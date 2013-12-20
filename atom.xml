@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://Vatscy.github.io/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2013-12-21T01:23:21+09:00</updated>
+  <updated>2013-12-21T02:58:00+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,13 +14,17 @@
 
   
   <entry>
-    <title type="html"><![CDATA[First Commit]]></title>
+    <title type="html"><![CDATA[First Write]]></title>
     <link href="http://Vatscy.github.io/blog/2013/12/21/first-commit/"/>
     <updated>2013-12-21T01:20:40+09:00</updated>
     <id>http://Vatscy.github.io/blog/2013/12/21/first-commit</id>
-    <content type="html"><![CDATA[<h1>first commit</h1>
+    <content type="html"><![CDATA[<h2>初カキコ、ども</h2>
 
-<p>test post!</p>
+<p>今日から開発ブログをコツコツ書いていこうと思います。</p>
+
+<p>Markdown記法に慣れる意味も込めて。</p>
+
+<p>ばつしい</p>
 ]]></content>
   </entry>
   
