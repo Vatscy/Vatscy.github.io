@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Markdown | ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2013-12-23T22:04:41+09:00</updated>
+  <updated>2013-12-23T22:31:15+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -32,9 +32,12 @@
 
 <p>要は自分のためですw</p>
 
-<h2>見出し</h2>
+<h2>記法</h2>
 
-<p>HTMLにおける<em>h1〜h6</em>です。</p>
+<h3>見出し</h3>
+
+<p>HTMLにおける<code>&lt;h1&gt;</code>〜<code>&lt;h6&gt;</code>。<br/>
+<strong>#の数</strong>で区別します。</p>
 
 <h1>h1</h1>
 
@@ -64,6 +67,36 @@
 <h6>h6</h6>
 
 <pre><code>###### h6
+</code></pre>
+
+<h3>改行</h3>
+
+<p>HTMLにおける<code>&lt;br&gt;</code>。<br/>
+<strong>行末に半角スペースを2個以上記述する</strong>ことで実現します。</p>
+
+<h3>段落</h3>
+
+<p>HTMLにおける<code>&lt;p&gt;</code>。<br/>
+<strong>空行を挟む</strong>ことで段落分けします。</p>
+
+<pre><code>段落1
+
+段落2
+</code></pre>
+
+<h3>強調</h3>
+
+<p>HTMLにおける<code>&lt;em&gt;</code>と<code>&lt;strong&gt;</code>。<br/>
+<code>&lt;em&gt;</code>より<code>&lt;strong&gt;</code>の方が強調度は高いらしい。</p>
+
+<p><em>オラオラオラオラオラオラオラオラ</em></p>
+
+<pre><code>*オラオラオラオラオラオラオラオラ*
+</code></pre>
+
+<p><strong>無駄無駄無駄無駄無駄無駄無駄無駄</strong></p>
+
+<pre><code>**無駄無駄無駄無駄無駄無駄無駄無駄**
 </code></pre>
 
 <p><strong>続きは後ほど。</strong></p>
