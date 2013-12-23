@@ -4,7 +4,7 @@
   <title><![CDATA[Category: その他 | ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/blog/categories/sofalseta/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2013-12-23T21:39:16+09:00</updated>
+  <updated>2013-12-23T21:47:07+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -18,7 +18,7 @@
     <link href="http://Vatscy.github.io/blog/2013/12/21/first-write/"/>
     <updated>2013-12-21T01:20:40+09:00</updated>
     <id>http://Vatscy.github.io/blog/2013/12/21/first-write</id>
-    <content type="html"><![CDATA[<h2>first write</h2>
+    <content type="html"><![CDATA[<h2>はじめに</h2>
 
 <p>ばつしいです。</p>
 
@@ -30,10 +30,15 @@
 
 <p>あと、Markdown記法に慣れる意味も込めて。</p>
 
-<p><strong>目的</strong>：<em>開発に関する知識をまとめることで理解を深めると共に情報発信を行う</em><br/>
-<strong>ゴール</strong>：<em>1週間に3回以上記事を書き、それを半年以上続ける</em></p>
+<h2>目的とゴール</h2>
 
-<p>とりあえずこんな感じでスタート！</p>
+<h3>目的</h3>
+
+<p><em>開発に関する知識をまとめることで理解を深めると共に情報発信を行う</em></p>
+
+<h3>ゴール</h3>
+
+<p><em>1週間に3回以上記事を書き、それを半年以上続ける</em></p>
 ]]></content>
   </entry>
   
