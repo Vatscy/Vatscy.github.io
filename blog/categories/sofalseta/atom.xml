@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: その他 | My Octopress Blog]]></title>
+  <title><![CDATA[Category: その他 | ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/blog/categories/sofalseta/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2013-12-23T20:57:25+09:00</updated>
+  <updated>2013-12-23T21:39:16+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[ばつしい]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
