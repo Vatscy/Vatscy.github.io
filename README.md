@@ -8,32 +8,32 @@
 
 ### 新規記事作成
 
-``` shell
-rake new_post
+```zsh
+% rake new_post
 ```
 
 ### ブログページ生成
 
-``` shell
-rake generate
+```zsh
+% rake generate
 ```
 
 ### プレビュー
 
-``` shell
-rake preview
+```zsh
+% rake preview
 ```
 
 ### デプロイ
 
-``` shell
-rake deploy
+```zsh
+% rake deploy
 ```
 
 #### ※下記コマンドを使用することで生成とデプロイを同時に行うことも可能
 
-``` shell
-rake gen_deploy
+```zsh
+% rake gen_deploy
 ```
 
 ## 参考ページ
