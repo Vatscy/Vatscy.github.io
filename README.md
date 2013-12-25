@@ -2,7 +2,7 @@
 
 ## URL
 
-[http://vatscy.github.io](http://vatscy.github.io)
+- [http://vatscy.github.io](http://vatscy.github.io)
 
 ## コマンド一覧
 
@@ -17,6 +17,8 @@
 ```zsh
 % rake generate
 ```
+
+- /source/_posts内に新たなMarkdownファイルが生成される。
 
 ### プレビュー
 
