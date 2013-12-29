@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Markdown | ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2013-12-25T22:22:57+09:00</updated>
+  <updated>2013-12-29T22:15:07+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -39,6 +39,8 @@
 <p>HTMLにおける<code>&lt;h1&gt;</code>〜<code>&lt;h6&gt;</code>。<br/>
 <strong>#の数</strong>で区別します。</p>
 
+<h4>(例)</h4>
+
 <h1>h1</h1>
 
 <pre><code># h1
@@ -72,34 +74,213 @@
 <h3>改行</h3>
 
 <p>HTMLにおける<code>&lt;br&gt;</code>。<br/>
-<strong>行末に半角スペースを2個以上記述する</strong>ことで実現します。</p>
+<strong>行末に半角スペースを2個以上記述する</strong>ことで実現します。<br/>
+ただ改行を入れるだけでは反映されないので注意！</p>
 
 <h3>段落</h3>
 
 <p>HTMLにおける<code>&lt;p&gt;</code>。<br/>
-<strong>空行を挟む</strong>ことで段落分けします。</p>
+<strong>空行を挟む</strong>ことで段落分けします。<br/>
+空行を挟まない改行は反映されないので注意！</p>
 
-<pre><code>段落1
+<h4>(例)</h4>
 
-段落2
+<p>さすがディオ!
+俺達に出来ないことを平然とやってのけるッ!</p>
+
+<p>そこにシビれる!
+あこがれるゥ!</p>
+
+<pre><code>さすがディオ!
+俺達に出来ないことを平然とやってのけるッ!
+
+そこにシビれる!
+あこがれるゥ!
 </code></pre>
 
 <h3>強調</h3>
 
 <p>HTMLにおける<code>&lt;em&gt;</code>と<code>&lt;strong&gt;</code>。<br/>
-<code>&lt;em&gt;</code>より<code>&lt;strong&gt;</code>の方が強調度は高いらしい。</p>
+<code>&lt;em&gt;</code>は * または _ で囲み、<code>&lt;strong&gt;</code>は ** または __ で囲みます。<br/>
+ちなみに、<code>&lt;em&gt;</code>より<code>&lt;strong&gt;</code>の方が強い強調を表します。</p>
 
-<p><em>オラオラオラオラオラオラオラオラ</em></p>
+<h4>(例)</h4>
 
-<pre><code>*オラオラオラオラオラオラオラオラ*
+<p>所詮<em>オッパイ</em>など<strong>お尻のまがいものに過ぎない</strong>のです</p>
+
+<pre><code>所詮*オッパイ*など**お尻のまがいものに過ぎない**のです
 </code></pre>
 
-<p><strong>無駄無駄無駄無駄無駄無駄無駄無駄</strong></p>
+<h3>コード</h3>
 
-<pre><code>**無駄無駄無駄無駄無駄無駄無駄無駄**
+<p>HTMLにおける<code>&lt;code&gt;</code>。<br/>
+先程から使っている<code>これ</code>や</p>
+
+<pre><code>これ
 </code></pre>
 
-<p><strong>続きは後ほど。</strong></p>
+<p>です。<br/>
+インライン(1つ目)の場合は<strong> ` で囲み</strong>ます。<br/>
+段落(2つ目)の場合は<strong>行頭にTabを挿入</strong>、または<strong> ``` で行を囲み</strong>ます。</p>
+
+<h3>順序無しリスト</h3>
+
+<p>HTMLにおける<code>&lt;ul&gt;&lt;li&gt;</code>。<br/>
+行頭に<strong> (* + &ndash; のうちのどれか1つ) ＋ 半角スペース</strong>を挿入することで実現します。<br/>
+また、さらに<strong>行頭に半角スペース4つを入れる</strong>ことでサブアイテムを作ることもできます。</p>
+
+<h4>(例)</h4>
+
+<ul>
+<li>強化系
+
+<ul>
+<li>ゴン</li>
+</ul>
+</li>
+<li>変化形
+
+<ul>
+<li>キルア</li>
+</ul>
+</li>
+<li>具現化形
+
+<ul>
+<li>クラピカ</li>
+</ul>
+</li>
+<li>操作系</li>
+<li>放出系
+
+<ul>
+<li>レオリオ</li>
+</ul>
+</li>
+<li>特質形</li>
+</ul>
+
+
+<p>```
+* 強化系</p>
+
+<pre><code>+ ゴン
+</code></pre>
+
+<ul>
+<li>変化形
+
+<ul>
+<li>キルア</li>
+</ul>
+</li>
+<li>具現化形
+
+<ul>
+<li>クラピカ</li>
+</ul>
+</li>
+<li>操作系</li>
+<li>放出系
+
+<ul>
+<li>レオリオ</li>
+</ul>
+</li>
+<li>特質形
+```</li>
+</ul>
+
+
+<h3>順序付きリスト</h3>
+
+<p>HTMLにおける<code>&lt;ol&gt;&lt;li&gt;</code>。<br/>
+行頭に<strong>数字 ＋ ピリオド</strong>を挿入することで実現します。</p>
+
+<h4>(例)</h4>
+
+<ol>
+<li>ファントムブラッド</li>
+<li>戦闘潮流</li>
+<li>スターダストクルセイダーズ</li>
+</ol>
+
+
+<p><code>
+1. ファントムブラッド
+2. 戦闘潮流
+3. スターダストクルセイダーズ
+</code></p>
+
+<h3>引用</h3>
+
+<p>HTMLにおける<code>&lt;blockquote&gt;</code>、<code>&lt;q&gt;</code>、<code>&lt;cite&gt;</code>。<br/>
+行頭に<strong> > ＋ 半角スペース</strong>を挿入することで実現します。</p>
+
+<h4>(例)</h4>
+
+<blockquote><p>恐ろしく速い手刀 オレでなきゃ見逃しちゃうね<br/>
+(by 団長の手刀を見逃さなかった人 &ndash; HUNTER×HUNTER11巻より抜粋)</p></blockquote>
+
+<p>```</p>
+
+<blockquote><p>恐ろしく速い手刀 オレでなきゃ見逃しちゃうね<br/>
+(by 団長の手刀を見逃さなかった人 &ndash; HUNTER×HUNTER11巻より抜粋)
+```</p></blockquote>
+
+<h3>水平線</h3>
+
+<p>HTMLにおける<code>&lt;hr&gt;</code>。<br/>
+1行の中に<strong> &ndash; (ハイフン)、 * (アスタリスク)、 _ (アンダースコア)のうちどれか1種を3個以上並べる</strong>ことで実現します。
+間に半角スペースを挟んでもOKです。</p>
+
+<h4>(例)</h4>
+
+<hr />
+
+<h2>```</h2>
+
+<hr />
+
+<hr />
+
+<p>```</p>
+
+<h3>リンク</h3>
+
+<p>HTMLにおける<code>&lt;a&gt;</code>。<br/>
+<code>[リンクのテキスト](URL "タイトル")</code> の形式で実現します。</p>
+
+<h4>(例)</h4>
+
+<p><a href="http://www.geocities.jp/yuusuke4971/" title="かの有名なサイト">ゆうすけのホームページ</a></p>
+
+<pre><code>[ゆうすけのホームページ](http://www.geocities.jp/yuusuke4971/ "かの有名なサイト")
+</code></pre>
+
+<p>&hellip;</p>
+
+<p>また、リンクの情報を一カ所にまとめておいて、<br/>
+実際にリンクを貼る場所でその情報を持ってくることもできます。</p>
+
+<h4>(例)</h4>
+
+<p><a href="http://www.google.co.jp" title="ごおgれ">Google</a><br/>
+<a href="http://www.yahoo.co.jp" title="やほお">Yahoo!</a></p>
+
+<p>```
+<a href="http://www.google.co.jp" title="ごおgれ">Google</a><br/>
+<a href="http://www.yahoo.co.jp" title="やほお">Yahoo!</a></p>
+
+<p>```</p>
+
+<h3>その他</h3>
+
+<ul>
+<li>HTMLタグを直接記述することも可能。複雑な処理はHTMLタグで書こう。</li>
+<li>GitHubでは<a href="https://help.github.com/articles/github-flavored-markdown" title="GFM">GitHub Flavored Markdown</a>というアレンジされたMarkdownが使われているので、専用の文法が存在する。</li>
+</ul>
+
 ]]></content>
   </entry>
   
