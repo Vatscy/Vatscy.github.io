@@ -12,13 +12,13 @@
 % rake new_post
 ```
 
+- /source/_posts内に新たなMarkdownファイルが生成される。
+
 ### ブログページ生成
 
 ```zsh
 % rake generate
 ```
-
-- /source/_posts内に新たなMarkdownファイルが生成される。
 
 ### プレビュー
 
