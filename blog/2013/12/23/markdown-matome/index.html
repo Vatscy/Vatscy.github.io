@@ -9,7 +9,7 @@
   <meta name="author" content="ばつしい">
 
   
-  <meta name="description" content="今回はMarkdownについてまとめてみます。 Markdownとは Markdown は、文書を記述するための軽量マークアップ言語のひとつである。(Wikipediaより引用) 要するにテキストに構造をつける言語です。 このブログもMarkdownで記述されています。 &hellip;">
+  <meta name="description" content="今回はMarkdownについてまとめてみます。 Markdownとは Markdown は、文書を記述するための軽量マークアップ言語のひとつである。(Wikipediaより引用) つまり、テキストに構造をつける言語です。 ちなみにこのブログもMarkdownで記述されています。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -111,13 +111,13 @@
 
 <blockquote><p>Markdown は、文書を記述するための軽量マークアップ言語のひとつである。(<a href="http://ja.wikipedia.org/wiki/Markdown" target="_blank">Wikipedia</a>より引用)</p></blockquote>
 
-<p>要するにテキストに構造をつける言語です。</p>
+<p>つまり、テキストに構造をつける言語です。</p>
 
-<p>このブログもMarkdownで記述されています。</p>
+<p>ちなみにこのブログもMarkdownで記述されています。</p>
 
 <p>これからブログを書いていく上でまとめておいた方が良さそうだったのでまとめてみます。</p>
 
-<p>要は自分のためですw</p>
+<p>(要は自分のため)</p>
 
 <!-- more -->
 
@@ -196,9 +196,9 @@
 
 <h4>(例)</h4>
 
-<p>所詮<em>オッパイ</em>など<strong>お尻のまがいものに過ぎない</strong>のです</p>
+<p><em>ウボォーさん</em>、聞こえますか？オレ達から貴方への<strong>鎮魂歌</strong>です</p>
 
-<pre><code>所詮*オッパイ*など**お尻のまがいものに過ぎない**のです
+<pre><code>*ウボォーさん*、聞こえますか？オレ達から貴方への**鎮魂歌**です
 </code></pre>
 
 <h3>コード</h3>
@@ -347,6 +347,66 @@
 </span><span class='line'>_ _ _ _ _</span></code></pre></td></tr></table></div></figure>
 
 
+<h3>テーブル</h3>
+
+<p>HTMLにおける<code>&lt;table&gt;</code>。</p>
+
+<h4>(例)</h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">左寄せ </th>
+<th align="center"> 中央寄せ </th>
+<th align="right"> 右寄せ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">左に </td>
+<td align="center"> 中央に </td>
+<td align="right"> 右に</td>
+</tr>
+<tr>
+<td align="left">受け流すスタイル </td>
+<td align="center"> 居座るスタイル </td>
+<td align="right"> 寄せていくスタイル</td>
+</tr>
+<tr>
+<td align="left">on </td>
+<td align="center"> on </td>
+<td align="right"> on</td>
+</tr>
+<tr>
+<td align="left">the </td>
+<td align="center"> the </td>
+<td align="right"> the</td>
+</tr>
+<tr>
+<td align="left">left </td>
+<td align="center"> center </td>
+<td align="right"> right</td>
+</tr>
+</tbody>
+</table>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>左寄せ | 中央寄せ | 右寄せ
+</span><span class='line'>:-----|:----:|-----:
+</span><span class='line'>左に | 中央に | 右に
+</span><span class='line'>受け流すスタイル | 居座るスタイル | 寄せていくスタイル
+</span><span class='line'>on | on | on
+</span><span class='line'>the | the | the
+</span><span class='line'>left | center | right</span></code></pre></td></tr></table></div></figure>
+
+
 <h3>リンク</h3>
 
 <p>HTMLにおける<code>&lt;a&gt;</code>。<br/>
@@ -359,7 +419,7 @@
 <pre><code>[ゆうすけのホームページ](http://www.geocities.jp/yuusuke4971/ "かの有名なサイト")
 </code></pre>
 
-<p>&hellip;</p>
+<hr />
 
 <p>また、リンクの情報を一カ所にまとめておいて、<br/>
 実際にリンクを貼る場所でその情報を持ってくることもできます。</p>
@@ -381,9 +441,22 @@
 </span><span class='line'>[1]: http://www.yahoo.co.jp "やほお"</span></code></pre></td></tr></table></div></figure>
 
 
+<h3>画像</h3>
+
+<p>HTMLにおける<code>&lt;img&gt;</code>。<br/>
+<code>![画像の説明文](画像URL)</code> の形式で実現します。</p>
+
+<h4>(例)</h4>
+
+<p><img src="http://vatscy.github.io/images/post/YMD68_TKG500.jpg" alt="そんな好きじゃない" /></p>
+
+<pre><code>![そんな好きじゃない](http://vatscy.github.io/images/post/YMD68_TKG500.jpg)
+</code></pre>
+
 <h3>その他</h3>
 
 <ul>
+<li>半角バックスラッシュまたは半角￥をMarkdownの直前に挿入することでエスケープ可能。</li>
 <li>HTMLタグを直接記述することも可能。複雑な処理はHTMLタグで書こう。</li>
 <li>GitHubでは<a href="https://help.github.com/articles/github-flavored-markdown" title="GFM">GitHub Flavored Markdown</a>というアレンジされたMarkdownが使われているので、専用の文法が存在する。</li>
 </ul>

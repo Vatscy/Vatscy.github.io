@@ -4,7 +4,7 @@
   <title><![CDATA[ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2014-01-11T21:51:18+09:00</updated>
+  <updated>2014-01-14T23:59:33+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -86,13 +86,13 @@
 
 <blockquote><p>Markdown は、文書を記述するための軽量マークアップ言語のひとつである。(<a href="http://ja.wikipedia.org/wiki/Markdown" target="_blank">Wikipedia</a>より引用)</p></blockquote>
 
-<p>要するにテキストに構造をつける言語です。</p>
+<p>つまり、テキストに構造をつける言語です。</p>
 
-<p>このブログもMarkdownで記述されています。</p>
+<p>ちなみにこのブログもMarkdownで記述されています。</p>
 
 <p>これからブログを書いていく上でまとめておいた方が良さそうだったのでまとめてみます。</p>
 
-<p>要は自分のためですw</p>
+<p>(要は自分のため)</p>
 
 <!-- more -->
 
@@ -171,9 +171,9 @@
 
 <h4>(例)</h4>
 
-<p>所詮<em>オッパイ</em>など<strong>お尻のまがいものに過ぎない</strong>のです</p>
+<p><em>ウボォーさん</em>、聞こえますか？オレ達から貴方への<strong>鎮魂歌</strong>です</p>
 
-<pre><code>所詮*オッパイ*など**お尻のまがいものに過ぎない**のです
+<pre><code>*ウボォーさん*、聞こえますか？オレ達から貴方への**鎮魂歌**です
 </code></pre>
 
 <h3>コード</h3>
@@ -322,6 +322,66 @@
 </span><span class='line'>_ _ _ _ _</span></code></pre></td></tr></table></div></figure>
 
 
+<h3>テーブル</h3>
+
+<p>HTMLにおける<code>&lt;table&gt;</code>。</p>
+
+<h4>(例)</h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">左寄せ </th>
+<th align="center"> 中央寄せ </th>
+<th align="right"> 右寄せ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">左に </td>
+<td align="center"> 中央に </td>
+<td align="right"> 右に</td>
+</tr>
+<tr>
+<td align="left">受け流すスタイル </td>
+<td align="center"> 居座るスタイル </td>
+<td align="right"> 寄せていくスタイル</td>
+</tr>
+<tr>
+<td align="left">on </td>
+<td align="center"> on </td>
+<td align="right"> on</td>
+</tr>
+<tr>
+<td align="left">the </td>
+<td align="center"> the </td>
+<td align="right"> the</td>
+</tr>
+<tr>
+<td align="left">left </td>
+<td align="center"> center </td>
+<td align="right"> right</td>
+</tr>
+</tbody>
+</table>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>左寄せ | 中央寄せ | 右寄せ
+</span><span class='line'>:-----|:----:|-----:
+</span><span class='line'>左に | 中央に | 右に
+</span><span class='line'>受け流すスタイル | 居座るスタイル | 寄せていくスタイル
+</span><span class='line'>on | on | on
+</span><span class='line'>the | the | the
+</span><span class='line'>left | center | right</span></code></pre></td></tr></table></div></figure>
+
+
 <h3>リンク</h3>
 
 <p>HTMLにおける<code>&lt;a&gt;</code>。<br/>
@@ -334,7 +394,7 @@
 <pre><code>[ゆうすけのホームページ](http://www.geocities.jp/yuusuke4971/ "かの有名なサイト")
 </code></pre>
 
-<p>&hellip;</p>
+<hr />
 
 <p>また、リンクの情報を一カ所にまとめておいて、<br/>
 実際にリンクを貼る場所でその情報を持ってくることもできます。</p>
@@ -356,9 +416,22 @@
 </span><span class='line'>[1]: http://www.yahoo.co.jp "やほお"</span></code></pre></td></tr></table></div></figure>
 
 
+<h3>画像</h3>
+
+<p>HTMLにおける<code>&lt;img&gt;</code>。<br/>
+<code>![画像の説明文](画像URL)</code> の形式で実現します。</p>
+
+<h4>(例)</h4>
+
+<p><img src="http://vatscy.github.io/images/post/YMD68_TKG500.jpg" alt="そんな好きじゃない" /></p>
+
+<pre><code>![そんな好きじゃない](http://vatscy.github.io/images/post/YMD68_TKG500.jpg)
+</code></pre>
+
 <h3>その他</h3>
 
 <ul>
+<li>半角バックスラッシュまたは半角￥をMarkdownの直前に挿入することでエスケープ可能。</li>
 <li>HTMLタグを直接記述することも可能。複雑な処理はHTMLタグで書こう。</li>
 <li>GitHubでは<a href="https://help.github.com/articles/github-flavored-markdown" title="GFM">GitHub Flavored Markdown</a>というアレンジされたMarkdownが使われているので、専用の文法が存在する。</li>
 </ul>
@@ -373,28 +446,27 @@
     <id>http://Vatscy.github.io/blog/2013/12/21/first-write</id>
     <content type="html"><![CDATA[<h2>はじめに</h2>
 
-<p>ばつしいです。</p>
-
-<p>2013年4月に新卒未経験で開発職として社会人ライフをスタート。<br/>
-そして長い研修を経て先日から業務を始めました。</p>
+<p>初めまして、ばつしいです。<br/>
+今日からゆるゆるとブログを綴っていこうと思います。<br/>
+テーマは技術的なことを書こうと思いますが、たまには気の赴くままに書いてみようかなと思っています。</p>
 
 <!-- more -->
 
 
-<p>今日から開発ブログをコツコツ書いていこうと思います。<br/>
-こうやってまとめることで知識・理解を整理してより理解が深まることを期待して。</p>
+<h2>プロフィール</h2>
 
-<p>あと、Markdown記法に慣れる意味も込めて。</p>
+<p>簡単に自己紹介します。</p>
 
-<h2>目的とゴール</h2>
+<p>2013年3月に某C大学の数学科を卒業し、<br/>
+2013年4月に新卒未経験で開発職として社会人を始めました。<br/>
+長い研修期間を経て、先日ついに配属され、業務を開始しました。</p>
 
-<h3>目的</h3>
+<h2>ブログ</h2>
 
-<p><em>開発に関する知識をまとめることで理解を深めると共に情報発信を行う</em></p>
+<p>開発職として働き始めたので、私的に何か始めようと思い、ブログを書き始める次第です。<br/>
+駆け出しエンジニアの拙いブログですが、誰かのお役に立てれば幸いです。</p>
 
-<h3>ゴール</h3>
-
-<p><em>1週間に3回以上記事を書き、それを半年以上続ける</em></p>
+<p>とりあえず初回はこんな感じで！</p>
 ]]></content>
   </entry>
   
