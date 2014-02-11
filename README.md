@@ -47,3 +47,4 @@
 - [Sharing Code Snippets](http://octopress.org/docs/blogging/code/)
 - [Mac + Ruby + Octopress + Github でブログの作成](http://salinger.github.io/blog/2013/01/14/1/)
 - [Octopress + GitHub Pages = Blog](http://change-the-world.github.io/blog/2012/08/26/1/)
+- [Octopressの初期設定時に気にしておきたい9箇所](http://tantant.jp/blog/Octopress/configuring-octopress/)
