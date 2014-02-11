@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Markdown | ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2014-02-11T11:39:04+09:00</updated>
+  <updated>2014-02-11T23:07:41+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -18,7 +18,9 @@
     <link href="http://Vatscy.github.io/blog/2013/12/23/markdown-matome/"/>
     <updated>2013-12-23T20:31:26+09:00</updated>
     <id>http://Vatscy.github.io/blog/2013/12/23/markdown-matome</id>
-    <content type="html"><![CDATA[<p>今回は<strong>Markdown</strong>についてまとめてみます。</p>
+    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/markdown.jpg" alt="Markdown" /></p>
+
+<p>今回は<strong>Markdown</strong>についてまとめてみます。</p>
 
 <h2>Markdownとは</h2>
 
