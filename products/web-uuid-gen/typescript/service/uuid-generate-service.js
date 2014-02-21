@@ -7,7 +7,11 @@ var Service;
             var new4Data = function () {
                 var max = Math.pow(16, 4) - 1;
                 var newNum = Math.floor(Math.random() * max);
-                return newNum.toString(16);
+                var newNumToStr = newNum.toString(16);
+                while (newNumToStr.length < 4) {
+                    newNumToStr = "0" + newNumToStr;
+                }
+                return newNumToStr;
             };
 
             var data1 = new4Data() + new4Data();
