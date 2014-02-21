@@ -1,7 +1,5 @@
 var Service;
 (function (Service) {
-    "use strict";
-
     var UuidGenerateService = (function () {
         function UuidGenerateService() {
         }

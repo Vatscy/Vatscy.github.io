@@ -1,12 +1,13 @@
 var Controller;
 (function (Controller) {
-    "use strict";
-
     var UuidGenerateController = (function () {
         function UuidGenerateController($scope, uuidGenerateService) {
             this.$scope = $scope;
             this.uuidGenerateService = uuidGenerateService;
             $scope.uuid = uuidGenerateService.newUuid();
+            $scope.refreshUuid = function () {
+                $scope.uuid = uuidGenerateService.newUuid();
+            };
         }
         return UuidGenerateController;
     })();

@@ -3,8 +3,6 @@
 */
 var App;
 (function (App) {
-    "use strict";
-
     App.appName = "web-uuid-gen";
 
     // モジュールの定義
