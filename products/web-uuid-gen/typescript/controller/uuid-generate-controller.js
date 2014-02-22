@@ -5,7 +5,6 @@ var Controller;
             this.$scope = $scope;
             this.uuidGenerateService = uuidGenerateService;
             $scope.uuid = uuidGenerateService.newUuid();
-
             $scope.refreshUuid = function () {
                 $scope.uuid = uuidGenerateService.newUuid();
             };
