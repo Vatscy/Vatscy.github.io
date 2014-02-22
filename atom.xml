@@ -4,7 +4,7 @@
   <title><![CDATA[ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2014-02-23T00:13:23+09:00</updated>
+  <updated>2014-02-23T02:27:02+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -12,6 +12,80 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[スーパードンキーコング2のBGMリミックス集「Serious Monkey Business」のクオリティがやばい]]></title>
+    <link href="http://Vatscy.github.io/blog/2014/02/23/serious-monkey-business/"/>
+    <updated>2014-02-23T01:01:37+09:00</updated>
+    <id>http://Vatscy.github.io/blog/2014/02/23/serious-monkey-business</id>
+    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/donkeykong2.png" alt="SuperDonkeyKong2" /></p>
+
+<p>スーパーファミコンの名作「<strong>スーパードンキーコング2</strong>」（以下SDK2）。</p>
+
+<p>発売当時の私は6歳。
+帰ってきて即効スーファミの電源を付けて、これと星のカービィSDXを永遠と遊んでいた記憶があります。
+大学生になり、Wiiのバーチャルコンソールで買い直して遊びましたがやっぱりメチャメチャ面白いですね！</p>
+
+<p>そんなSDK2、ゲームの内容ももちろんですが、<strong>BGMの評価もとても高い</strong>ですよね。
+私自身ゲームのBGMが凄く好きで、色んなゲームのサウンドトラックをiPodに入れてます。
+<strong>ドライブ中にマリオカートのスターのBGM流すのはオススメです。</strong></p>
+
+<p>SDK2のBGMは群を抜いて好きです。特に<a href="http://www.youtube.com/watch?v=zK4TWXWEKAQ">とげとげタルめいろ</a>と<a href="http://www.youtube.com/watch?v=bnWktjTMZb0">ハニー・アドベンチャー</a>が神だと思います。</p>
+
+<h2>Serious Monkey Business</h2>
+
+<p>さて本題です。</p>
+
+<p><strong>SDK2のBGMがアレンジされて、ウェブ上で無料配信されているのをご存知でしたか？</strong></p>
+
+<!-- more -->
+
+
+<p>それがこちら→ <a href="http://dkc2.ocremix.org/">Serious Monkey Business</a></p>
+
+<p>「Download Music」→「Download the Complete .zip file」からzipを落とすことができます。</p>
+
+<p>多数の著名アーティストが約2年半の歳月をかけて作り上げたらしい。
+更に凄いのが、実際にSDK2のコンポーザをされていたDavid Wise氏もアレンジに参加しています。
+つまり<strong>ほぼ公式</strong>。</p>
+
+<p>以下がトレーラームービーです。</p>
+
+<h3>トレーラームービー</h3>
+
+<iframe width="560" height="315" src="http://Vatscy.github.io//www.youtube.com/embed/pP0nb5R3nwU" frameborder="0" allowfullscreen></iframe>
+
+
+<p>ロック、テクノ、オーケストラなど様々なテイストにアレンジされていて面白いですね。歌付きもあったり。</p>
+
+<hr />
+
+<p>個人的にお気に入りなのが以下の2曲。</p>
+
+<h2>Roller Disco (原曲: どくろコースター)</h2>
+
+<iframe width="420" height="315" src="http://Vatscy.github.io//www.youtube.com/embed/Rq9OOvtMxM8" frameborder="0" allowfullscreen></iframe>
+
+
+<p>トランス調にアレンジされていてノリノリになれます。<br/>
+最後のサルボイスと敵ボイスがいいですねwww</p>
+
+<h2>Bramble Reprise (原曲: とげとげタルめいろ)</h2>
+
+<iframe width="420" height="315" src="http://Vatscy.github.io//www.youtube.com/embed/BQhKibpZuA0" frameborder="0" allowfullscreen></iframe>
+
+
+<p>やはり名曲だけあってアレンジも雰囲気出てていいですね。<br/>
+ちなみにとげとげタルめいろはスマブラXでもアレンジされてましたね。<br/>
+ちなみに私は断然原曲派です（ｷﾘｯ</p>
+
+<hr />
+
+<p>いかがだったでしょうか。</p>
+
+<p>ちなみに、ゲームサウンドアレンジ配信サイト<a href="http://ocremix.org/">OverClocked ReMix</a>では、SDK2以外にもゼルダやFFなどのアレンジも配信しているようです。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ページ読み込み時のJavaScriptの実行タイミング]]></title>
@@ -205,7 +279,7 @@
 <p>∧＿＿∧<br/>
 (・∀・)</p>
 
-<p>となります。</p>
+<p>となります。（ずれてるけど）</p>
 
 <h2>完全読み込み後実行</h2>
 
