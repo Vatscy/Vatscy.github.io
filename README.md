@@ -48,3 +48,4 @@
 - [Mac + Ruby + Octopress + Github でブログの作成](http://salinger.github.io/blog/2013/01/14/1/)
 - [Octopress + GitHub Pages = Blog](http://change-the-world.github.io/blog/2012/08/26/1/)
 - [Octopressの初期設定時に気にしておきたい9箇所](http://tantant.jp/blog/Octopress/configuring-octopress/)
+- [GitHub Pages + Octopress カスタマイズ](http://qiita.com/PSP_T/items/07365ed24eef63602233)
