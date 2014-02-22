@@ -4,7 +4,7 @@
   <title><![CDATA[ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2014-02-22T13:50:27+09:00</updated>
+  <updated>2014-02-22T13:53:36+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -14,9 +14,9 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Document Ready]]></title>
+    <title type="html"><![CDATA[ページ読み込み時のJavaScriptの実行タイミング]]></title>
     <link href="http://Vatscy.github.io/blog/2014/02/22/document-ready/"/>
-    <updated>2014-02-22T00:00:00+09:00</updated>
+    <updated>2014-02-22T12:12:05+09:00</updated>
     <id>http://Vatscy.github.io/blog/2014/02/22/document-ready</id>
     <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/document-ready.jpg" alt="DocumentReady" /></p>
 

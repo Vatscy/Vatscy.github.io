@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: JavaScript | ばしぶろ]]></title>
+  <link href="http://Vatscy.github.io/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://Vatscy.github.io/"/>
+  <updated>2014-02-22T13:53:36+09:00</updated>
+  <id>http://Vatscy.github.io/</id>
+  <author>
+    <name><![CDATA[ばつしい]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ページ読み込み時のJavaScriptの実行タイミング]]></title>
+    <link href="http://Vatscy.github.io/blog/2014/02/22/document-ready/"/>
+    <updated>2014-02-22T12:12:05+09:00</updated>
+    <id>http://Vatscy.github.io/blog/2014/02/22/document-ready</id>
+    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/document-ready.jpg" alt="DocumentReady" /></p>
+
+<p>HTMLページを読み込む際のJavaScriptの実行タイミングは色々あります。<br/>
+タイミングをミスると意図したように動作しないことがあるので注意が必要です。</p>
+
+<p>いくつかパターンを見ていきます。</p>
+
+<h2>通常実行</h2>
+
+<p>特に意識せずにJavaScriptを記述したり読み込んだりすると、<strong>書いた順番に処理</strong>されます。</p>
+
+<p>```html
+<html>
+<head></p>
+
+<pre><code>&lt;title&gt;Title&lt;/title&gt;
+&lt;script type="text/javascript" src="main.js"&gt;&lt;/script&gt;
+&lt;!-- ↑このタイミングで実行される --&gt;
+</code></pre>
+
+<p></head>
+<body></p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+&lt;!--
+var element = document.getElementById("last-name");
+element.innerHTML = "ナルシソ";
+// --&gt;
+&lt;/script&gt;
+&lt;!-- ↑このタイミングで実行される --&gt;
+
+&lt;div id="last-name"&gt;&lt;/div&gt;
+&lt;div id="first-name"&gt;&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+&lt;!--
+var element = document.getElementById("first-name");
+element.innerHTML = "アナスイ";
+// --&gt;
+&lt;/script&gt;
+&lt;!-- ↑このタイミングで実行される --&gt;
+</code></pre>
+
+<p></body>
+</html>
+```</p>
+
+<p>上記のHTMLを読み込むと、(main.jsの中身は空として)画面には何が表示されるでしょうか？</p>
+
+<p>正解は、「アナスイ」と表示されます。</p>
+
+<p>これは、<code>var element = document.getElementById("last-name");</code>の時点では<br/>
+まだ<code>&lt;div id="last-name"&gt;&lt;/div&gt;</code>が読み込まれておらず、指定できないからです。</p>
+
+<p>ソースの可読性やMVCといった観点から、HTML内に直接JavaScriptを記述するのは好ましくありません。<br/>
+なので通常は<code>&lt;head&gt;</code>タグ内で外部JSファイルを読み込む形になると思いますが、<br/>
+何も意識せずに書くと、上記のような問題が発生します。</p>
+
+<p>そこで、HTMLが読み込まれた<strong>後</strong>にJavaScriptを実行する必要があります。</p>
+
+<h2>読み込み後実行</h2>
+
+<p><a href="http://jquery.com">jQuery</a>を下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。<br/>
+3パターン挙げますが、全て処理は同じです。</p>
+
+<p>```javascript
+$(document).ready(function(){</p>
+
+<pre><code>// 読み込み後に実行する処理
+</code></pre>
+
+<p>});</p>
+
+<p>$().ready(function(){</p>
+
+<pre><code>// 読み込み後に実行する処理
+</code></pre>
+
+<p>});</p>
+
+<p>$(function(){</p>
+
+<pre><code>// 読み込み後に実行する処理
+</code></pre>
+
+<p>});
+```</p>
+
+<p>個人的には一番下がシンプルで好みです。</p>
+
+<h2>完全読み込み後実行</h2>
+
+<p>HTMLだけでなく、<strong>全ての関連ファイルを読み込み後に実行</strong>する処理を書くこともできます。</p>
+
+<p>```javascript
+document.onload = function() {</p>
+
+<pre><code>// 完全読み込み後に実行する処理
+</code></pre>
+
+<p>}
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
