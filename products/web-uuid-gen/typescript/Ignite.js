@@ -104,4 +104,11 @@ var App;
         };
     });
 })(App || (App = {}));
+
+/**
+* Initializing
+*/
+$(function () {
+    $("#refresh-button").tooltip();
+});
 //# sourceMappingURL=Ignite.js.map

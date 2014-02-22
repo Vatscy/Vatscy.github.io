@@ -188,10 +188,23 @@ $(document).ready( function () {
 
 <p>正解は、「アナスイ」と表示されます。</p>
 
-<p>これは、<code>var element = document.getElementById("last-name");</code>の時点では
-まだ<code>&lt;div id="last-name"&gt;&lt;/div&gt;</code>が読み込まれておらず、指定できないからです。</p>
+<p>これは、</p>
 
-<p>ソースの可読性やMVCといった観点から、HTML内に直接JavaScriptを記述するのは好ましくありません。
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;last-name&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>の時点ではまだ</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;last-name&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>が読み込まれておらず、指定できないからです。</p>
+
+<p>ソースの可読性やMVCといった観点から、HTML内に直接JavaScriptを記述するのは好ましくありません(持論)。
 なので通常は<code>&lt;head&gt;</code>タグ内で外部JSファイルを読み込む形になると思いますが、
 何も意識せずに書くと、上記のような問題が発生します。</p>
 
