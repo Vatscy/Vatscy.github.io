@@ -4,7 +4,7 @@
   <title><![CDATA[ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2014-02-22T15:17:58+09:00</updated>
+  <updated>2014-02-23T00:11:32+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -68,19 +68,19 @@
 </span><span class='line'><span class="nt">&lt;body&gt;</span>
 </span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>  <span class="c">&lt;!--</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;last-name&quot;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;ナルシソ&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;ears&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;∧＿＿∧&quot;</span><span class="p">;</span>
 </span><span class='line'>  <span class="c1">// --&gt;</span>
 </span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
 </span><span class='line'>  <span class="c">&lt;!-- ↑このタイミングで実行される --&gt;</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;last-name&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;first-name&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;ears&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;face&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>  <span class="c">&lt;!--</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;first-name&quot;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;アナスイ&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;face&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;(・∀・)&quot;</span><span class="p">;</span>
 </span><span class='line'>  <span class="c1">// --&gt;</span>
 </span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
 </span><span class='line'>  <span class="c">&lt;!-- ↑このタイミングで実行される --&gt;</span>
@@ -91,19 +91,23 @@
 
 <p>上記のHTMLを読み込むと、(main.jsの中身は空として)画面には何が表示されるでしょうか？</p>
 
-<p>正解は、「アナスイ」と表示されます。</p>
+<p>正解は、</p>
 
-<p>これは、</p>
+<p>(・∀・)</p>
+
+<p>と表示されます。</p>
+
+<p>耳が表示されないのは</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;last-name&quot;</span><span class="p">);</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;ears&quot;</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>の時点ではまだ</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;last-name&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;ears&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -117,7 +121,7 @@
 
 <h2>読み込み後実行</h2>
 
-<p><a href="http://jquery.com">jQuery</a>を下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。
+<p><a href="http://jquery.com">jQuery</a>を用いて下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。
 3パターン挙げますが、全て処理は同じです。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -147,9 +151,65 @@
 
 <p>個人的には一番下がシンプルで好みです。</p>
 
+<p>これを使って先程のコードを書き直してみると</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;title&gt;</span>Title<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!-- jQueryの読み込みが必要 --&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;lib/jquery/jquery.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;main.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!--</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;ears&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;∧＿＿∧&quot;</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;face&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;(・∀・)&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>  <span class="c1">// --&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;ears&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;face&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>処理の記述は<code>&lt;div&gt;</code>より先ですが、HTMLが読み込まれた後に実行されるので、表示結果は</p>
+
+<p>∧＿＿∧
+(・∀・)</p>
+
+<p>となります。</p>
+
 <h2>完全読み込み後実行</h2>
 
-<p>HTMLだけでなく、<strong>全ての関連ファイルを読み込み後に実行</strong>する処理を書くこともできます。</p>
+<p>HTMLだけでなく、<strong>全ての関連ファイルを読み込んだ後に実行</strong>する処理を書くこともできます。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -159,6 +219,8 @@
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>場合によって上手く使い分けましょう！</p>
 ]]></content>
   </entry>
   

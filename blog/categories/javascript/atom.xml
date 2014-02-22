@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2014-02-22T15:17:58+09:00</updated>
+  <updated>2014-02-23T00:11:32+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -46,19 +46,19 @@
 
 <pre><code>&lt;script type="text/javascript"&gt;
 &lt;!--
-var element = document.getElementById("last-name");
-element.innerHTML = "ナルシソ";
+var element = document.getElementById("ears");
+element.innerHTML = "∧＿＿∧";
 // --&gt;
 &lt;/script&gt;
 &lt;!-- ↑このタイミングで実行される --&gt;
 
-&lt;div id="last-name"&gt;&lt;/div&gt;
-&lt;div id="first-name"&gt;&lt;/div&gt;
+&lt;div id="ears"&gt;&lt;/div&gt;
+&lt;div id="face"&gt;&lt;/div&gt;
 
 &lt;script type="text/javascript"&gt;
 &lt;!--
-var element = document.getElementById("first-name");
-element.innerHTML = "アナスイ";
+var element = document.getElementById("face");
+element.innerHTML = "(・∀・)";
 // --&gt;
 &lt;/script&gt;
 &lt;!-- ↑このタイミングで実行される --&gt;
@@ -70,16 +70,20 @@ element.innerHTML = "アナスイ";
 
 <p>上記のHTMLを読み込むと、(main.jsの中身は空として)画面には何が表示されるでしょうか？</p>
 
-<p>正解は、「アナスイ」と表示されます。</p>
+<p>正解は、</p>
 
-<p>これは、
+<p>(・∀・)</p>
+
+<p>と表示されます。</p>
+
+<p>耳が表示されないのは
 <code>javascript
-var element = document.getElementById("last-name");
+var element = document.getElementById("ears");
 </code>
 の時点ではまだ
 ```html</p>
 
-<div id="last-name"></div>
+<div id="ears"></div>
 
 
 <p>```
@@ -93,7 +97,7 @@ var element = document.getElementById("last-name");
 
 <h2>読み込み後実行</h2>
 
-<p><a href="http://jquery.com">jQuery</a>を下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。
+<p><a href="http://jquery.com">jQuery</a>を用いて下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。
 3パターン挙げますが、全て処理は同じです。</p>
 
 <p>```javascript
@@ -121,9 +125,49 @@ $(document).ready(function(){</p>
 
 <p>個人的には一番下がシンプルで好みです。</p>
 
+<p>これを使って先程のコードを書き直してみると</p>
+
+<p>```html
+<html>
+<head></p>
+
+<pre><code>&lt;title&gt;Title&lt;/title&gt;
+&lt;!-- jQueryの読み込みが必要 --&gt;
+&lt;script type="text/javascript" src="lib/jquery/jquery.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="main.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+&lt;!--
+$(function() {
+    var element = document.getElementById("ears");
+    element.innerHTML = "∧＿＿∧";
+    element = document.getElementById("face");
+    element.innerHTML = "(・∀・)";
+});
+// --&gt;
+&lt;/script&gt;
+</code></pre>
+
+<p></head>
+<body></p>
+
+<pre><code>&lt;div id="ears"&gt;&lt;/div&gt;
+&lt;div id="face"&gt;&lt;/div&gt;
+</code></pre>
+
+<p></body>
+</html>
+```</p>
+
+<p>処理の記述は<code>&lt;div&gt;</code>より先ですが、HTMLが読み込まれた後に実行されるので、表示結果は</p>
+
+<p>∧＿＿∧
+(・∀・)</p>
+
+<p>となります。</p>
+
 <h2>完全読み込み後実行</h2>
 
-<p>HTMLだけでなく、<strong>全ての関連ファイルを読み込み後に実行</strong>する処理を書くこともできます。</p>
+<p>HTMLだけでなく、<strong>全ての関連ファイルを読み込んだ後に実行</strong>する処理を書くこともできます。</p>
 
 <p>```javascript
 document.onload = function() {</p>
@@ -133,6 +177,8 @@ document.onload = function() {</p>
 
 <p>}
 ```</p>
+
+<p>場合によって上手く使い分けましょう！</p>
 ]]></content>
   </entry>
   
