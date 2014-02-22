@@ -9,7 +9,8 @@
   <meta name="author" content="ばつしい">
 
   
-  <meta name="description" content="今回はMarkdownについてまとめてみます。 Markdownとは Markdown は、文書を記述するための軽量マークアップ言語のひとつである。(Wikipediaより引用) つまり、テキストに構造をつける言語です。 ちなみにこのブログもMarkdownで記述されています。 &hellip;">
+  <meta name="description" content="HTMLページを読み込む際のJavaScriptの実行タイミングは色々あります。
+タイミングをミスると意図したように動作しないことがあるので注意が必要です。 いくつかパターンを見ていきます。 通常実行 特に意識せずにJavaScriptを記述したり読み込んだりすると、書いた順番に処理されます。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +87,166 @@ $(document).ready( function () {
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/22/document-ready/">Document Ready</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-22T00:00:00+09:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="http://vatscy.github.io/images/post/document-ready.jpg" alt="DocumentReady" /></p>
+
+<p>HTMLページを読み込む際のJavaScriptの実行タイミングは色々あります。<br/>
+タイミングをミスると意図したように動作しないことがあるので注意が必要です。</p>
+
+<p>いくつかパターンを見ていきます。</p>
+
+<h2>通常実行</h2>
+
+<p>特に意識せずにJavaScriptを記述したり読み込んだりすると、<strong>書いた順番に処理</strong>されます。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;title&gt;</span>Title<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;main.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!-- ↑このタイミングで実行される --&gt;</span>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!--</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;last-name&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;ナルシソ&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="c1">// --&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!-- ↑このタイミングで実行される --&gt;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;last-name&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;first-name&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!--</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;first-name&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;アナスイ&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="c1">// --&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!-- ↑このタイミングで実行される --&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>上記のHTMLを読み込むと、(main.jsの中身は空として)画面には何が表示されるでしょうか？</p>
+
+<p>正解は、「アナスイ」と表示されます。</p>
+
+<p>これは、<code>var element = document.getElementById("last-name");</code>の時点では<br/>
+まだ<code>&lt;div id="last-name"&gt;&lt;/div&gt;</code>が読み込まれておらず、指定できないからです。</p>
+
+<p>ソースの可読性やMVCといった観点から、HTML内に直接JavaScriptを記述するのは好ましくありません。<br/>
+なので通常は<code>&lt;head&gt;</code>タグ内で外部JSファイルを読み込む形になると思いますが、<br/>
+何も意識せずに書くと、上記のような問題が発生します。</p>
+
+<p>そこで、HTMLが読み込まれた<strong>後</strong>にJavaScriptを実行する必要があります。</p>
+
+<h2>読み込み後実行</h2>
+
+<p><a href="http://jquery.com">jQuery</a>を下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。<br/>
+3パターン挙げますが、全て処理は同じです。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="c1">// 読み込み後に実行する処理</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">().</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="c1">// 読み込み後に実行する処理</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="c1">// 読み込み後に実行する処理</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>個人的には一番下がシンプルで好みです。</p>
+
+<h2>完全読み込み後実行</h2>
+
+<p>HTMLだけでなく、<strong>全ての関連ファイルを読み込み後に実行</strong>する処理を書くこともできます。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// 完全読み込み後に実行する処理</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -232,6 +393,10 @@ $(document).ready( function () {
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/22/document-ready/">Document Ready</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/12/23/markdown-matome/">【Markdown】記法まとめ</a>
