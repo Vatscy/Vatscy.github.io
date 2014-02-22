@@ -115,10 +115,13 @@ $(document).ready( function () {
 
 <div class="entry-content"><p><img src="http://vatscy.github.io/images/post/document-ready.jpg" alt="DocumentReady" /></p>
 
-<p>HTMLページを読み込む際のJavaScriptの実行タイミングは色々あります。<br/>
+<p>HTMLページを読み込む際のJavaScriptの実行タイミングは色々あります。
 タイミングをミスると意図したように動作しないことがあるので注意が必要です。</p>
 
 <p>いくつかパターンを見ていきます。</p>
+
+<!-- more -->
+
 
 <h2>通常実行</h2>
 
@@ -185,18 +188,18 @@ $(document).ready( function () {
 
 <p>正解は、「アナスイ」と表示されます。</p>
 
-<p>これは、<code>var element = document.getElementById("last-name");</code>の時点では<br/>
+<p>これは、<code>var element = document.getElementById("last-name");</code>の時点では
 まだ<code>&lt;div id="last-name"&gt;&lt;/div&gt;</code>が読み込まれておらず、指定できないからです。</p>
 
-<p>ソースの可読性やMVCといった観点から、HTML内に直接JavaScriptを記述するのは好ましくありません。<br/>
-なので通常は<code>&lt;head&gt;</code>タグ内で外部JSファイルを読み込む形になると思いますが、<br/>
+<p>ソースの可読性やMVCといった観点から、HTML内に直接JavaScriptを記述するのは好ましくありません。
+なので通常は<code>&lt;head&gt;</code>タグ内で外部JSファイルを読み込む形になると思いますが、
 何も意識せずに書くと、上記のような問題が発生します。</p>
 
 <p>そこで、HTMLが読み込まれた<strong>後</strong>にJavaScriptを実行する必要があります。</p>
 
 <h2>読み込み後実行</h2>
 
-<p><a href="http://jquery.com">jQuery</a>を下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。<br/>
+<p><a href="http://jquery.com">jQuery</a>を下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。
 3パターン挙げますが、全て処理は同じです。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
