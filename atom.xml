@@ -4,7 +4,7 @@
   <title><![CDATA[ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2014-03-30T21:39:26+09:00</updated>
+  <updated>2014-03-30T21:41:43+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -45,7 +45,8 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git stash</span></code></pre></td></tr></table></div></figure>
 
 
-<p>このコマンドを使うことで、<strong>コミットされていない変更内容を一時退避</strong>することができます。</p>
+<p>このコマンドを使うことで、<strong>コミットされていない変更内容を一時退避</strong>することができます。
+この機能を<strong>スタッシュ</strong>といいます。</p>
 
 <p>これを利用して上記問題を解決してみましょう。</p>
 
@@ -72,7 +73,7 @@
 
 
 <p>だけで変更内容も引き継げるケースもあります。
-まずはチェックアウトを試みてみて、エラーが出たら上記3コマンドを実行しましょう。</p>
+まずはチェックアウトを試みて、エラーが出たら上記3コマンドを実行しましょう。</p>
 
 <h2>コミット済みの変更を引き継ぎつつブランチを変更する</h2>
 
