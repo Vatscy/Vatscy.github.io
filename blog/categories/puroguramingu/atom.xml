@@ -4,7 +4,7 @@
   <title><![CDATA[Category: プログラミング | ばしぶろ]]></title>
   <link href="http://Vatscy.github.io/blog/categories/puroguramingu/atom.xml" rel="self"/>
   <link href="http://Vatscy.github.io/"/>
-  <updated>2014-03-30T21:24:47+09:00</updated>
+  <updated>2014-03-30T21:33:12+09:00</updated>
   <id>http://Vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -12,98 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[【Git】ブランチを切り替え忘れて作業してしまった時の対処法]]></title>
-    <link href="http://Vatscy.github.io/blog/2014/03/30/git-stash/"/>
-    <updated>2014-03-30T21:05:04+09:00</updated>
-    <id>http://Vatscy.github.io/blog/2014/03/30/git-stash</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/git-stash.jpg" alt="GitStash" /></p>
-
-<p>Git管理されたプロジェクトを更新していてこんな経験はありませんか？</p>
-
-<pre><code>- ブランチ切らずに作業してしまった！
-- 違うブランチにコミットしてしまった！
-</code></pre>
-
-<p>Git始めたての頃はよくやってました。最近でもたまにあります。</p>
-
-<p>変更をしてしまった後でブランチを切り替えようとすると、場合によってはエラーが出て切り替えられない場合があります。</p>
-
-<p><em>ブランチを切り替えつつ、変更内容も引き継ぎたい！</em></p>
-
-<p>こんな時は次のコマンドを使います。</p>
-
-<!--more-->
-
-
-<p><code>zsh
-$ git stash
-</code></p>
-
-<p>このコマンドを使うことで、<strong>コミットされていない変更内容を一時退避</strong>することができます。</p>
-
-<p>これを利用して上記問題を解決してみましょう。</p>
-
-<h2>未コミットの変更を引き継ぎつつブランチを変更する</h2>
-
-<p>未コミットの場合は、以下の手順でコマンドを実行します。</p>
-
-<p><code>zsh
-$ git stash
-$ git checkout &lt;切り替えたいブランチ名&gt;
-$ git stash pop
-</code></p>
-
-<p><code>$ git stash pop</code>は、直前に一時退避した変更内容を取り出すコマンドです。</p>
-
-<p>変更を一時退避し、ブランチを切り替え、一時退避していた変更を取り出す、という流れです。</p>
-
-<p>ただ、場合によってはコンフリクト（衝突）が発生する可能性があるので、それは自分で対処しましょう。</p>
-
-<p>また、わざわざこの方法を取らなくても、</p>
-
-<p><code>zsh
-$ git checkout &lt;切り替えたいブランチ名&gt;
-</code></p>
-
-<p>だけで変更内容も引き継げるケースもあります。</p>
-
-<p>まずはチェックアウトを試みてみて、エラーが出たら上記3コマンドを実行しましょう。</p>
-
-<h2>コミット済みの変更を引き継ぎつつブランチを変更する</h2>
-
-<p>「間違えて違うブランチでコミットしてしまった！」といったケースの対処法です。</p>
-
-<p>この対処法は色々あるのですが、ここではスタッシュを使って対処する方法を紹介します。</p>
-
-<p>要は、<strong>未コミットの状態まで戻せれば、上で紹介した手順が踏める</strong>わけです。</p>
-
-<p>よって、以下のコマンドを実行します。</p>
-
-<p><code>zsh
-$ git reset --soft HEAD^
-</code></p>
-
-<p>このコマンドは、最新のコミットを取り消して、未コミットの状態に戻すコマンドです。</p>
-
-<p>ちなみに、<code>--soft</code>は「変更内容は残す」という意味で、<code>HEAD^</code>は「直前のコミット」という意味です。</p>
-
-<p>「コミットした」という事実を取り消すだけで、変更内容自体は未コミットの状態で残ります。</p>
-
-<p>この状態に戻して、上記の未コミットの場合の手順を踏めばいいわけです。</p>
-
-<p>簡単ですね(・∀・)</p>
-
-<h2>まとめ</h2>
-
-<p>この記事を通して何が言いたかったかというと、「<strong>スタッシュ便利だよ</strong>」ということですww</p>
-
-<p>今回はブランチ切り替え時のスタッシュの有用性についてまとめました。</p>
-
-<p>しかしそれ以外にもスタッシュは様々な場面で使えるので、スタッシュという機能があるということを覚えておくときっと役に立つはずです。</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[ページ読み込み時のJavaScriptの実行タイミング]]></title>
