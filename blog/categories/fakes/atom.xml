@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Fakes | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/fakes/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-05-02T21:17:33+09:00</updated>
+  <updated>2014-05-02T21:27:05+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -74,8 +74,9 @@ $ vstest.console.exe TestProject\bin\Debug\TestProject.dll
 
 <p>私は<code>/Enablecodecoverage</code>でカバレッジ計測、<code>/Logger:trx</code>で結果を出力しています。</p>
 
-<p>さて、ここでまた注意ですが、やはり<strong>Premium以上のVisual Studioのインストールが必須となります。</strong>
-FakesはPremium以上がインストールされていないと利用できないんですね&hellip;</p>
+<p>さて、ここでまた注意ですが、やはり<strong>Premium以上のVisual Studioのインストールが必須となります。</strong></p>
+
+<p>FakesはPremium以上がインストールされていないと利用できないんですね&hellip;</p>
 ]]></content>
   </entry>
   
