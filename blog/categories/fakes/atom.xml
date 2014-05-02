@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Fakes | ばしぶろ]]></title>
+  <link href="http://vatscy.github.io/blog/categories/fakes/atom.xml" rel="self"/>
+  <link href="http://vatscy.github.io/"/>
+  <updated>2014-05-02T21:17:33+09:00</updated>
+  <id>http://vatscy.github.io/</id>
+  <author>
+    <name><![CDATA[ばつしい]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[【C#】Fakesを使った単体テストをCUIでビルド・テスト実行する方法]]></title>
+    <link href="http://vatscy.github.io/blog/2014/05/02/build-fakes/"/>
+    <updated>2014-05-02T18:52:01+09:00</updated>
+    <id>http://vatscy.github.io/blog/2014/05/02/build-fakes</id>
+    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/build-fakes.jpg" alt="BuildFakes" /></p>
+
+<p>私は普段Visual Studio 2013 Premiumを使って開発を行なっています。</p>
+
+<p>単体テストを書く際に、モックライブラリとしてPremium以上で利用できる「<strong>Fakes</strong>」を使っています。</p>
+
+<ul>
+<li><a href="http://msdn.microsoft.com/ja-jp/library/hh549175.aspx">Microsoft Fakes を使用したテストでのコードの分離 &ndash; MSDN</a></li>
+</ul>
+
+
+<p>Fakesを使って単体テストを書いていて、そのプロジェクトをJenkinsでビルド・テスト実行しようとした際に少しハマったのでまとめておきます。</p>
+
+<!-- more -->
+
+
+<h2>MSBuildでビルドする</h2>
+
+<p>C#のプロジェクトをビルドする時には<strong>MSBuild</strong>を使います。</p>
+
+<p>Fakesを導入するとビルド時に必要なモックライブラリを生成してくれます。</p>
+
+<p>この時、<strong>Visual StudioのPremium以上がインストールされていないと自動生成されずビルドに失敗してしまいます。</strong></p>
+
+<p>開発している環境と、Jenkinsを置いている環境が異なる場合は注意が必要です。
+私の場合JenkinsサーバにはPremium以上がインストールされていなかったのでこれでハマりました。</p>
+
+<h2>vstest.consoleで単体テストを実行する</h2>
+
+<p>MSTestにFakesを導入して記述した単体テストをコマンドプロンプトから実行します。</p>
+
+<p>この時<em>MSTest.exe</em>では上手く実行できませんでした。
+テストの実行自体はできるのですが、Fakesを使っているテストが失敗してしまいます。</p>
+
+<p>そこで使用するのが、<strong>vstest.console.exe</strong>という実行ファイルです。</p>
+
+<ul>
+<li><a href="http://msdn.microsoft.com/ja-jp/library/jj155800.aspx">コマンド ラインからの VSTest.Console の使用 &ndash; MSDN</a></li>
+</ul>
+
+
+<p>デバッグモードでビルドした際は以下のようなコマンドでテスト実行ができます。</p>
+
+<p><code>
+$ vstest.console.exe TestProject\bin\Debug\TestProject.dll
+</code></p>
+
+<p>オプションに関しては公式サイトを。</p>
+
+<ul>
+<li><a href="http://msdn.microsoft.com/ja-jp/library/jj155796.aspx">VSTest.Console.exe コマンド ライン オプション &ndash; MSDN</a></li>
+</ul>
+
+
+<p>私は<code>/Enablecodecoverage</code>でカバレッジ計測、<code>/Logger:trx</code>で結果を出力しています。</p>
+
+<p>さて、ここでまた注意ですが、やはり<strong>Premium以上のVisual Studioのインストールが必須となります。</strong>
+FakesはPremium以上がインストールされていないと利用できないんですね&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

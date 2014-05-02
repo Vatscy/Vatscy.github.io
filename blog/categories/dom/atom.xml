@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: DOM | ばしぶろ]]></title>
-  <link href="http://Vatscy.github.io/blog/categories/dom/atom.xml" rel="self"/>
-  <link href="http://Vatscy.github.io/"/>
-  <updated>2014-04-08T00:37:17+09:00</updated>
-  <id>http://Vatscy.github.io/</id>
+  <link href="http://vatscy.github.io/blog/categories/dom/atom.xml" rel="self"/>
+  <link href="http://vatscy.github.io/"/>
+  <updated>2014-05-02T21:17:33+09:00</updated>
+  <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[ページ読み込み時のJavaScriptの実行タイミング]]></title>
-    <link href="http://Vatscy.github.io/blog/2014/02/22/document-ready/"/>
+    <link href="http://vatscy.github.io/blog/2014/02/22/document-ready/"/>
     <updated>2014-02-22T12:12:05+09:00</updated>
-    <id>http://Vatscy.github.io/blog/2014/02/22/document-ready</id>
+    <id>http://vatscy.github.io/blog/2014/02/22/document-ready</id>
     <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/document-ready.jpg" alt="DocumentReady" /></p>
 
 <p>HTMLページを読み込む際のJavaScriptの実行タイミングは色々あります。

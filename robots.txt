@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://Vatscy.github.io/sitemap.xml 
+Sitemap: http://vatscy.github.io/sitemap.xml 

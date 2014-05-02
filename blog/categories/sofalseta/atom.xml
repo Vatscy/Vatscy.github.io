@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: その他 | ばしぶろ]]></title>
-  <link href="http://Vatscy.github.io/blog/categories/sofalseta/atom.xml" rel="self"/>
-  <link href="http://Vatscy.github.io/"/>
-  <updated>2014-04-08T00:37:17+09:00</updated>
-  <id>http://Vatscy.github.io/</id>
+  <link href="http://vatscy.github.io/blog/categories/sofalseta/atom.xml" rel="self"/>
+  <link href="http://vatscy.github.io/"/>
+  <updated>2014-05-02T21:17:33+09:00</updated>
+  <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[First Write]]></title>
-    <link href="http://Vatscy.github.io/blog/2013/12/21/first-write/"/>
+    <link href="http://vatscy.github.io/blog/2013/12/21/first-write/"/>
     <updated>2013-12-21T01:20:40+09:00</updated>
-    <id>http://Vatscy.github.io/blog/2013/12/21/first-write</id>
+    <id>http://vatscy.github.io/blog/2013/12/21/first-write</id>
     <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/first-write.jpg" alt="First Write" /></p>
 
 <h2>はじめに</h2>

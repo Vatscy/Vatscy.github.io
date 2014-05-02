@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: jQuery - ばしぶろ</title>
+  <title>【C#】Fakesを使った単体テストをCUIでビルド・テスト実行する方法 - ばしぶろ</title>
   <meta name="author" content="ばつしい">
 
   
-  <meta name="description" content="Category: jQuery">
+  <meta name="description" content="私は普段Visual Studio 2013 Premiumを使って開発を行なっています。 単体テストを書く際に、モックライブラリとしてPremium以上で利用できる「Fakes」を使っています。 Microsoft Fakes を使用したテストでのコードの分離 &ndash; MSDN &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vatscy.github.ioblog/categories/jquery/">
+  <link rel="canonical" href="http://vatscy.github.io/blog/2014/05/02/build-fakes/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -85,36 +85,155 @@ $(document).ready( function () {
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: jQuery</h1>
+    
+      <h1 class="entry-title">【C#】Fakesを使った単体テストをCUIでビルド・テスト実行する方法</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-02T18:52:01+09:00" pubdate data-updated="true">2014年05月02日</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p><img src="http://vatscy.github.io/images/post/build-fakes.jpg" alt="BuildFakes" /></p>
 
-  
-  <h2>2014</h2>
+<p>私は普段Visual Studio 2013 Premiumを使って開発を行なっています。</p>
 
-<article>
-  
-<h1><a href="/blog/2014/02/22/document-ready/">ページ読み込み時のJavaScriptの実行タイミング</a></h1>
-<time datetime="2014-02-22T12:12:05+09:00" pubdate><span class='month'>Feb</span> <span class='day'>22</span> <span class='year'>2014</span></time>
+<p>単体テストを書く際に、モックライブラリとしてPremium以上で利用できる「<strong>Fakes</strong>」を使っています。</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/dom/'>DOM</a>, <a class='category' href='/blog/categories/html/'>HTML</a>, <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/jquery/'>jQuery</a>, <a class='category' href='/blog/categories/puroguramingu/'>プログラミング</a></span>
-</footer>
+<ul>
+<li><a href="http://msdn.microsoft.com/ja-jp/library/hh549175.aspx">Microsoft Fakes を使用したテストでのコードの分離 &ndash; MSDN</a></li>
+</ul>
 
 
-</article>
+<p>Fakesを使って単体テストを書いていて、そのプロジェクトをJenkinsでビルド・テスト実行しようとした際に少しハマったのでまとめておきます。</p>
 
+<!-- more -->
+
+
+<h2>MSBuildでビルドする</h2>
+
+<p>C#のプロジェクトをビルドする時には<strong>MSBuild</strong>を使います。</p>
+
+<p>Fakesを導入するとビルド時に必要なモックライブラリを生成してくれます。</p>
+
+<p>この時、<strong>Visual StudioのPremium以上がインストールされていないと自動生成されずビルドに失敗してしまいます。</strong></p>
+
+<p>開発している環境と、Jenkinsを置いている環境が異なる場合は注意が必要です。
+私の場合JenkinsサーバにはPremium以上がインストールされていなかったのでこれでハマりました。</p>
+
+<h2>vstest.consoleで単体テストを実行する</h2>
+
+<p>MSTestにFakesを導入して記述した単体テストをコマンドプロンプトから実行します。</p>
+
+<p>この時<em>MSTest.exe</em>では上手く実行できませんでした。
+テストの実行自体はできるのですが、Fakesを使っているテストが失敗してしまいます。</p>
+
+<p>そこで使用するのが、<strong>vstest.console.exe</strong>という実行ファイルです。</p>
+
+<ul>
+<li><a href="http://msdn.microsoft.com/ja-jp/library/jj155800.aspx">コマンド ラインからの VSTest.Console の使用 &ndash; MSDN</a></li>
+</ul>
+
+
+<p>デバッグモードでビルドした際は以下のようなコマンドでテスト実行ができます。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ vstest.console.exe TestProject\bin\Debug\TestProject.dll</span></code></pre></td></tr></table></div></figure>
+
+
+<p>オプションに関しては公式サイトを。</p>
+
+<ul>
+<li><a href="http://msdn.microsoft.com/ja-jp/library/jj155796.aspx">VSTest.Console.exe コマンド ライン オプション &ndash; MSDN</a></li>
+</ul>
+
+
+<p>私は<code>/Enablecodecoverage</code>でカバレッジ計測、<code>/Logger:trx</code>で結果を出力しています。</p>
+
+<p>さて、ここでまた注意ですが、やはり<strong>Premium以上のVisual Studioのインストールが必須となります。</strong>
+FakesはPremium以上がインストールされていないと利用できないんですね&hellip;</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">ばつしい</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-02T18:52:01+09:00" pubdate data-updated="true">2014年05月02日</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/c-number/'>C#</a>, <a class='category' href='/blog/categories/fakes/'>Fakes</a>, <a class='category' href='/blog/categories/visual-studio/'>Visual Studio</a>, <a class='category' href='/blog/categories/dan-ti-tesuto/'>単体テスト</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2014/05/02/build-fakes/" data-via="vatscy8241" data-counturl="http://vatscy.github.io/blog/2014/05/02/build-fakes/" >Tweet</a>
+  
+  
+  	<div class="g-plusone" data-size="medium"></div>
+  
+  
+  	<a href="http://b.hatena.ne.jp/entry/http://vatscy.github.io/blog/2014/05/02/build-fakes/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/03/30/git-branch-stash/" title="Previous Post: 【Git】ブランチを切り替え忘れて作業してしまった時の対処法">&laquo; 【Git】ブランチを切り替え忘れて作業してしまった時の対処法</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -222,7 +341,10 @@ $(document).ready( function () {
       var disqus_shortname = 'vatscy';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://vatscy.github.io/blog/2014/05/02/build-fakes/';
+        var disqus_url = 'http://vatscy.github.io/blog/2014/05/02/build-fakes/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
