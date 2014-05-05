@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: HackStore | ばしぶろ]]></title>
+  <link href="http://vatscy.github.io/blog/categories/hackstore/atom.xml" rel="self"/>
+  <link href="http://vatscy.github.io/"/>
+  <updated>2014-05-05T11:05:50+09:00</updated>
+  <id>http://vatscy.github.io/</id>
+  <author>
+    <name><![CDATA[ばつしい]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[【Mac】HackStoreで非公式優良Appをインストール！]]></title>
+    <link href="http://vatscy.github.io/blog/2014/05/05/hackstore/"/>
+    <updated>2014-05-05T10:20:10+09:00</updated>
+    <id>http://vatscy.github.io/blog/2014/05/05/hackstore</id>
+    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/hackstore.jpg" alt="HackStore" /></p>
+
+<p>Apple公式のApp Storeを利用すれば非常に多数のアプリをインストールすることができます。
+Appleが審査しているのでユーザは非常に安心して利用することができます。</p>
+
+<p>しかし、Appleの審査には時間がかかる、基準が厳しいというのが界隈では有名です。
+なので、手続きがめんどくさい！やや訳ありで公式に配布はできない！という理由（多分）で各自のWebサイト上でアプリを提供している方も多数存在します。</p>
+
+<p><em>そんな非公式なアプリの中には非常に優良なアプリが沢山！</em><br/>
+<em>ただ、そんな隠れ優良アプリがWeb上に散在しているとなかなか知るキッカケがない！</em></p>
+
+<p>そこで、今回はそれら非公式優良アプリをまとめている<strong>HackStore</strong>について紹介します。</p>
+
+<!-- more -->
+
+
+<h2>HackStoreのインストール</h2>
+
+<p>【1】始めにApp Store以外からアプリをインストールできるように環境設定を変更します。</p>
+
+<p>システム環境設定 → セキュリティとプライバシー を開き、『ダウンロードしたアプリケーションの実行許可』を<strong>すべてのアプリケーションを許可</strong>に設定します。</p>
+
+<p><img src="http://vatscy.github.io/images/post/hackstore1.png" alt="環境設定" /></p>
+
+<p>【2】以下の公式サイトから.dmgファイルをダウンロード。</p>
+
+<ul>
+<li><a href="http://www.hack-store.com/">HackStore | Free space for Mac apps</a></li>
+</ul>
+
+
+<p>【3】ダウンロードした.dmgファイルをダブルクリックしてインストール完了。</p>
+
+<p><img src="http://vatscy.github.io/images/post/hackstore2.jpg" alt="スタート画面" /></p>
+
+<h2>優良アプリが沢山</h2>
+
+<p>眺めてみると、有名なアプリや、便利そうなアプリが沢山ありました。<br/>
+今後このブログで紹介していきたいと思います。</p>
+
+<p>Macユーザは是非HackStoreをインストールして隠れアプリを発掘してみて下さい。</p>
+]]></content>
+  </entry>
+  
+</feed>
