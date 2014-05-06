@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Visual Studio - ばしぶろ</title>
+  <title>【Mac】言語データを断捨離してみた - ばしぶろ</title>
   <meta name="author" content="ばつしい">
 
   
-  <meta name="description" content="Category: Visual Studio">
+  <meta name="description" content="Macは世界中の多様な言語に対応しています。
+(ここでいう言語とは、「日本語」とか「英語」という意味での言語であって、「Java」などの類のものではない)
+ただ、実際にMacを使う際に使う言語って日本人ならせいぜい日本語と英語くらいですよね。 ということで不要な言語を断捨離してみた。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vatscy.github.ioblog/categories/visual-studio/">
+  <link rel="canonical" href="http://vatscy.github.io/blog/2014/05/06/monolingual/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -85,36 +87,148 @@ $(document).ready( function () {
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Visual Studio</h1>
+    
+      <h1 class="entry-title">【Mac】言語データを断捨離してみた</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-06T22:33:53+09:00" pubdate data-updated="true">2014年05月06日</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p><img src="http://vatscy.github.io/images/post/monolingual1.jpg" alt="monolingual" /></p>
 
-  
-  <h2>2014</h2>
+<p>Macは世界中の多様な言語に対応しています。<br/>
+(ここでいう言語とは、「日本語」とか「英語」という意味での言語であって、「Java」などの類のものではない)<br/>
+ただ、実際にMacを使う際に使う言語って日本人ならせいぜい日本語と英語くらいですよね。</p>
 
-<article>
-  
-<h1><a href="/blog/2014/05/02/build-fakes/">【C#】Fakesを使った単体テストをCUIでビルド・テスト実行する方法</a></h1>
-<time datetime="2014-05-02T18:52:01+09:00" pubdate><span class='month'>May</span> <span class='day'>02</span> <span class='year'>2014</span></time>
+<p>ということで<strong>不要な言語を断捨離してみた</strong>。</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/c-number/'>C#</a>, <a class='category' href='/blog/categories/fakes/'>Fakes</a>, <a class='category' href='/blog/categories/visual-studio/'>Visual Studio</a>, <a class='category' href='/blog/categories/tesuto/'>テスト</a>, <a class='category' href='/blog/categories/puroguramingu/'>プログラミング</a></span>
-</footer>
+<!-- more -->
 
 
-</article>
+<p>今回は<strong>monolingual</strong>という無料アプリを使います。</p>
 
+<h2>monolingualのインストール</h2>
+
+<p>以前紹介したHackStoreからインストールします。</p>
+
+<ul>
+<li><a href="/blog/2014/05/05/hackstore/">【Mac】HackStoreで非公式優良Appをインストール! &ndash; ばしぶろ</a></li>
+</ul>
+
+
+<p>HackStoreを開き、右上の検索バーに「monolingual」と入力し検索。</p>
+
+<p><img src="http://vatscy.github.io/images/post/monolingual2.jpg" alt="monolingual" /></p>
+
+<p>「DOWNROAD」をクリックするとダウンロードが開始され、自動的にインストールまで行われます。</p>
+
+<h2>monolingualを使ってみる</h2>
+
+<p>アプリケーションフォルダからmonolingualを起動。<br/>
+するといきなり削除する言語を問うてきます。なるほど、シンプル。</p>
+
+<p><img src="http://vatscy.github.io/images/post/monolingual3.jpg" alt="monolingual" /></p>
+
+<p>一番下に「日本語」と「英語」があります。
+私はなんとなくChineseも残しましたｗ</p>
+
+<p><strong>削除する言語を選択する</strong>ことに注意！<br/>
+ミスると以下の警告の通り、OSの再インスコが必要になるみたいです。</p>
+
+<p><img src="http://vatscy.github.io/images/post/monolingual4.jpg" alt="monolingual" /></p>
+
+<p>まぁ断捨離は思い切ってやるもんなんで光の速さで削除ボタンをクリック。<br/>
+すると言語データの削除が始まります。</p>
+
+<p><img src="http://vatscy.github.io/images/post/monolingual5.jpg" alt="monolingual" /></p>
+
+<p>断捨離完了！<strong>2.42GB</strong>もあるんですね&hellip;侮り難し言語データ。</p>
+
+<p>これで動作が軽くなるのかは知らないけど、何となく無駄が省けてスッキリしました！</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">ばつしい</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-06T22:33:53+09:00" pubdate data-updated="true">2014年05月06日</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/app/'>App</a>, <a class='category' href='/blog/categories/hackstore/'>HackStore</a>, <a class='category' href='/blog/categories/mac/'>Mac</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2014/05/06/monolingual/" data-via="vatscy8241" data-counturl="http://vatscy.github.io/blog/2014/05/06/monolingual/" >Tweet</a>
+  
+  
+  	<div class="g-plusone" data-size="medium"></div>
+  
+  
+  	<a href="http://b.hatena.ne.jp/entry/http://vatscy.github.io/blog/2014/05/06/monolingual/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/05/05/hackstore/" title="Previous Post: 【Mac】HackStoreで非公式優良Appをインストール！">&laquo; 【Mac】HackStoreで非公式優良Appをインストール！</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -222,7 +336,10 @@ $(document).ready( function () {
       var disqus_shortname = 'vatscy';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://vatscy.github.io/blog/2014/05/06/monolingual/';
+        var disqus_url = 'http://vatscy.github.io/blog/2014/05/06/monolingual/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

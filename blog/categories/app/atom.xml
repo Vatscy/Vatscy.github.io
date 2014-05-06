@@ -4,7 +4,7 @@
   <title><![CDATA[Category: App | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/app/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-05-05T11:15:07+09:00</updated>
+  <updated>2014-05-06T23:27:22+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[【Mac】言語データを断捨離してみた]]></title>
+    <link href="http://vatscy.github.io/blog/2014/05/06/monolingual/"/>
+    <updated>2014-05-06T22:33:53+09:00</updated>
+    <id>http://vatscy.github.io/blog/2014/05/06/monolingual</id>
+    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/monolingual1.jpg" alt="monolingual" /></p>
+
+<p>Macは世界中の多様な言語に対応しています。<br/>
+(ここでいう言語とは、「日本語」とか「英語」という意味での言語であって、「Java」などの類のものではない)<br/>
+ただ、実際にMacを使う際に使う言語って日本人ならせいぜい日本語と英語くらいですよね。</p>
+
+<p>ということで<strong>不要な言語を断捨離してみた</strong>。</p>
+
+<!-- more -->
+
+
+<p>今回は<strong>monolingual</strong>という無料アプリを使います。</p>
+
+<h2>monolingualのインストール</h2>
+
+<p>以前紹介したHackStoreからインストールします。</p>
+
+<ul>
+<li><a href="/blog/2014/05/05/hackstore/">【Mac】HackStoreで非公式優良Appをインストール! &ndash; ばしぶろ</a></li>
+</ul>
+
+
+<p>HackStoreを開き、右上の検索バーに「monolingual」と入力し検索。</p>
+
+<p><img src="http://vatscy.github.io/images/post/monolingual2.jpg" alt="monolingual" /></p>
+
+<p>「DOWNROAD」をクリックするとダウンロードが開始され、自動的にインストールまで行われます。</p>
+
+<h2>monolingualを使ってみる</h2>
+
+<p>アプリケーションフォルダからmonolingualを起動。<br/>
+するといきなり削除する言語を問うてきます。なるほど、シンプル。</p>
+
+<p><img src="http://vatscy.github.io/images/post/monolingual3.jpg" alt="monolingual" /></p>
+
+<p>一番下に「日本語」と「英語」があります。
+私はなんとなくChineseも残しましたｗ</p>
+
+<p><strong>削除する言語を選択する</strong>ことに注意！<br/>
+ミスると以下の警告の通り、OSの再インスコが必要になるみたいです。</p>
+
+<p><img src="http://vatscy.github.io/images/post/monolingual4.jpg" alt="monolingual" /></p>
+
+<p>まぁ断捨離は思い切ってやるもんなんで光の速さで削除ボタンをクリック。<br/>
+すると言語データの削除が始まります。</p>
+
+<p><img src="http://vatscy.github.io/images/post/monolingual5.jpg" alt="monolingual" /></p>
+
+<p>断捨離完了！<strong>2.42GB</strong>もあるんですね&hellip;侮り難し言語データ。</p>
+
+<p>これで動作が軽くなるのかは知らないけど、何となく無駄が省けてスッキリしました！</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[【Mac】HackStoreで非公式優良Appをインストール！]]></title>
@@ -36,7 +95,7 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
 
 <h2>HackStoreのインストール</h2>
 
-<p>【1】始めにApp Store以外からアプリをインストールできるように環境設定を変更します。</p>
+<p>【1】App Store以外からアプリをインストールできるように環境設定を変更します。</p>
 
 <p>システム環境設定 → セキュリティとプライバシー を開き、『ダウンロードしたアプリケーションの実行許可』を<strong>すべてのアプリケーションを許可</strong>に設定します。</p>
 
