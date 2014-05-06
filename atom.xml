@@ -4,7 +4,7 @@
   <title><![CDATA[ばしぶろ]]></title>
   <link href="http://vatscy.github.io/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-05-06T23:29:41+09:00</updated>
+  <updated>2014-05-06T23:32:30+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -43,7 +43,7 @@
 
 <p><img src="http://vatscy.github.io/images/post/monolingual2.jpg" alt="monolingual" /></p>
 
-<p>「DOWNROAD」をクリックするとダウンロードが開始され、自動的にインストールまで行われます。</p>
+<p>「DOWNLOAD」をクリックするとダウンロードが開始され、自動的にインストールまで行われます。</p>
 
 <h2>monolingualを使ってみる</h2>
 
@@ -52,8 +52,9 @@
 
 <p><img src="http://vatscy.github.io/images/post/monolingual3.jpg" alt="monolingual" /></p>
 
-<p>一番下に「日本語」と「英語」があります。
-私はなんとなくChineseも残しましたｗ</p>
+<p>一番下に「日本語」と「英語」があります。<br/>
+あと上の方にEnglishが何個かあったのでそれも残しておく。<br/>
+ついでにChineseも残す(何となく)</p>
 
 <p><strong>削除する言語を選択する</strong>ことに注意！<br/>
 ミスると以下の警告の通り、OSの再インスコが必要になるみたいです。</p>
