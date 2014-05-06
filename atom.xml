@@ -4,7 +4,7 @@
   <title><![CDATA[ばしぶろ]]></title>
   <link href="http://vatscy.github.io/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-05-06T23:27:22+09:00</updated>
+  <updated>2014-05-06T23:29:41+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -20,9 +20,8 @@
     <id>http://vatscy.github.io/blog/2014/05/06/monolingual</id>
     <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/monolingual1.jpg" alt="monolingual" /></p>
 
-<p>Macは世界中の多様な言語に対応しています。<br/>
-(ここでいう言語とは、「日本語」とか「英語」という意味での言語であって、「Java」などの類のものではない)<br/>
-ただ、実際にMacを使う際に使う言語って日本人ならせいぜい日本語と英語くらいですよね。</p>
+<p>Macは世界中の多様な言語に対応しています。(「日本語」とか「英語」とか)<br/>
+ただ実際に使う言語って日本人ならせいぜい日本語と英語くらいですよね。</p>
 
 <p>ということで<strong>不要な言語を断捨離してみた</strong>。</p>
 
