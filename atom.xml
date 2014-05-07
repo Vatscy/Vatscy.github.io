@@ -4,7 +4,7 @@
   <title><![CDATA[ばしぶろ]]></title>
   <link href="http://vatscy.github.io/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-05-06T23:34:37+09:00</updated>
+  <updated>2014-05-07T23:03:49+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -53,8 +53,11 @@
 <p><img src="http://vatscy.github.io/images/post/monolingual3.jpg" alt="monolingual" /></p>
 
 <p>一番下に「日本語」と「英語」があります。<br/>
-あと上の方にEnglishが何個かあったのでそれも残しておく。<br/>
+あと上の方にEnglishが何個かありますが、最低限United Statesは残します。<br/>
 ついでにChineseも残す(何となく)</p>
+
+<p>アプリによっては、言語設定によって不具合が起こる場合があるので注意してください。
+(English(United States)でないとショートカットが使えない、など)</p>
 
 <p><strong>削除する言語を選択する</strong>ことに注意！<br/>
 ミスると以下の警告の通り、OSの再インスコが必要になるみたいです。</p>
