@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>【Mac】HackStoreで非公式優良Appをインストール！ - ばしぶろ</title>
+  <title>正規表現を解析して可視化してくれるサイトが凄すぎる件 - ばしぶろ</title>
   <meta name="author" content="ばつしい">
 
   
-  <meta name="description" content="Apple公式のApp Storeを利用すれば非常に多数のアプリをインストールすることができます。
-Appleが審査しているのでユーザは非常に安心して利用することができます。 しかし、Appleの審査には時間がかかる、基準が厳しいというのが界隈では有名です。
-なので、手続きがめんどくさい！ &hellip;">
+  <meta name="description" content="ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、正規表現そのものが何を意味しているのか、どんな文字列を期待しているのかを解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vatscy.github.io/blog/2014/05/05/hackstore/">
+  <link rel="canonical" href="http://vatscy.github.io/blog/2014/05/17/regexper/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -91,7 +89,7 @@ $(document).ready( function () {
   
   <header>
     
-      <h1 class="entry-title">【Mac】HackStoreで非公式優良Appをインストール！</h1>
+      <h1 class="entry-title">正規表現を解析して可視化してくれるサイトが凄すぎる件</h1>
     
     
       <p class="meta">
@@ -107,54 +105,69 @@ $(document).ready( function () {
   
 
 
-<time datetime="2014-05-05T10:20:10+09:00" pubdate data-updated="true">2014年05月05日</time>
+<time datetime="2014-05-17T08:10:37+09:00" pubdate data-updated="true">2014年05月17日</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p><img src="http://vatscy.github.io/images/post/hackstore.jpg" alt="HackStore" /></p>
+<div class="entry-content"><p><img src="http://vatscy.github.io/images/post/regexper1.jpg" alt="regexper" /></p>
 
-<p>Apple公式のApp Storeを利用すれば非常に多数のアプリをインストールすることができます。
-Appleが審査しているのでユーザは非常に安心して利用することができます。</p>
+<p>ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、<em>正規表現そのものが何を意味しているのか、どんな文字列を期待しているのか</em>を解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。</p>
 
-<p>しかし、Appleの審査には時間がかかる、基準が厳しいというのが界隈では有名です。
-なので、手続きがめんどくさい！やや訳ありで公式に配布はできない！という理由（多分）で各自のWebサイト上でアプリを提供している方も多数存在します。</p>
+<p>僕は馬鹿なので正規表現を見ても何が何だかさっぱりわかりません。<br/>
+例えばこれ。</p>
 
-<p><em>そんな非公式なアプリの中には非常に優良なアプリが沢山！</em><br/>
-<em>ただ、そんな隠れ優良アプリがWeb上に散在しているとなかなか知るキッカケがない！</em></p>
-
-<p>そこで、今回はそれら非公式優良アプリをまとめている<strong>HackStore</strong>について紹介します。</p>
-
-<!-- more -->
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>^[a-zA-Z0-9-_.]@([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,4}$</span></code></pre></td></tr></table></div></figure>
 
 
-<h2>HackStoreのインストール</h2>
+<p>いつかはマスターしたいけど&hellip;今は楽したい。<br/>
+そう思ってググってみると&hellip;ありました！</p>
 
-<p>【1】App Store以外からアプリをインストールできるように環境設定を変更します。</p>
+<!--more-->
 
-<p>システム環境設定 → セキュリティとプライバシー を開き、『ダウンロードしたアプリケーションの実行許可』を<strong>すべてのアプリケーションを許可</strong>に設定します。</p>
 
-<p><img src="http://vatscy.github.io/images/post/hackstore1.png" alt="環境設定" /></p>
-
-<p>【2】以下の公式サイトから.dmgファイルをダウンロード。</p>
+<p>それがこちら。</p>
 
 <ul>
-<li><a href="http://www.hack-store.com/">HackStore | Free space for Mac apps</a></li>
+<li><a href="http://www.regexper.com/">Regexper</a></li>
 </ul>
 
 
-<p>【3】ダウンロードした.dmgファイルをダブルクリックしてインストール完了。</p>
+<p>正規表現を入力して Display をクリックすると、その正規表現が表す内容を図にして表示してくれます。</p>
 
-<p><img src="http://vatscy.github.io/images/post/hackstore2.jpg" alt="スタート画面" /></p>
+<p>例えば先程の正規表現は、当記事の一番上の画像のように表示されます。<br/>
+これはメールアドレスを判定する簡易的な正規表現です。</p>
 
-<h2>優良アプリが沢山</h2>
+<h2>使ってみる</h2>
 
-<p>眺めてみると、有名なアプリや、便利そうなアプリが沢山ありました。<br/>
-今後このブログで紹介していきたいと思います。</p>
+<p>こちらの正規表現を試してみましょう。</p>
 
-<p>Macユーザは是非HackStoreをインストールして隠れアプリを発掘してみて下さい。</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(^(?!090|080|070)(^\d{2,5}?\-\d{1,4}?\-\d{4}$|^[\d\-]{12}$))|(^(090|080|070)(\-\d{4}\-\d{4}|[\d-]{13})$)|(^0120(\-\d{2,3}\-\d{3,4}|[\d\-]{12})$)|(^0080\-\d{3}\-\d{4})</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>090</code>とか<code>080</code>とかあるので電話番号の正規表現です。</p>
+
+<ul>
+<li>フォームに正規表現を入力</li>
+</ul>
+
+
+<p><img src="http://vatscy.github.io/images/post/regexper2.jpg" alt="regexper" /></p>
+
+<ul>
+<li>Displayをクリックすると図が表示される</li>
+</ul>
+
+
+<p><img src="http://vatscy.github.io/images/post/regexper3.jpg" alt="regexper" /></p>
+
+<p>簡単でわかりやすい！</p>
+
+<p>GitHubで開発しているみたいです。こんなサイトを作りたいなぁ&hellip;</p>
 </div>
 
 
@@ -177,12 +190,12 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
   
 
 
-<time datetime="2014-05-05T10:20:10+09:00" pubdate data-updated="true">2014年05月05日</time>
+<time datetime="2014-05-17T08:10:37+09:00" pubdate data-updated="true">2014年05月17日</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/app/'>App</a>, <a class='category' href='/blog/categories/hackstore/'>HackStore</a>, <a class='category' href='/blog/categories/mac/'>Mac</a>
+    <a class='category' href='/blog/categories/websaito/'>Webサイト</a>, <a class='category' href='/blog/categories/puroguramingu/'>プログラミング</a>
   
 </span>
 
@@ -191,13 +204,13 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
     
       <div class="sharing">
   
-  	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2014/05/05/hackstore/" data-via="vatscy8241" data-counturl="http://vatscy.github.io/blog/2014/05/05/hackstore/" >Tweet</a>
+  	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2014/05/17/regexper/" data-via="vatscy8241" data-counturl="http://vatscy.github.io/blog/2014/05/17/regexper/" >Tweet</a>
   
   
   	<div class="g-plusone" data-size="medium"></div>
   
   
-  	<a href="http://b.hatena.ne.jp/entry/http://vatscy.github.io/blog/2014/05/05/hackstore/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  	<a href="http://b.hatena.ne.jp/entry/http://vatscy.github.io/blog/2014/05/17/regexper/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
   
   
     <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
@@ -207,10 +220,8 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/05/02/build-fakes/" title="Previous Post: 【C#】Fakesを使った単体テストをCUIでビルド・テスト実行する方法">&laquo; 【C#】Fakesを使った単体テストをCUIでビルド・テスト実行する方法</a>
+        <a class="basic-alignment left" href="/blog/2014/05/06/monolingual/" title="Previous Post: 【Mac】言語データを断捨離してみた">&laquo; 【Mac】言語データを断捨離してみた</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/05/06/monolingual/" title="Next Post: 【Mac】言語データを断捨離してみた">【Mac】言語データを断捨離してみた &raquo;</a>
       
     </p>
   </footer>
@@ -329,8 +340,8 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://vatscy.github.io/blog/2014/05/05/hackstore/';
-        var disqus_url = 'http://vatscy.github.io/blog/2014/05/05/hackstore/';
+        var disqus_identifier = 'http://vatscy.github.io/blog/2014/05/17/regexper/';
+        var disqus_url = 'http://vatscy.github.io/blog/2014/05/17/regexper/';
         var disqus_script = 'embed.js';
       
     (function () {

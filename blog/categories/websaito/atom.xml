@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Webサイト | ばしぶろ]]></title>
+  <link href="http://vatscy.github.io/blog/categories/websaito/atom.xml" rel="self"/>
+  <link href="http://vatscy.github.io/"/>
+  <updated>2014-05-17T10:17:23+09:00</updated>
+  <id>http://vatscy.github.io/</id>
+  <author>
+    <name><![CDATA[ばつしい]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[正規表現を解析して可視化してくれるサイトが凄すぎる件]]></title>
+    <link href="http://vatscy.github.io/blog/2014/05/17/regexper/"/>
+    <updated>2014-05-17T08:10:37+09:00</updated>
+    <id>http://vatscy.github.io/blog/2014/05/17/regexper</id>
+    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/regexper1.jpg" alt="regexper" /></p>
+
+<p>ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、<em>正規表現そのものが何を意味しているのか、どんな文字列を期待しているのか</em>を解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。</p>
+
+<p>僕は馬鹿なので正規表現を見ても何が何だかさっぱりわかりません。<br/>
+例えばこれ。</p>
+
+<p><code>
+^[a-zA-Z0-9-_.]@([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,4}$
+</code></p>
+
+<p>いつかはマスターしたいけど&hellip;今は楽したい。<br/>
+そう思ってググってみると&hellip;ありました！</p>
+
+<!--more-->
+
+
+<p>それがこちら。</p>
+
+<ul>
+<li><a href="http://www.regexper.com/">Regexper</a></li>
+</ul>
+
+
+<p>正規表現を入力して Display をクリックすると、その正規表現が表す内容を図にして表示してくれます。</p>
+
+<p>例えば先程の正規表現は、当記事の一番上の画像のように表示されます。<br/>
+これはメールアドレスを判定する簡易的な正規表現です。</p>
+
+<h2>使ってみる</h2>
+
+<p>こちらの正規表現を試してみましょう。</p>
+
+<p><code>
+(^(?!090|080|070)(^\d{2,5}?\-\d{1,4}?\-\d{4}$|^[\d\-]{12}$))|(^(090|080|070)(\-\d{4}\-\d{4}|[\d-]{13})$)|(^0120(\-\d{2,3}\-\d{3,4}|[\d\-]{12})$)|(^0080\-\d{3}\-\d{4})
+</code></p>
+
+<p><code>090</code>とか<code>080</code>とかあるので電話番号の正規表現です。</p>
+
+<ul>
+<li>フォームに正規表現を入力</li>
+</ul>
+
+
+<p><img src="http://vatscy.github.io/images/post/regexper2.jpg" alt="regexper" /></p>
+
+<ul>
+<li>Displayをクリックすると図が表示される</li>
+</ul>
+
+
+<p><img src="http://vatscy.github.io/images/post/regexper3.jpg" alt="regexper" /></p>
+
+<p>簡単でわかりやすい！</p>
+
+<p>GitHubで開発しているみたいです。こんなサイトを作りたいなぁ&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>
