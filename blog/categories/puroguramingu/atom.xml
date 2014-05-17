@@ -4,7 +4,7 @@
   <title><![CDATA[Category: プログラミング | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/puroguramingu/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-05-17T10:17:23+09:00</updated>
+  <updated>2014-05-17T10:22:05+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -70,6 +70,10 @@
 
 
 <p><img src="http://vatscy.github.io/images/post/regexper3.jpg" alt="regexper" /></p>
+
+<p>見方としては、左から線をたどっていって、分岐があれば好きな方に行ける。
+最終的に一番右に到達するまでに出てきた文字をつなげたような文字列を期待しています。
+(解説下手だけどこの記事を読んでる人ならわかると信じたい)</p>
 
 <p>簡単でわかりやすい！</p>
 
