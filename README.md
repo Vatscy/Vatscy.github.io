@@ -14,6 +14,14 @@
 
 - /source/_posts内に新たなMarkdownファイルが生成される。
 
+### 新規ページ作成
+
+```zsh
+$ rake new_page
+```
+
+- /source/に新たにフォルダが作られ、indexが作成される。
+
 ### ブログページ生成
 
 ```zsh

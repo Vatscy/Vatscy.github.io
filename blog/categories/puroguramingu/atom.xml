@@ -4,7 +4,7 @@
   <title><![CDATA[Category: プログラミング | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/puroguramingu/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-05-18T01:01:44+09:00</updated>
+  <updated>2014-06-09T23:12:13+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -12,6 +12,213 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[【ASP.NET】APIのルーティングを設定する2つの方法【WebAPI】]]></title>
+    <link href="http://vatscy.github.io/blog/2014/06/08/api-routing/"/>
+    <updated>2014-06-08T22:31:27+09:00</updated>
+    <id>http://vatscy.github.io/blog/2014/06/08/api-routing</id>
+    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/api-routing.jpg" alt="WebAPI" /></p>
+
+<p>ASP.NET Web APIでルーティングを行う方法は大きく分けて2つあります。<br/>
+(私が知る限りでは)</p>
+
+<p>今回はその2つの方法について解説していきます。</p>
+
+<!-- more -->
+
+
+<h2>そもそもルーティングとは</h2>
+
+<p>ASP.NET Web APIは、その名の通りAPIを提供するためのフレームワークです。<br/>
+実装としては、Controllerクラスを作り、その中にメソッドを定義します。<br/>
+基本的にはメソッド1つに対してAPI1本が対応します。</p>
+
+<p>ルーティングとは、あるURLにリクエストが来たときにどのAPIを呼び出すか、すなわち、<strong>リクエストURLと、呼び出すメソッドを結びつけること</strong>です。</p>
+
+<h2>方法1: WebApiConfigで定義する</h2>
+
+<p>ASP.NET Web APIのプロジェクトを新規作成した場合、このルーティング方法がデフォルトで採用されていると思います。</p>
+
+<p>WebApiConfig.csで以下のように定義します。
+```csharp
+public static class WebApiConfig
+{</p>
+
+<pre><code>public static void Register(HttpConfiguration config)
+{
+    config.Routes.MapHttpRoute(
+        name: "DefaultApi",
+        routeTemplate: "api/{controller}/{action}/{id}",
+        defaults: new { id = RouteParameter.Optional }
+    );
+}
+</code></pre>
+
+<p>}
+<code>``
+Registerというメソッド内でconfigにルーティングを追加します。  
+例えば上記の例だと、</code><a href="http://sample.jp/api/profile/get/5">http://sample.jp/api/profile/get/5</a><code>というURLをコールすると、**ProfileController**の**Get**メソッドが呼び出されます。  
+</code>{controller}<code>の部分がコントローラ名、</code>{action}<code>の部分がメソッド名に対応するわけです。  
+ちなみに</code>config.Routes.MapHttpRoute`を複数回呼び出すことで規則を複数定義することができます。その場合、先に定義した規則が優先して適用されます。</p>
+
+<p>メソッドの実装はこちら。</p>
+
+<p>```csharp
+public class ProfileController : ApiController
+{</p>
+
+<pre><code>[HttpGet]
+public HttpResponseMessage Get(int id)
+{
+    ... 
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>ルーティング設定に含まれている<code>id</code>は何かというと、メソッドに渡すパラメータです。<br/>
+メソッドで上記のようにパラメータを受け取るように定義しておけば、URLの<code>{id}</code>の部分に指定した値を受け取ることができます。</p>
+
+<p>ルーティング設定の中の
+<code>
+defaults: new { id = RouteParameter.Optional }
+</code>
+は、ルーティング時のデフォルト値の設定になります。<br/>
+<code>RouteParameter.Optional</code>は「<em>このパラメータは省略可能である</em>」ことを意味します。<br/>
+つまり<code>{id}</code>はあってもなくてもいいという意味です。</p>
+
+<p>ちなみにデフォルトとして以下のように設定することもできます。
+<code>
+defaults: new { controller = "profile", action = "get", id = RouteParameter.Optional }
+</code>
+このように設定すると、<code>{controller}</code>や<code>{action}</code>を省略することが可能になります。<br/>
+つまり<code>http://sample.jp/api/</code>というURLでアクセスすると勝手にProfileControllerのGetメソッドが呼ばれるわけです。</p>
+
+<h3>アクション名を指定する</h3>
+
+<p>例えば、「<strong>メソッド名は具体的に記述する</strong>」というチームルールがあったとします。<br/>
+しかし、例えば以下のようなメソッドがあったとします。
+```csharp
+public class ProfileController : ApiController
+{</p>
+
+<pre><code>[HttpGet]
+public HttpResponseMessage FindProfileByConsumerId(int id)
+{
+    ... 
+}
+</code></pre>
+
+<p>}
+<code>``
+このとき、APIのURLは</code><a href="http://sample.jp/api/profile/findProfileByConsumerId/5">http://sample.jp/api/profile/findProfileByConsumerId/5</a>`となってしまいます。長い&hellip;</p>
+
+<p>これを回避するために、ルーティングする文字列を別に指定することができます。<br/>
+以下のように<code>ActionName</code>属性をメソッドに付与します。
+```csharp
+[HttpGet]
+[ActionName(&ldquo;get&rdquo;)]
+public HttpResponseMessage FindProfileByConsumerId(int id)
+{</p>
+
+<pre><code>... 
+</code></pre>
+
+<p>}
+<code>``
+こうすると</code><a href="http://sample.jp/api/profile/get/5">http://sample.jp/api/profile/get/5</a><code>というURLで</code>FindProfileByConsumerId`メソッドを呼び出すことができます。</p>
+
+<h2>方法2: Attributeで定義する</h2>
+
+<p>この方法は<strong>全てのメソッドにルーティング方法を明記する</strong>方法です。</p>
+
+<p>まずWebApiConfig.csで以下のように宣言します。
+```csharp
+public static class WebApiConfig
+{</p>
+
+<pre><code>public static void Register(HttpConfiguration config)
+{
+    config.MapHttpAttributeRoutes();
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>次にメソッドに<code>Route</code>属性を付与します。
+```csharp
+public class ProfileController : ApiController
+{</p>
+
+<pre><code>[HttpGet]
+[Route("api/profile/{id}")]
+public HttpResponseMessage FindProfileByConsumerId(int id)
+{
+    ... 
+}
+</code></pre>
+
+<p>}
+<code>``
+このように定義すると、</code><a href="http://sample.jp/api/profile/5">http://sample.jp/api/profile/5</a>`に対してこのメソッドが呼ばれるようになります。</p>
+
+<p>APIを複数実装(メソッドを追加)する場合は必ず<code>Route</code>属性を付与します。
+```csharp
+public class ProfileController : ApiController
+{</p>
+
+<pre><code>[HttpGet]
+[Route("api/profile/{id}")]
+public HttpResponseMessage FindProfileByConsumerId(int id)
+{
+    ... 
+}
+
+[HttpPost]
+[Route("api/profile/update")]
+public void UpdateConsumerProfile(Profile profile)
+{
+    ...
+}
+</code></pre>
+
+<p>}
+<code>
+ただ、上のように毎回`api/profile/`の部分を書いていくのは面倒だしメンテナンスしづらい。  
+そういった場合は`RoutePrefix`属性で共通化します。
+</code>csharp
+[RoutePrefix(&ldquo;api/profile&rdquo;)]
+public class ProfileController : ApiController
+{</p>
+
+<pre><code>[HttpGet]
+[Route("{id}")]
+public HttpResponseMessage FindProfileByConsumerId(int id)
+{
+    ... 
+}
+
+[HttpPost]
+[Route("update")]
+public void UpdateConsumerProfile(Profile profile)
+{
+    ...
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<h2>まとめ</h2>
+
+<p>ルーティングする際には基本的には上で説明した2パターンのどちらかを採用するのがいいかなーと思います。</p>
+
+<p>ちなみに上記2パターンを併用することもできます。そこはお好みで。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[正規表現を解析して可視化してくれるサイトが凄すぎる件]]></title>
@@ -296,175 +503,6 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 <p>なのでまずは<strong>オブジェクト指向設計</strong>から始めてみようと思います。</p>
 
 <p>何か最近、自分に不足していると感じること、学びたいことが沢山ありすぎてつらいですが、広く手を出して浅くなってしまうのは無個性すぎるので、スコープを狭めて深く学び、個性を出していきたい。と言っても基礎が薄いので固めなければならない、という状況で歯がゆい。しばらくは足掻きたいと思います。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ページ読み込み時のJavaScriptの実行タイミング]]></title>
-    <link href="http://vatscy.github.io/blog/2014/02/22/document-ready/"/>
-    <updated>2014-02-22T12:12:05+09:00</updated>
-    <id>http://vatscy.github.io/blog/2014/02/22/document-ready</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/document-ready.jpg" alt="DocumentReady" /></p>
-
-<p>HTMLページを読み込む際のJavaScriptの実行タイミングは色々あります。
-タイミングをミスると意図したように動作しないことがあるので注意が必要です。</p>
-
-<p>いくつかパターンを見ていきます。</p>
-
-<!-- more -->
-
-
-<h2>通常実行</h2>
-
-<p>特に意識せずにJavaScriptを記述したり読み込んだりすると、<strong>書いた順番に処理</strong>されます。</p>
-
-<p>```html
-<html>
-<head></p>
-
-<pre><code>&lt;title&gt;Title&lt;/title&gt;
-&lt;script type="text/javascript" src="main.js"&gt;&lt;/script&gt;
-&lt;!-- ↑このタイミングで実行される --&gt;
-</code></pre>
-
-<p></head>
-<body></p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-&lt;!--
-var element = document.getElementById("ears");
-element.innerHTML = "∧＿＿∧";
-// --&gt;
-&lt;/script&gt;
-&lt;!-- ↑このタイミングで実行される --&gt;
-
-&lt;div id="ears"&gt;&lt;/div&gt;
-&lt;div id="face"&gt;&lt;/div&gt;
-
-&lt;script type="text/javascript"&gt;
-&lt;!--
-var element = document.getElementById("face");
-element.innerHTML = "(・∀・)";
-// --&gt;
-&lt;/script&gt;
-&lt;!-- ↑このタイミングで実行される --&gt;
-</code></pre>
-
-<p></body>
-</html>
-```</p>
-
-<p>上記のHTMLを読み込むと、(main.jsの中身は空として)画面には何が表示されるでしょうか？</p>
-
-<p>正解は、</p>
-
-<p>(・∀・)</p>
-
-<p>と表示されます。</p>
-
-<p>耳が表示されないのは
-<code>javascript
-var element = document.getElementById("ears");
-</code>
-の時点ではまだ
-```html</p>
-
-<div id="ears"></div>
-
-
-<p>```
-が読み込まれておらず、指定できないからです。</p>
-
-<p>ソースの可読性やMVCといった観点から、HTML内に直接JavaScriptを記述するのは好ましくありません(持論)。
-なので通常は<code>&lt;head&gt;</code>タグ内で外部JSファイルを読み込む形になると思いますが、
-何も意識せずに書くと、上記のような問題が発生します。</p>
-
-<p>そこで、HTMLが読み込まれた<strong>後</strong>にJavaScriptを実行する必要があります。</p>
-
-<h2>読み込み後実行</h2>
-
-<p><a href="http://jquery.com">jQuery</a>を用いて下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。
-3パターン挙げますが、全て処理は同じです。</p>
-
-<p>```javascript
-$(document).ready(function(){</p>
-
-<pre><code>// 読み込み後に実行する処理
-</code></pre>
-
-<p>});</p>
-
-<p>$().ready(function(){</p>
-
-<pre><code>// 読み込み後に実行する処理
-</code></pre>
-
-<p>});</p>
-
-<p>$(function(){</p>
-
-<pre><code>// 読み込み後に実行する処理
-</code></pre>
-
-<p>});
-```</p>
-
-<p>個人的には一番下がシンプルで好みです。</p>
-
-<p>これを使って先程のコードを書き直してみると</p>
-
-<p>```html
-<html>
-<head></p>
-
-<pre><code>&lt;title&gt;Title&lt;/title&gt;
-&lt;!-- jQueryの読み込みが必要 --&gt;
-&lt;script type="text/javascript" src="lib/jquery/jquery.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="main.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
-&lt;!--
-$(function() {
-    var element = document.getElementById("ears");
-    element.innerHTML = "∧＿＿∧";
-    element = document.getElementById("face");
-    element.innerHTML = "(・∀・)";
-});
-// --&gt;
-&lt;/script&gt;
-</code></pre>
-
-<p></head>
-<body></p>
-
-<pre><code>&lt;div id="ears"&gt;&lt;/div&gt;
-&lt;div id="face"&gt;&lt;/div&gt;
-</code></pre>
-
-<p></body>
-</html>
-```</p>
-
-<p>処理の記述は<code>&lt;div&gt;</code>より先ですが、HTMLが読み込まれた後に実行されるので、表示結果は</p>
-
-<p>∧＿＿∧<br/>
-(・∀・)</p>
-
-<p>となります。（ずれてるけど）</p>
-
-<h2>完全読み込み後実行</h2>
-
-<p>HTMLだけでなく、<strong>全ての関連ファイルを読み込んだ後に実行</strong>する処理を書くこともできます。</p>
-
-<p>```javascript
-document.onload = function() {</p>
-
-<pre><code>// 完全読み込み後に実行する処理
-</code></pre>
-
-<p>}
-```</p>
-
-<p>場合によって上手く使い分けましょう！</p>
 ]]></content>
   </entry>
   
