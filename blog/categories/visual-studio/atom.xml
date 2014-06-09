@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Visual Studio | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/visual-studio/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-06-09T23:12:13+09:00</updated>
+  <updated>2014-06-09T23:18:17+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -20,8 +20,14 @@
     <id>http://vatscy.github.io/blog/2014/06/08/api-routing</id>
     <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/api-routing.jpg" alt="WebAPI" /></p>
 
-<p>ASP.NET Web APIでルーティングを行う方法は大きく分けて2つあります。<br/>
+<p>ASP.NET Web APIでルーティングを行う方法は大きく分けて以下の2つです。<br/>
 (私が知る限りでは)</p>
+
+<ol>
+<li>WebApiConfigで一括定義する</li>
+<li>Attributeを付与して個別定義する</li>
+</ol>
+
 
 <p>今回はその2つの方法について解説していきます。</p>
 
@@ -36,7 +42,7 @@
 
 <p>ルーティングとは、あるURLにリクエストが来たときにどのAPIを呼び出すか、すなわち、<strong>リクエストURLと、呼び出すメソッドを結びつけること</strong>です。</p>
 
-<h2>方法1: WebApiConfigで定義する</h2>
+<h2>方法1: WebApiConfigで一括定義する</h2>
 
 <p>ASP.NET Web APIのプロジェクトを新規作成した場合、このルーティング方法がデフォルトで採用されていると思います。</p>
 
@@ -128,9 +134,10 @@ public HttpResponseMessage FindProfileByConsumerId(int id)
 
 <p>}
 <code>``
-こうすると</code><a href="http://sample.jp/api/profile/get/5">http://sample.jp/api/profile/get/5</a><code>というURLで</code>FindProfileByConsumerId`メソッドを呼び出すことができます。</p>
+こうすると</code><a href="http://sample.jp/api/profile/get/5">http://sample.jp/api/profile/get/5</a><code>というURLで、  
+</code>FindProfileByConsumerId`メソッドを呼び出すことができます。</p>
 
-<h2>方法2: Attributeで定義する</h2>
+<h2>方法2: Attributeを付与して個別定義する</h2>
 
 <p>この方法は<strong>全てのメソッドにルーティング方法を明記する</strong>方法です。</p>
 
@@ -214,7 +221,7 @@ public void UpdateConsumerProfile(Profile profile)
 
 <h2>まとめ</h2>
 
-<p>ルーティングする際には基本的には上で説明した2パターンのどちらかを採用するのがいいかなーと思います。</p>
+<p>ルーティングする際には基本的には上で説明した2パターンのどちらかを採用するのがいいかなー、と思います。</p>
 
 <p>ちなみに上記2パターンを併用することもできます。そこはお好みで。</p>
 ]]></content>
