@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]><html class="no-js iem7" xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"><![endif]-->
 <!--[if lt IE 9]><html class="no-js lte-ie8" xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"><!--<![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en" xmlns:fb="http://ogp.me/ns/fb#"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -54,6 +54,37 @@ $(document).ready( function () {
 <meta property="fb:admins" content="100003503987227" />
 <meta property="fb:app_id" content="1421437681470897" />
 
+<!-- SNS Button CSS -->
+<style type="text/css">
+.snsb {
+	border: 0 !important;
+	padding: 5px 0 15px 0 !important;
+	margin: 0 !important;
+}
+.snsb div {
+	float: left !important;
+	border: 0 !important;
+	padding: 0 !important;
+	margin: 0 5px 0px 0 !important;
+	height: 23px !important;
+	text-indent: 0 !important;
+}
+.facebook-b span {
+	vertical-align: top !important;
+}
+.twitter-b {
+	width: 80px !important;
+}
+.googleplus-b {
+	border-style: none;
+	line-height: normal;
+	font-size: 1px;
+	vertical-align: baseline;
+	display: inline-block;
+	width: 32px !important;
+	background: transparent;
+}
+</style>
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -95,11 +126,17 @@ $(document).ready( function () {
 </nav> -->
   <div id="main">
     <div id="content">
-      <div>
+      <!-- このファイル使われてない疑惑 -->
+
+<div>
 <article role="article">
   
   <header>
-    <h1 class="entry-title">Category: ASP.NET</h1>
+    <h1 class="entry-title">
+      
+        Category: ASP.NET
+      
+    </h1>
     
   </header>
   
@@ -261,7 +298,7 @@ $(document).ready( function () {
     a("//platform.twitter.com/widgets.js");
 
 
-    a("//connect.facebook.net/ja_JP/all.js#xfbml=1","facebook-jssdk");
+    a("//connect.facebook.net/en_US/all.js#xfbml=1","facebook-jssdk");
 
     a("//b.st-hatena.com/js/bookmark_button_wo_al.js");
     f.parentNode.insertBefore(e,f);
