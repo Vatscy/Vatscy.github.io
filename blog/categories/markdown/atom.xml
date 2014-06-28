@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Markdown | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-06-28T12:07:27+09:00</updated>
+  <updated>2014-06-28T15:57:28+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -18,9 +18,7 @@
     <link href="http://vatscy.github.io/blog/2013/12/23/markdown-matome/"/>
     <updated>2013-12-23T20:31:26+09:00</updated>
     <id>http://vatscy.github.io/blog/2013/12/23/markdown-matome</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/markdown.jpg" alt="Markdown" /></p>
-
-<p>今回は<strong>Markdown</strong>についてまとめてみます。</p>
+    <content type="html"><![CDATA[<p>今回は<strong>Markdown</strong>についてまとめてみます。</p>
 
 <h2>Markdownとは</h2>
 
@@ -365,11 +363,6 @@ left | center | right
 <li>HTMLタグを直接記述することも可能。複雑な処理はHTMLタグで書こう。</li>
 <li>GitHubでは<a href="https://help.github.com/articles/github-flavored-markdown" title="GFM">GitHub Flavored Markdown</a>というアレンジされたMarkdownが使われているので、専用の文法が存在する。</li>
 </ul>
-
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2d6e5b7be/">
-</div>
 
 ]]></content>
   </entry>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: プログラミング | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/puroguramingu/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-06-28T12:07:27+09:00</updated>
+  <updated>2014-06-28T15:57:28+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -18,9 +18,7 @@
     <link href="http://vatscy.github.io/blog/2014/06/08/api-routing/"/>
     <updated>2014-06-08T22:31:27+09:00</updated>
     <id>http://vatscy.github.io/blog/2014/06/08/api-routing</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/api-routing.jpg" alt="WebAPI" /></p>
-
-<p>ASP.NET Web APIでルーティングを行う方法は大きく分けて以下の2つです。<br/>
+    <content type="html"><![CDATA[<p>ASP.NET Web APIでルーティングを行う方法は大きく分けて以下の2つです。<br/>
 (私が知る限りでは)</p>
 
 <ol>
@@ -224,11 +222,6 @@ public void UpdateConsumerProfile(Profile profile)
 <p>ルーティングする際には基本的には上で説明した2パターンのどちらかを採用するのがいいかなー、と思います。</p>
 
 <p>ちなみに上記2パターンを併用することもできます。そこはお好みで。</p>
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2e5809808/">
-</div>
-
 ]]></content>
   </entry>
   
@@ -237,9 +230,7 @@ public void UpdateConsumerProfile(Profile profile)
     <link href="http://vatscy.github.io/blog/2014/05/17/regexper/"/>
     <updated>2014-05-17T08:10:37+09:00</updated>
     <id>http://vatscy.github.io/blog/2014/05/17/regexper</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/regexper1.jpg" alt="regexper" /></p>
-
-<p>ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、<em>正規表現そのものが何を意味しているのか、どんな文字列を期待しているのか</em>を解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。</p>
+    <content type="html"><![CDATA[<p>ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、<em>正規表現そのものが何を意味しているのか、どんな文字列を期待しているのか</em>を解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。</p>
 
 <p>僕は馬鹿なので正規表現を見ても何が何だかさっぱりわかりません。<br/>
 例えばこれ。</p>
@@ -297,11 +288,6 @@ public void UpdateConsumerProfile(Profile profile)
 <p>簡単でわかりやすい！</p>
 
 <p>GitHubで開発しているみたいです。こんなサイトを作りたいなぁ&hellip;</p>
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2e389fead/">
-</div>
-
 ]]></content>
   </entry>
   
@@ -310,9 +296,7 @@ public void UpdateConsumerProfile(Profile profile)
     <link href="http://vatscy.github.io/blog/2014/05/02/build-fakes/"/>
     <updated>2014-05-02T18:52:01+09:00</updated>
     <id>http://vatscy.github.io/blog/2014/05/02/build-fakes</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/build-fakes.jpg" alt="BuildFakes" /></p>
-
-<p>私は普段Visual Studio 2013 Premiumを使って開発を行なっています。</p>
+    <content type="html"><![CDATA[<p>私は普段Visual Studio 2013 Premiumを使って開発を行なっています。</p>
 
 <p>単体テストを書く際に、モックライブラリとしてPremium以上で利用できる「<strong>Fakes</strong>」を使っています。</p>
 
@@ -369,11 +353,6 @@ $ vstest.console.exe TestProject\bin\Debug\TestProject.dll
 <p>さて、ここでまた注意ですが、やはり<strong>Premium以上のVisual Studioのインストールが必須となります。</strong></p>
 
 <p>FakesはPremium以上がインストールされていないと利用できないんですね&hellip;</p>
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2de67c197/">
-</div>
-
 ]]></content>
   </entry>
   
@@ -382,9 +361,7 @@ $ vstest.console.exe TestProject\bin\Debug\TestProject.dll
     <link href="http://vatscy.github.io/blog/2014/03/30/git-branch-stash/"/>
     <updated>2014-03-30T21:28:28+09:00</updated>
     <id>http://vatscy.github.io/blog/2014/03/30/git-branch-stash</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/git-stash.jpg" alt="GitStash" /></p>
-
-<p>Git管理されたプロジェクトを更新していてこんな経験はありませんか？</p>
+    <content type="html"><![CDATA[<p>Git管理されたプロジェクトを更新していてこんな経験はありませんか？</p>
 
 <ul>
 <li>ブランチ切らずに作業してしまった！</li>
@@ -461,11 +438,6 @@ $ git reset --soft HEAD^
 
 <p>今回はブランチ切り替え時のスタッシュの有用性についてまとめました。
 しかしそれ以外にもスタッシュは様々な場面で使えるので、スタッシュという機能があるということを覚えておくときっと役に立つはずです。</p>
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2dca03076/">
-</div>
-
 ]]></content>
   </entry>
   
@@ -474,9 +446,7 @@ $ git reset --soft HEAD^
     <link href="http://vatscy.github.io/blog/2014/03/08/ddd/"/>
     <updated>2014-03-08T22:53:45+09:00</updated>
     <id>http://vatscy.github.io/blog/2014/03/08/ddd</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/ddd.jpg" alt="DDD" /></p>
-
-<p>現場に配属されて数ヶ月が経ち、業務にも徐々に慣れてきました。
+    <content type="html"><![CDATA[<p>現場に配属されて数ヶ月が経ち、業務にも徐々に慣れてきました。
 エンジニアとしての知識もわりとついてきたんじゃないかと思いますが、圧倒的に自分に足りないなと思うのは<strong>設計力</strong>です。</p>
 
 <p>そこで、上司からの薦めもあり、DDD(ドメイン駆動設計)入門してみました。
@@ -530,11 +500,6 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 <p>なのでまずは<strong>オブジェクト指向設計</strong>から始めてみようと思います。</p>
 
 <p>何か最近、自分に不足していると感じること、学びたいことが沢山ありすぎてつらいですが、広く手を出して浅くなってしまうのは無個性すぎるので、スコープを狭めて深く学び、個性を出していきたい。と言っても基礎が薄いので固めなければならない、という状況で歯がゆい。しばらくは足掻きたいと思います。</p>
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2da9ea033/">
-</div>
-
 ]]></content>
   </entry>
   

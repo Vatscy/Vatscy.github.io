@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HackStore | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/hackstore/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-06-28T12:07:27+09:00</updated>
+  <updated>2014-06-28T15:57:28+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -18,9 +18,7 @@
     <link href="http://vatscy.github.io/blog/2014/05/06/monolingual/"/>
     <updated>2014-05-06T22:33:53+09:00</updated>
     <id>http://vatscy.github.io/blog/2014/05/06/monolingual</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/monolingual1.jpg" alt="monolingual" /></p>
-
-<p>Macは世界中の多様な言語に対応しています。(「日本語」とか「英語」とか)<br/>
+    <content type="html"><![CDATA[<p>Macは世界中の多様な言語に対応しています。(「日本語」とか「英語」とか)<br/>
 ただ実際に使う言語って日本人ならせいぜい日本語と英語くらいですよね。</p>
 
 <p>ということで<strong>不要な言語を断捨離してみた</strong>。</p>
@@ -73,11 +71,6 @@
 <strong>2.42GB</strong>もあるんですね&hellip;侮り難し言語データ。</p>
 
 <p>これで動作が軽くなるのかは知らないけど、何となく無駄が省けてスッキリしました！</p>
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2e1c294a5/">
-</div>
-
 ]]></content>
   </entry>
   
@@ -86,9 +79,7 @@
     <link href="http://vatscy.github.io/blog/2014/05/05/hackstore/"/>
     <updated>2014-05-05T10:20:10+09:00</updated>
     <id>http://vatscy.github.io/blog/2014/05/05/hackstore</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/hackstore.jpg" alt="HackStore" /></p>
-
-<p>Apple公式のApp Storeを利用すれば非常に多数のアプリをインストールすることができます。
+    <content type="html"><![CDATA[<p>Apple公式のApp Storeを利用すれば非常に多数のアプリをインストールすることができます。
 Appleが審査しているのでユーザは非常に安心して利用することができます。</p>
 
 <p>しかし、Appleの審査には時間がかかる、基準が厳しいというのが界隈では有名です。
@@ -127,11 +118,6 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
 今後このブログで紹介していきたいと思います。</p>
 
 <p>Macユーザは是非HackStoreをインストールして隠れアプリを発掘してみて下さい。</p>
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2e02469bd/">
-</div>
-
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Git | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-06-28T12:07:27+09:00</updated>
+  <updated>2014-06-28T15:57:28+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -18,9 +18,7 @@
     <link href="http://vatscy.github.io/blog/2014/03/30/git-branch-stash/"/>
     <updated>2014-03-30T21:28:28+09:00</updated>
     <id>http://vatscy.github.io/blog/2014/03/30/git-branch-stash</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/git-stash.jpg" alt="GitStash" /></p>
-
-<p>Git管理されたプロジェクトを更新していてこんな経験はありませんか？</p>
+    <content type="html"><![CDATA[<p>Git管理されたプロジェクトを更新していてこんな経験はありませんか？</p>
 
 <ul>
 <li>ブランチ切らずに作業してしまった！</li>
@@ -97,11 +95,6 @@ $ git reset --soft HEAD^
 
 <p>今回はブランチ切り替え時のスタッシュの有用性についてまとめました。
 しかしそれ以外にもスタッシュは様々な場面で使えるので、スタッシュという機能があるということを覚えておくときっと役に立つはずです。</p>
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2dca03076/">
-</div>
-
 ]]></content>
   </entry>
   

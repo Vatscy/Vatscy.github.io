@@ -2,47 +2,47 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://vatscy.github.io/blog/2013/12/21/first-write/</loc>
-        <lastmod>2014-06-28T11:49:58+09:00</lastmod>
+        <lastmod>2014-06-28T15:26:34+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/2013/12/23/markdown-matome/</loc>
-        <lastmod>2014-06-28T11:50:35+09:00</lastmod>
+        <lastmod>2014-06-28T15:26:34+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/2014/02/22/document-ready/</loc>
-        <lastmod>2014-06-28T11:46:15+09:00</lastmod>
+        <lastmod>2014-06-28T15:26:34+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/2014/02/23/serious-monkey-business/</loc>
-        <lastmod>2014-06-28T11:51:05+09:00</lastmod>
+        <lastmod>2014-06-28T15:26:34+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/2014/03/08/ddd/</loc>
-        <lastmod>2014-06-28T11:51:39+09:00</lastmod>
+        <lastmod>2014-06-28T15:26:34+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/2014/03/30/git-branch-stash/</loc>
-        <lastmod>2014-06-28T11:52:05+09:00</lastmod>
+        <lastmod>2014-06-28T15:26:34+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/2014/05/02/build-fakes/</loc>
-        <lastmod>2014-06-28T11:52:34+09:00</lastmod>
+        <lastmod>2014-06-28T15:26:34+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/2014/05/05/hackstore/</loc>
-        <lastmod>2014-06-28T11:53:01+09:00</lastmod>
+        <lastmod>2014-06-28T15:26:34+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/2014/05/06/monolingual/</loc>
-        <lastmod>2014-06-28T11:53:29+09:00</lastmod>
+        <lastmod>2014-06-28T15:26:34+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/2014/05/17/regexper/</loc>
-        <lastmod>2014-06-28T11:53:58+09:00</lastmod>
+        <lastmod>2014-06-28T15:26:34+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/2014/06/08/api-routing/</loc>
-        <lastmod>2014-06-28T11:54:30+09:00</lastmod>
+        <lastmod>2014-06-28T15:26:34+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/404.html</loc>
@@ -54,15 +54,19 @@
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/archives/</loc>
-        <lastmod>2014-06-28T11:54:30+09:00</lastmod>
+        <lastmod>2014-06-28T15:24:36+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/blog/</loc>
-        <lastmod>2014-06-28T11:54:30+09:00</lastmod>
+        <lastmod>2014-06-28T15:24:36+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://vatscy.github.io/debug/</loc>
+        <lastmod>2014-06-28T15:56:38+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/</loc>
-        <lastmod>2014-06-28T11:54:30+09:00</lastmod>
+        <lastmod>2014-06-28T15:24:36+09:00</lastmod>
     </url>
     <url>
         <loc>http://vatscy.github.io/robots.txt</loc>

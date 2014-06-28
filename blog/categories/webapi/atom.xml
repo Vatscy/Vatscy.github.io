@@ -4,7 +4,7 @@
   <title><![CDATA[Category: WebAPI | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/webapi/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-06-28T12:07:27+09:00</updated>
+  <updated>2014-06-28T15:57:28+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -18,9 +18,7 @@
     <link href="http://vatscy.github.io/blog/2014/06/08/api-routing/"/>
     <updated>2014-06-08T22:31:27+09:00</updated>
     <id>http://vatscy.github.io/blog/2014/06/08/api-routing</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/api-routing.jpg" alt="WebAPI" /></p>
-
-<p>ASP.NET Web APIでルーティングを行う方法は大きく分けて以下の2つです。<br/>
+    <content type="html"><![CDATA[<p>ASP.NET Web APIでルーティングを行う方法は大きく分けて以下の2つです。<br/>
 (私が知る限りでは)</p>
 
 <ol>
@@ -224,11 +222,6 @@ public void UpdateConsumerProfile(Profile profile)
 <p>ルーティングする際には基本的には上で説明した2パターンのどちらかを採用するのがいいかなー、と思います。</p>
 
 <p>ちなみに上記2パターンを併用することもできます。そこはお好みで。</p>
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2e5809808/">
-</div>
-
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Webサイト | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/websaito/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-06-28T12:07:27+09:00</updated>
+  <updated>2014-06-28T15:57:28+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -18,9 +18,7 @@
     <link href="http://vatscy.github.io/blog/2014/05/17/regexper/"/>
     <updated>2014-05-17T08:10:37+09:00</updated>
     <id>http://vatscy.github.io/blog/2014/05/17/regexper</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/regexper1.jpg" alt="regexper" /></p>
-
-<p>ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、<em>正規表現そのものが何を意味しているのか、どんな文字列を期待しているのか</em>を解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。</p>
+    <content type="html"><![CDATA[<p>ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、<em>正規表現そのものが何を意味しているのか、どんな文字列を期待しているのか</em>を解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。</p>
 
 <p>僕は馬鹿なので正規表現を見ても何が何だかさっぱりわかりません。<br/>
 例えばこれ。</p>
@@ -78,11 +76,6 @@
 <p>簡単でわかりやすい！</p>
 
 <p>GitHubで開発しているみたいです。こんなサイトを作りたいなぁ&hellip;</p>
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2e389fead/">
-</div>
-
 ]]></content>
   </entry>
   

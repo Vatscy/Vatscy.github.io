@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HTML | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/html/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-06-28T12:07:27+09:00</updated>
+  <updated>2014-06-28T15:57:28+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -18,9 +18,7 @@
     <link href="http://vatscy.github.io/blog/2014/02/22/document-ready/"/>
     <updated>2014-02-22T12:12:05+09:00</updated>
     <id>http://vatscy.github.io/blog/2014/02/22/document-ready</id>
-    <content type="html"><![CDATA[<p><img src="http://vatscy.github.io/images/post/document-ready.jpg" alt="DocumentReady" /></p>
-
-<p>HTMLページを読み込む際のJavaScriptの実行タイミングは色々あります。
+    <content type="html"><![CDATA[<p>HTMLページを読み込む際のJavaScriptの実行タイミングは色々あります。
 タイミングをミスると意図したように動作しないことがあるので注意が必要です。</p>
 
 <p>いくつかパターンを見ていきます。</p>
@@ -179,11 +177,6 @@ document.onload = function() {</p>
 ```</p>
 
 <p>場合によって上手く使い分けましょう！</p>
-
-<div class="access-counter">
-アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2a887c54f/">
-</div>
-
 ]]></content>
   </entry>
   
