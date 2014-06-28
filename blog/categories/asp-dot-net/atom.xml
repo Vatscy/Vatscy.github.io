@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ASP.NET | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/asp-dot-net/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-06-27T20:59:38+09:00</updated>
+  <updated>2014-06-28T11:57:32+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -224,6 +224,11 @@ public void UpdateConsumerProfile(Profile profile)
 <p>ルーティングする際には基本的には上で説明した2パターンのどちらかを採用するのがいいかなー、と思います。</p>
 
 <p>ちなみに上記2パターンを併用することもできます。そこはお好みで。</p>
+
+<div class="access-counter">
+アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2e5809808/">
+</div>
+
 ]]></content>
   </entry>
   

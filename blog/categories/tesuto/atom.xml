@@ -4,7 +4,7 @@
   <title><![CDATA[Category: テスト | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/tesuto/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-06-27T20:59:38+09:00</updated>
+  <updated>2014-06-28T11:57:32+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -77,6 +77,11 @@ $ vstest.console.exe TestProject\bin\Debug\TestProject.dll
 <p>さて、ここでまた注意ですが、やはり<strong>Premium以上のVisual Studioのインストールが必須となります。</strong></p>
 
 <p>FakesはPremium以上がインストールされていないと利用できないんですね&hellip;</p>
+
+<div class="access-counter">
+アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2de67c197/">
+</div>
+
 ]]></content>
   </entry>
   
