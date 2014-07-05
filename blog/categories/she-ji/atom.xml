@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 設計 | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/she-ji/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-07-01T00:42:54+09:00</updated>
+  <updated>2014-07-05T19:14:23+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -27,7 +27,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 <!--more-->
 
 
-<h2>DDD(ドメイン駆動設計)とは</h2>
+<h1>DDD(ドメイン駆動設計)とは</h1>
 
 <p>そもそも、DDDとは何なのか？</p>
 
@@ -60,7 +60,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 <p>ということで、DDDについての解説は私は現状できませんw
 もう少し学んでからリベンジしたいと思います。</p>
 
-<h2>気づいたこと</h2>
+<h1>気づいたこと</h1>
 
 <p>DDDについて学び始めて気づいたことは、<strong>設計の初歩から始めないと駄目だな</strong>ということです。</p>
 

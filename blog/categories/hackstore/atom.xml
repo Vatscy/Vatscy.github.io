@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HackStore | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/hackstore/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-07-01T00:42:54+09:00</updated>
+  <updated>2014-07-05T19:14:23+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -28,7 +28,7 @@
 
 <p>今回は<strong>monolingual</strong>という無料アプリを使います。</p>
 
-<h2>monolingualのインストール</h2>
+<h1>monolingualのインストール</h1>
 
 <p>以前紹介したHackStoreからインストールします。</p>
 
@@ -43,7 +43,7 @@
 
 <p>「DOWNLOAD」をクリックするとダウンロードが開始され、自動的にインストールまで行われます。</p>
 
-<h2>monolingualを使ってみる</h2>
+<h1>monolingualを使ってみる</h1>
 
 <p>アプリケーションフォルダからmonolingualを起動。<br/>
 するといきなり削除する言語を問うてきます。なるほど、シンプル。</p>
@@ -71,6 +71,13 @@
 <strong>2.42GB</strong>もあるんですね&hellip;侮り難し言語データ。</p>
 
 <p>これで動作が軽くなるのかは知らないけど、何となく無駄が省けてスッキリしました！</p>
+
+<h1>関連記事</h1>
+
+<ul>
+<li><a href="http://vatscy.github.io/blog/2014/05/05/hackstore/">【Mac】HackStoreで非公式優良Appをインストール!</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
@@ -93,7 +100,7 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
 <!-- more -->
 
 
-<h2>HackStoreのインストール</h2>
+<h1>HackStoreのインストール</h1>
 
 <p>【1】App Store以外からアプリをインストールできるように環境設定を変更します。</p>
 
@@ -112,12 +119,19 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
 
 <p><img src="http://vatscy.github.io/images/post/hackstore2.jpg" alt="スタート画面" /></p>
 
-<h2>優良アプリが沢山</h2>
+<h1>優良アプリが沢山</h1>
 
 <p>眺めてみると、有名なアプリや、便利そうなアプリが沢山ありました。<br/>
 今後このブログで紹介していきたいと思います。</p>
 
 <p>Macユーザは是非HackStoreをインストールして隠れアプリを発掘してみて下さい。</p>
+
+<h1>関連記事</h1>
+
+<ul>
+<li><a href="http://vatscy.github.io/blog/2014/05/06/monolingual/">【Mac】言語データを断捨離してみた</a></li>
+</ul>
+
 ]]></content>
   </entry>
   

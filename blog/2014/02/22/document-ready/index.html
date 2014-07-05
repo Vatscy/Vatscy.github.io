@@ -58,6 +58,9 @@ $(document).ready( function () {
 
 <!-- SNS Button CSS -->
 <style type="text/css">
+.entry-content h1 {
+	margin-top: 60px;
+}
 .snsb {
 	border: 0 !important;
 	padding: 10px 0 5px 0 !important;
@@ -90,9 +93,12 @@ $(document).ready( function () {
 	width: 32px !important;
 	background: transparent;
 }
+.post-footer {
+	margin-top: 100px;
+}
 .access-counter {
 	font-size: 8px !important;
-	margin-top: 100px;
+	margin-top: 20px;
 }
 .access-counter img {
 	border: 0;
@@ -200,7 +206,7 @@ $(document).ready( function () {
 <!-- more -->
 
 
-<h2>通常実行</h2>
+<h1>通常実行</h1>
 
 <p>特に意識せずにJavaScriptを記述したり読み込んだりすると、<strong>書いた順番に処理</strong>されます。</p>
 
@@ -265,7 +271,10 @@ $(document).ready( function () {
 
 <p>正解は、</p>
 
-<p>(・∀・)</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>(・∀・)
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>と表示されます。</p>
 
@@ -291,7 +300,7 @@ $(document).ready( function () {
 
 <p>そこで、HTMLが読み込まれた<strong>後</strong>にJavaScriptを実行する必要があります。</p>
 
-<h2>読み込み後実行</h2>
+<h1>読み込み後実行</h1>
 
 <p><a href="http://jquery.com">jQuery</a>を用いて下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。
 3パターン挙げますが、全て処理は同じです。</p>
@@ -374,12 +383,16 @@ $(document).ready( function () {
 
 <p>処理の記述は<code>&lt;div&gt;</code>より先ですが、HTMLが読み込まれた後に実行されるので、表示結果は</p>
 
-<p>∧＿＿∧<br/>
-(・∀・)</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>∧＿＿∧
+</span><span class='line'>(・∀・)
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>となります。（ずれてるけど）</p>
 
-<h2>完全読み込み後実行</h2>
+<h1>完全読み込み後実行</h1>
 
 <p>HTMLだけでなく、<strong>全ての関連ファイルを読み込んだ後に実行</strong>する処理を書くこともできます。</p>
 
@@ -398,8 +411,10 @@ $(document).ready( function () {
 
 
   <footer>
-    <div class="access-counter">
-	アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2a887c54f/">
+    <div class="post-footer">
+	<div class="access-counter">
+		アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2a887c54f/">
+	</div>
 </div>
     <p class="meta">
       

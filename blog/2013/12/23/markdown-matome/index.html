@@ -56,6 +56,9 @@ $(document).ready( function () {
 
 <!-- SNS Button CSS -->
 <style type="text/css">
+.entry-content h1 {
+	margin-top: 60px;
+}
 .snsb {
 	border: 0 !important;
 	padding: 10px 0 5px 0 !important;
@@ -88,9 +91,12 @@ $(document).ready( function () {
 	width: 32px !important;
 	background: transparent;
 }
+.post-footer {
+	margin-top: 100px;
+}
 .access-counter {
 	font-size: 8px !important;
-	margin-top: 100px;
+	margin-top: 20px;
 }
 .access-counter img {
 	border: 0;
@@ -192,7 +198,7 @@ $(document).ready( function () {
 </p>
   <p>今回は<strong>Markdown</strong>についてまとめてみます。</p>
 
-<h2>Markdownとは</h2>
+<h1>Markdownとは</h1>
 
 <blockquote><p>Markdown は、文書を記述するための軽量マークアップ言語のひとつである。(<a href="http://ja.wikipedia.org/wiki/Markdown" target="_blank">Wikipedia</a>より引用)</p></blockquote>
 
@@ -207,14 +213,14 @@ $(document).ready( function () {
 <!-- more -->
 
 
-<h2>記法</h2>
+<h1>記法</h1>
 
-<h3>見出し</h3>
+<h2>見出し</h2>
 
 <p>HTMLにおける<code>&lt;h1&gt;</code>〜<code>&lt;h6&gt;</code>。<br/>
 <strong>#の数</strong>で区別します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <h1>h1</h1>
 
@@ -246,19 +252,19 @@ $(document).ready( function () {
 <pre><code>###### h6
 </code></pre>
 
-<h3>改行</h3>
+<h2>改行</h2>
 
 <p>HTMLにおける<code>&lt;br&gt;</code>。<br/>
 <strong>行末に半角スペースを2個以上記述する</strong>ことで実現します。<br/>
 ただ改行を入れるだけでは反映されないので注意！</p>
 
-<h3>段落</h3>
+<h2>段落</h2>
 
 <p>HTMLにおける<code>&lt;p&gt;</code>。<br/>
 <strong>空行を挟む</strong>ことで段落分けします。<br/>
 空行を挟まない改行は反映されないので注意！</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <p>さすがディオ!
 俺達に出来ないことを平然とやってのけるッ!</p>
@@ -273,20 +279,20 @@ $(document).ready( function () {
 あこがれるゥ!
 </code></pre>
 
-<h3>強調</h3>
+<h2>強調</h2>
 
 <p>HTMLにおける<code>&lt;em&gt;</code>と<code>&lt;strong&gt;</code>。<br/>
 <code>&lt;em&gt;</code>は * または _ で囲み、<code>&lt;strong&gt;</code>は ** または __ で囲みます。<br/>
 ちなみに、<code>&lt;em&gt;</code>より<code>&lt;strong&gt;</code>の方が強い強調を表します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <p><em>ウボォーさん</em>、聞こえますか？オレ達から貴方への<strong>鎮魂歌</strong>です</p>
 
 <pre><code>*ウボォーさん*、聞こえますか？オレ達から貴方への**鎮魂歌**です
 </code></pre>
 
-<h3>コード</h3>
+<h2>コード</h2>
 
 <p>HTMLにおける<code>&lt;code&gt;</code>。<br/>
 先程から使っている<code>これ</code>や</p>
@@ -298,7 +304,7 @@ $(document).ready( function () {
 インライン(1つ目)の場合は<strong> ｀(グレイヴアクセント) で囲み</strong>ます。<br/>
 段落(2つ目)の場合は<strong>行頭にTabを挿入</strong>、または<strong> ｀(グレイヴアクセント)3つで行を囲み</strong>ます。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -316,13 +322,13 @@ $(document).ready( function () {
 </span><span class='line'> ```</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>順序無しリスト</h3>
+<h2>順序無しリスト</h2>
 
 <p>HTMLにおける<code>&lt;ul&gt;&lt;li&gt;</code>。<br/>
 行頭に<strong> (* + &ndash; のうちのどれか1つ) ＋ 半角スペース</strong>を挿入することで実現します。<br/>
 また、さらに<strong>行頭に半角スペース4つを入れる</strong>ことでサブアイテムを作ることもできます。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <ul>
 <li>強化系
@@ -376,12 +382,12 @@ $(document).ready( function () {
 </span><span class='line'>- 特質形</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>順序付きリスト</h3>
+<h2>順序付きリスト</h2>
 
 <p>HTMLにおける<code>&lt;ol&gt;&lt;li&gt;</code>。<br/>
 行頭に<strong>数字 ＋ ピリオド</strong>を挿入することで実現します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <ol>
 <li>ファントムブラッド</li>
@@ -398,12 +404,12 @@ $(document).ready( function () {
 </span><span class='line'>3. スターダストクルセイダーズ</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>引用</h3>
+<h2>引用</h2>
 
 <p>HTMLにおける<code>&lt;blockquote&gt;</code>、<code>&lt;q&gt;</code>、<code>&lt;cite&gt;</code>。<br/>
 行頭に<strong> > ＋ 半角スペース</strong>を挿入することで実現します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <blockquote><p>恐ろしく速い手刀 オレでなきゃ見逃しちゃうね<br/>
 (by 団長の手刀を見逃さなかった人 &ndash; HUNTER×HUNTER11巻より抜粋)</p></blockquote>
@@ -414,13 +420,13 @@ $(document).ready( function () {
 </span><span class='line'>&gt; (by 団長の手刀を見逃さなかった人 - HUNTER×HUNTER11巻より抜粋)</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>水平線</h3>
+<h2>水平線</h2>
 
 <p>HTMLにおける<code>&lt;hr&gt;</code>。<br/>
 1行の中に<strong> &ndash; (ハイフン)、 * (アスタリスク)、 _ (アンダースコア)のうちどれか1種を3個以上並べる</strong>ことで実現します。
 間に半角スペースを挟んでもOKです。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <hr />
 
@@ -432,11 +438,11 @@ $(document).ready( function () {
 </span><span class='line'>_ _ _ _ _</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>テーブル</h3>
+<h2>テーブル</h2>
 
 <p>HTMLにおける<code>&lt;table&gt;</code>。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <table>
 <thead>
@@ -492,12 +498,12 @@ $(document).ready( function () {
 </span><span class='line'>left | center | right</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>リンク</h3>
+<h2>リンク</h2>
 
 <p>HTMLにおける<code>&lt;a&gt;</code>。<br/>
 <code>[リンクのテキスト](URL "タイトル")</code> の形式で実現します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <p><a href="http://www.geocities.jp/yuusuke4971/" title="かの有名なサイト">ゆうすけのホームページ</a></p>
 
@@ -509,7 +515,7 @@ $(document).ready( function () {
 <p>また、リンクの情報を一カ所にまとめておいて、<br/>
 実際にリンクを貼る場所でその情報を持ってくることもできます。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <p><a href="http://www.google.co.jp" title="ごおgれ">Google</a><br/>
 <a href="http://www.yahoo.co.jp" title="やほお">Yahoo!</a></p>
@@ -526,19 +532,19 @@ $(document).ready( function () {
 </span><span class='line'>[1]: http://www.yahoo.co.jp "やほお"</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>画像</h3>
+<h2>画像</h2>
 
 <p>HTMLにおける<code>&lt;img&gt;</code>。<br/>
 <code>![画像の説明文](画像URL)</code> の形式で実現します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <p><img src="http://vatscy.github.io/images/post/YMD68_TKG500.jpg" alt="そんな好きじゃない" /></p>
 
 <pre><code>![そんな好きじゃない](http://vatscy.github.io/images/post/YMD68_TKG500.jpg)
 </code></pre>
 
-<h3>その他</h3>
+<h2>その他</h2>
 
 <ul>
 <li>半角バックスラッシュまたは半角￥をMarkdownの直前に挿入することでエスケープ可能。</li>
@@ -551,8 +557,10 @@ $(document).ready( function () {
 
 
   <footer>
-    <div class="access-counter">
-	アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2d6e5b7be/">
+    <div class="post-footer">
+	<div class="access-counter">
+		アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2d6e5b7be/">
+	</div>
 </div>
     <p class="meta">
       

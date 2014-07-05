@@ -4,7 +4,7 @@
   <title><![CDATA[Category: テスト | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/tesuto/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-07-01T00:42:54+09:00</updated>
+  <updated>2014-07-05T19:14:23+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -32,7 +32,7 @@
 <!-- more -->
 
 
-<h2>MSBuildでビルドする</h2>
+<h1>MSBuildでビルドする</h1>
 
 <p>C#のプロジェクトをビルドする時には<strong>MSBuild</strong>を使います。</p>
 
@@ -43,7 +43,7 @@
 <p>開発している環境と、Jenkinsを置いている環境が異なる場合は注意が必要です。
 私の場合JenkinsサーバにはPremium以上がインストールされていなかったのでこれでハマりました。</p>
 
-<h2>vstest.consoleで単体テストを実行する</h2>
+<h1>vstest.consoleで単体テストを実行する</h1>
 
 <p>MSTestにFakesを導入して記述した単体テストをコマンドプロンプトから実行します。</p>
 

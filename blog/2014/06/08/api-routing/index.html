@@ -60,6 +60,9 @@ Attributeを付与して個別定義する 今回はその2つの方法につい
 
 <!-- SNS Button CSS -->
 <style type="text/css">
+.entry-content h1 {
+	margin-top: 60px;
+}
 .snsb {
 	border: 0 !important;
 	padding: 10px 0 5px 0 !important;
@@ -92,9 +95,12 @@ Attributeを付与して個別定義する 今回はその2つの方法につい
 	width: 32px !important;
 	background: transparent;
 }
+.post-footer {
+	margin-top: 100px;
+}
 .access-counter {
 	font-size: 8px !important;
-	margin-top: 100px;
+	margin-top: 20px;
 }
 .access-counter img {
 	border: 0;
@@ -208,7 +214,7 @@ Attributeを付与して個別定義する 今回はその2つの方法につい
 <!-- more -->
 
 
-<h2>そもそもルーティングとは</h2>
+<h1>そもそもルーティングとは</h1>
 
 <p>ASP.NET Web APIは、その名の通りAPIを提供するためのフレームワークです。<br/>
 実装としては、Controllerクラスを作り、その中にメソッドを定義します。<br/>
@@ -216,7 +222,7 @@ Attributeを付与して個別定義する 今回はその2つの方法につい
 
 <p>ルーティングとは、あるURLにリクエストが来たときにどのAPIを呼び出すか、すなわち、<strong>リクエストURLと、呼び出すメソッドを結びつけること</strong>です。</p>
 
-<h2>方法1: WebApiConfigで一括定義する</h2>
+<h1>方法1: WebApiConfigで一括定義する</h1>
 
 <p>ASP.NET Web APIのプロジェクトを新規作成した場合、このルーティング方法がデフォルトで採用されていると思います。</p>
 
@@ -297,7 +303,7 @@ Attributeを付与して個別定義する 今回はその2つの方法につい
 <p>このように設定すると、<code>{controller}</code>や<code>{action}</code>を省略することが可能になります。<br/>
 つまり<code>http://sample.jp/api/</code>というURLでアクセスすると勝手にProfileControllerのGetメソッドが呼ばれるわけです。</p>
 
-<h3>アクション名を指定する</h3>
+<h2>アクション名を指定する</h2>
 
 <p>例えば、「<strong>メソッド名は具体的に記述する</strong>」というチームルールがあったとします。<br/>
 しかし、例えば以下のようなメソッドがあったとします。</p>
@@ -344,7 +350,7 @@ Attributeを付与して個別定義する 今回はその2つの方法につい
 <p>こうすると<code>http://sample.jp/api/profile/get/5</code>というURLで、<br/>
 <code>FindProfileByConsumerId</code>メソッドを呼び出すことができます。</p>
 
-<h2>方法2: Attributeを付与して個別定義する</h2>
+<h1>方法2: Attributeを付与して個別定義する</h1>
 
 <p>この方法は<strong>全てのメソッドにルーティング方法を明記する</strong>方法です。</p>
 
@@ -469,7 +475,7 @@ Attributeを付与して個別定義する 今回はその2つの方法につい
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>まとめ</h2>
+<h1>まとめ</h1>
 
 <p>ルーティングする際には基本的には上で説明した2パターンのどちらかを採用するのがいいかなー、と思います。</p>
 
@@ -479,8 +485,10 @@ Attributeを付与して個別定義する 今回はその2つの方法につい
 
 
   <footer>
-    <div class="access-counter">
-	アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2e5809808/">
+    <div class="post-footer">
+	<div class="access-counter">
+		アクセス数: <img src="http://www.rays-counter.com/d265_f6_021/53ae2e5809808/">
+	</div>
 </div>
     <p class="meta">
       

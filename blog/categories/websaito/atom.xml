@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Webサイト | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/websaito/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-07-01T00:42:54+09:00</updated>
+  <updated>2014-07-05T19:14:23+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -35,8 +35,10 @@
 
 <p>それがこちら。</p>
 
+<h2>Regexper</h2>
+
 <ul>
-<li><a href="http://www.regexper.com/">Regexper</a></li>
+<li><a href="http://www.regexper.com/">http://www.regexper.com/</a></li>
 </ul>
 
 
@@ -45,7 +47,7 @@
 <p>例えば先程の正規表現は、当記事の一番上の画像のように表示されます。<br/>
 これはメールアドレスを判定する簡易的な正規表現です。</p>
 
-<h2>使ってみる</h2>
+<h1>使ってみる</h1>
 
 <p>こちらの正規表現を試してみましょう。</p>
 

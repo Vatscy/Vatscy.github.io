@@ -4,7 +4,7 @@
   <title><![CDATA[Category: C# | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/c-number/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-07-01T00:42:54+09:00</updated>
+  <updated>2014-07-05T19:14:23+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -32,7 +32,7 @@
 <!-- more -->
 
 
-<h2>そもそもルーティングとは</h2>
+<h1>そもそもルーティングとは</h1>
 
 <p>ASP.NET Web APIは、その名の通りAPIを提供するためのフレームワークです。<br/>
 実装としては、Controllerクラスを作り、その中にメソッドを定義します。<br/>
@@ -40,7 +40,7 @@
 
 <p>ルーティングとは、あるURLにリクエストが来たときにどのAPIを呼び出すか、すなわち、<strong>リクエストURLと、呼び出すメソッドを結びつけること</strong>です。</p>
 
-<h2>方法1: WebApiConfigで一括定義する</h2>
+<h1>方法1: WebApiConfigで一括定義する</h1>
 
 <p>ASP.NET Web APIのプロジェクトを新規作成した場合、このルーティング方法がデフォルトで採用されていると思います。</p>
 
@@ -100,7 +100,7 @@ defaults: new { controller = "profile", action = "get", id = RouteParameter.Opti
 このように設定すると、<code>{controller}</code>や<code>{action}</code>を省略することが可能になります。<br/>
 つまり<code>http://sample.jp/api/</code>というURLでアクセスすると勝手にProfileControllerのGetメソッドが呼ばれるわけです。</p>
 
-<h3>アクション名を指定する</h3>
+<h2>アクション名を指定する</h2>
 
 <p>例えば、「<strong>メソッド名は具体的に記述する</strong>」というチームルールがあったとします。<br/>
 しかし、例えば以下のようなメソッドがあったとします。
@@ -135,7 +135,7 @@ public HttpResponseMessage FindProfileByConsumerId(int id)
 こうすると</code><a href="http://sample.jp/api/profile/get/5">http://sample.jp/api/profile/get/5</a><code>というURLで、  
 </code>FindProfileByConsumerId`メソッドを呼び出すことができます。</p>
 
-<h2>方法2: Attributeを付与して個別定義する</h2>
+<h1>方法2: Attributeを付与して個別定義する</h1>
 
 <p>この方法は<strong>全てのメソッドにルーティング方法を明記する</strong>方法です。</p>
 
@@ -217,7 +217,7 @@ public void UpdateConsumerProfile(Profile profile)
 <p>}
 ```</p>
 
-<h2>まとめ</h2>
+<h1>まとめ</h1>
 
 <p>ルーティングする際には基本的には上で説明した2パターンのどちらかを採用するのがいいかなー、と思います。</p>
 
@@ -244,7 +244,7 @@ public void UpdateConsumerProfile(Profile profile)
 <!-- more -->
 
 
-<h2>MSBuildでビルドする</h2>
+<h1>MSBuildでビルドする</h1>
 
 <p>C#のプロジェクトをビルドする時には<strong>MSBuild</strong>を使います。</p>
 
@@ -255,7 +255,7 @@ public void UpdateConsumerProfile(Profile profile)
 <p>開発している環境と、Jenkinsを置いている環境が異なる場合は注意が必要です。
 私の場合JenkinsサーバにはPremium以上がインストールされていなかったのでこれでハマりました。</p>
 
-<h2>vstest.consoleで単体テストを実行する</h2>
+<h1>vstest.consoleで単体テストを実行する</h1>
 
 <p>MSTestにFakesを導入して記述した単体テストをコマンドプロンプトから実行します。</p>
 

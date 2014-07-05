@@ -4,7 +4,7 @@
   <title><![CDATA[ばしぶろ]]></title>
   <link href="http://vatscy.github.io/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-07-01T00:42:54+09:00</updated>
+  <updated>2014-07-05T19:14:23+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -29,7 +29,7 @@
 <!-- more -->
 
 
-<h2>原曲: Stickerbrush Symphony</h2>
+<h1>原曲: Stickerbrush Symphony</h1>
 
 <iframe width="560" height="315" src="http://vatscy.github.io//www.youtube.com/embed/zK4TWXWEKAQ" frameborder="0" allowfullscreen></iframe>
 
@@ -50,7 +50,7 @@
 
 <p>映像もそうですが、これがスーファミの音源だということが信じられないですよね。</p>
 
-<h2>ドンキーコングランド (GAMEBOY) ver.</h2>
+<h1>ドンキーコングランド (GAMEBOY) ver.</h1>
 
 <iframe width="420" height="315" src="http://vatscy.github.io//www.youtube.com/embed/YMBYRAY06Q0" frameborder="0" allowfullscreen></iframe>
 
@@ -61,7 +61,7 @@
 
 <p>このゲーム持ってたんですが当時の私には難しすぎてこの曲を拝む前に投げてしまった記憶がありますｗ</p>
 
-<h2>Bramble Reprise</h2>
+<h1>Bramble Reprise</h1>
 
 <iframe width="420" height="315" src="http://vatscy.github.io//www.youtube.com/embed/79e1NfDLaLA" frameborder="0" allowfullscreen></iframe>
 
@@ -72,7 +72,7 @@
 
 <p>このクオリティで無料配布ってすげー！</p>
 
-<h2>大乱闘スマッシュブラザーズX (Wii) ver.</h2>
+<h1>大乱闘スマッシュブラザーズX (Wii) ver.</h1>
 
 <iframe width="560" height="315" src="http://vatscy.github.io//www.youtube.com/embed/tUnhVUhyxKU" frameborder="0" allowfullscreen></iframe>
 
@@ -87,7 +87,7 @@
 
 <p>次回作でもアレンジして頂きたいものです。</p>
 
-<h2>ドンキーコング トロピカルフリーズ (Wii U) ver.</h2>
+<h1>ドンキーコング トロピカルフリーズ (Wii U) ver.</h1>
 
 <iframe width="560" height="315" src="http://vatscy.github.io//www.youtube.com/embed/9SLOGs9ttiE" frameborder="0" allowfullscreen></iframe>
 
@@ -98,7 +98,7 @@
 
 <p>トロピカルフリーズは未プレイなので機会があればやってみたいです。</p>
 
-<h2>The Ultimate DK Country Tribute Collection ver.</h2>
+<h1>The Ultimate DK Country Tribute Collection ver.</h1>
 
 <iframe width="420" height="315" src="http://vatscy.github.io//www.youtube.com/embed/eB_LaNcZ3Xk" frameborder="0" allowfullscreen></iframe>
 
@@ -144,7 +144,7 @@
 <!-- more -->
 
 
-<h2>そもそもルーティングとは</h2>
+<h1>そもそもルーティングとは</h1>
 
 <p>ASP.NET Web APIは、その名の通りAPIを提供するためのフレームワークです。<br/>
 実装としては、Controllerクラスを作り、その中にメソッドを定義します。<br/>
@@ -152,7 +152,7 @@
 
 <p>ルーティングとは、あるURLにリクエストが来たときにどのAPIを呼び出すか、すなわち、<strong>リクエストURLと、呼び出すメソッドを結びつけること</strong>です。</p>
 
-<h2>方法1: WebApiConfigで一括定義する</h2>
+<h1>方法1: WebApiConfigで一括定義する</h1>
 
 <p>ASP.NET Web APIのプロジェクトを新規作成した場合、このルーティング方法がデフォルトで採用されていると思います。</p>
 
@@ -233,7 +233,7 @@
 <p>このように設定すると、<code>{controller}</code>や<code>{action}</code>を省略することが可能になります。<br/>
 つまり<code>http://sample.jp/api/</code>というURLでアクセスすると勝手にProfileControllerのGetメソッドが呼ばれるわけです。</p>
 
-<h3>アクション名を指定する</h3>
+<h2>アクション名を指定する</h2>
 
 <p>例えば、「<strong>メソッド名は具体的に記述する</strong>」というチームルールがあったとします。<br/>
 しかし、例えば以下のようなメソッドがあったとします。</p>
@@ -280,7 +280,7 @@
 <p>こうすると<code>http://sample.jp/api/profile/get/5</code>というURLで、<br/>
 <code>FindProfileByConsumerId</code>メソッドを呼び出すことができます。</p>
 
-<h2>方法2: Attributeを付与して個別定義する</h2>
+<h1>方法2: Attributeを付与して個別定義する</h1>
 
 <p>この方法は<strong>全てのメソッドにルーティング方法を明記する</strong>方法です。</p>
 
@@ -405,7 +405,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>まとめ</h2>
+<h1>まとめ</h1>
 
 <p>ルーティングする際には基本的には上で説明した2パターンのどちらかを採用するのがいいかなー、と思います。</p>
 
@@ -435,8 +435,10 @@
 
 <p>それがこちら。</p>
 
+<h2>Regexper</h2>
+
 <ul>
-<li><a href="http://www.regexper.com/">Regexper</a></li>
+<li><a href="http://www.regexper.com/">http://www.regexper.com/</a></li>
 </ul>
 
 
@@ -445,7 +447,7 @@
 <p>例えば先程の正規表現は、当記事の一番上の画像のように表示されます。<br/>
 これはメールアドレスを判定する簡易的な正規表現です。</p>
 
-<h2>使ってみる</h2>
+<h1>使ってみる</h1>
 
 <p>こちらの正規表現を試してみましょう。</p>
 
@@ -494,7 +496,7 @@
 
 <p>今回は<strong>monolingual</strong>という無料アプリを使います。</p>
 
-<h2>monolingualのインストール</h2>
+<h1>monolingualのインストール</h1>
 
 <p>以前紹介したHackStoreからインストールします。</p>
 
@@ -509,7 +511,7 @@
 
 <p>「DOWNLOAD」をクリックするとダウンロードが開始され、自動的にインストールまで行われます。</p>
 
-<h2>monolingualを使ってみる</h2>
+<h1>monolingualを使ってみる</h1>
 
 <p>アプリケーションフォルダからmonolingualを起動。<br/>
 するといきなり削除する言語を問うてきます。なるほど、シンプル。</p>
@@ -537,6 +539,13 @@
 <strong>2.42GB</strong>もあるんですね&hellip;侮り難し言語データ。</p>
 
 <p>これで動作が軽くなるのかは知らないけど、何となく無駄が省けてスッキリしました！</p>
+
+<h1>関連記事</h1>
+
+<ul>
+<li><a href="http://vatscy.github.io/blog/2014/05/05/hackstore/">【Mac】HackStoreで非公式優良Appをインストール!</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
@@ -559,7 +568,7 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
 <!-- more -->
 
 
-<h2>HackStoreのインストール</h2>
+<h1>HackStoreのインストール</h1>
 
 <p>【1】App Store以外からアプリをインストールできるように環境設定を変更します。</p>
 
@@ -578,12 +587,19 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
 
 <p><img src="http://vatscy.github.io/images/post/hackstore2.jpg" alt="スタート画面" /></p>
 
-<h2>優良アプリが沢山</h2>
+<h1>優良アプリが沢山</h1>
 
 <p>眺めてみると、有名なアプリや、便利そうなアプリが沢山ありました。<br/>
 今後このブログで紹介していきたいと思います。</p>
 
 <p>Macユーザは是非HackStoreをインストールして隠れアプリを発掘してみて下さい。</p>
+
+<h1>関連記事</h1>
+
+<ul>
+<li><a href="http://vatscy.github.io/blog/2014/05/06/monolingual/">【Mac】言語データを断捨離してみた</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
@@ -606,7 +622,7 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
 <!-- more -->
 
 
-<h2>MSBuildでビルドする</h2>
+<h1>MSBuildでビルドする</h1>
 
 <p>C#のプロジェクトをビルドする時には<strong>MSBuild</strong>を使います。</p>
 
@@ -617,7 +633,7 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
 <p>開発している環境と、Jenkinsを置いている環境が異なる場合は注意が必要です。
 私の場合JenkinsサーバにはPremium以上がインストールされていなかったのでこれでハマりました。</p>
 
-<h2>vstest.consoleで単体テストを実行する</h2>
+<h1>vstest.consoleで単体テストを実行する</h1>
 
 <p>MSTestにFakesを導入して記述した単体テストをコマンドプロンプトから実行します。</p>
 
@@ -687,7 +703,7 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
 
 <p>これを利用して上記問題を解決してみましょう。</p>
 
-<h2>未コミットの変更を引き継ぎつつブランチを変更する</h2>
+<h1>未コミットの変更を引き継ぎつつブランチを変更する</h1>
 
 <p>未コミットの場合は、以下の手順でコマンドを実行します。</p>
 
@@ -712,7 +728,7 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
 <p>だけで変更内容も引き継げるケースもあります。
 まずはチェックアウトを試みて、エラーが出たら上記3コマンドを実行しましょう。</p>
 
-<h2>コミット済みの変更を引き継ぎつつブランチを変更する</h2>
+<h1>コミット済みの変更を引き継ぎつつブランチを変更する</h1>
 
 <p>「間違えて違うブランチでコミットしてしまった！」といったケースの対処法です。
 この対処法は色々あるのですが、ここではスタッシュを使って対処する方法を紹介します。</p>
@@ -732,7 +748,7 @@ Appleが審査しているのでユーザは非常に安心して利用するこ
 
 <p>簡単ですね(・∀・)</p>
 
-<h2>まとめ</h2>
+<h1>まとめ</h1>
 
 <p>この記事を通して何が言いたかったかというと、「<strong>スタッシュ便利だよ</strong>」ということですww</p>
 
@@ -755,7 +771,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 <!--more-->
 
 
-<h2>DDD(ドメイン駆動設計)とは</h2>
+<h1>DDD(ドメイン駆動設計)とは</h1>
 
 <p>そもそも、DDDとは何なのか？</p>
 
@@ -788,7 +804,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 <p>ということで、DDDについての解説は私は現状できませんw
 もう少し学んでからリベンジしたいと思います。</p>
 
-<h2>気づいたこと</h2>
+<h1>気づいたこと</h1>
 
 <p>DDDについて学び始めて気づいたことは、<strong>設計の初歩から始めないと駄目だな</strong>ということです。</p>
 
@@ -820,7 +836,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 
 <p>SDK2のBGMは群を抜いて好きです。特に<a href="http://www.youtube.com/watch?v=zK4TWXWEKAQ">とげとげタルめいろ</a>と<a href="http://www.youtube.com/watch?v=bnWktjTMZb0">ハニー・アドベンチャー</a>は神です。</p>
 
-<h2>Serious Monkey Business</h2>
+<h1>Serious Monkey Business</h1>
 
 <p>さて本題です。</p>
 
@@ -839,18 +855,20 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 
 <p>以下がトレーラームービーです。</p>
 
-<h3>トレーラームービー</h3>
+<h2>トレーラームービー</h2>
 
 <iframe width="560" height="315" src="http://vatscy.github.io//www.youtube.com/embed/pP0nb5R3nwU" frameborder="0" allowfullscreen></iframe>
 
 
 <p>ロック、テクノ、オーケストラなど様々なテイストにアレンジされていて面白いですね。歌付きもあったり。</p>
 
-<hr />
+<p>.<br/>
+.<br/>
+.</p>
 
 <p>個人的にお気に入りなのが以下の2曲。</p>
 
-<h3>Roller Disco (原曲: どくろコースター)</h3>
+<h2>Roller Disco (原曲: どくろコースター)</h2>
 
 <iframe width="420" height="315" src="http://vatscy.github.io//www.youtube.com/embed/rAuoj6fnsAo" frameborder="0" allowfullscreen></iframe>
 
@@ -858,7 +876,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 <p>トランス調にアレンジされていてノリノリになれます。<br/>
 最後のサルボイスと敵ボイスがいいですねwww</p>
 
-<h3>Bramble Reprise (原曲: とげとげタルめいろ)</h3>
+<h2>Bramble Reprise (原曲: とげとげタルめいろ)</h2>
 
 <iframe width="420" height="315" src="http://vatscy.github.io//www.youtube.com/embed/79e1NfDLaLA" frameborder="0" allowfullscreen></iframe>
 
@@ -867,12 +885,21 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 ちなみにとげとげタルめいろはスマブラXでもアレンジされてましたね。<br/>
 ちなみに私は断然原曲派です（ｷﾘｯ</p>
 
-<hr />
+<p>.<br/>
+.<br/>
+.</p>
 
 <p>いかがだったでしょうか。<br/>
 これらが全部無料で落とせるって凄いですね。</p>
 
 <p>ちなみに、ゲームサウンドアレンジ配信サイト<a href="http://ocremix.org/">OverClocked ReMix</a>では、SDK2以外にもゼルダやFFなどのアレンジも配信しているようです。</p>
+
+<h1>　関連記事</h1>
+
+<ul>
+<li><a href="http://vatscy.github.io/blog/2014/06/28/brambles/">神曲『とげとげタルめいろ』原曲・アレンジ集めてみた</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
@@ -889,7 +916,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 <!-- more -->
 
 
-<h2>通常実行</h2>
+<h1>通常実行</h1>
 
 <p>特に意識せずにJavaScriptを記述したり読み込んだりすると、<strong>書いた順番に処理</strong>されます。</p>
 
@@ -954,7 +981,10 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 
 <p>正解は、</p>
 
-<p>(・∀・)</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>(・∀・)
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>と表示されます。</p>
 
@@ -980,7 +1010,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 
 <p>そこで、HTMLが読み込まれた<strong>後</strong>にJavaScriptを実行する必要があります。</p>
 
-<h2>読み込み後実行</h2>
+<h1>読み込み後実行</h1>
 
 <p><a href="http://jquery.com">jQuery</a>を用いて下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。
 3パターン挙げますが、全て処理は同じです。</p>
@@ -1063,12 +1093,16 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 
 <p>処理の記述は<code>&lt;div&gt;</code>より先ですが、HTMLが読み込まれた後に実行されるので、表示結果は</p>
 
-<p>∧＿＿∧<br/>
-(・∀・)</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>∧＿＿∧
+</span><span class='line'>(・∀・)
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>となります。（ずれてるけど）</p>
 
-<h2>完全読み込み後実行</h2>
+<h1>完全読み込み後実行</h1>
 
 <p>HTMLだけでなく、<strong>全ての関連ファイルを読み込んだ後に実行</strong>する処理を書くこともできます。</p>
 
@@ -1092,7 +1126,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
     <id>http://vatscy.github.io/blog/2013/12/23/markdown-matome</id>
     <content type="html"><![CDATA[<p>今回は<strong>Markdown</strong>についてまとめてみます。</p>
 
-<h2>Markdownとは</h2>
+<h1>Markdownとは</h1>
 
 <blockquote><p>Markdown は、文書を記述するための軽量マークアップ言語のひとつである。(<a href="http://ja.wikipedia.org/wiki/Markdown" target="_blank">Wikipedia</a>より引用)</p></blockquote>
 
@@ -1107,14 +1141,14 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 <!-- more -->
 
 
-<h2>記法</h2>
+<h1>記法</h1>
 
-<h3>見出し</h3>
+<h2>見出し</h2>
 
 <p>HTMLにおける<code>&lt;h1&gt;</code>〜<code>&lt;h6&gt;</code>。<br/>
 <strong>#の数</strong>で区別します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <h1>h1</h1>
 
@@ -1146,19 +1180,19 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 <pre><code>###### h6
 </code></pre>
 
-<h3>改行</h3>
+<h2>改行</h2>
 
 <p>HTMLにおける<code>&lt;br&gt;</code>。<br/>
 <strong>行末に半角スペースを2個以上記述する</strong>ことで実現します。<br/>
 ただ改行を入れるだけでは反映されないので注意！</p>
 
-<h3>段落</h3>
+<h2>段落</h2>
 
 <p>HTMLにおける<code>&lt;p&gt;</code>。<br/>
 <strong>空行を挟む</strong>ことで段落分けします。<br/>
 空行を挟まない改行は反映されないので注意！</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <p>さすがディオ!
 俺達に出来ないことを平然とやってのけるッ!</p>
@@ -1173,20 +1207,20 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 あこがれるゥ!
 </code></pre>
 
-<h3>強調</h3>
+<h2>強調</h2>
 
 <p>HTMLにおける<code>&lt;em&gt;</code>と<code>&lt;strong&gt;</code>。<br/>
 <code>&lt;em&gt;</code>は * または _ で囲み、<code>&lt;strong&gt;</code>は ** または __ で囲みます。<br/>
 ちなみに、<code>&lt;em&gt;</code>より<code>&lt;strong&gt;</code>の方が強い強調を表します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <p><em>ウボォーさん</em>、聞こえますか？オレ達から貴方への<strong>鎮魂歌</strong>です</p>
 
 <pre><code>*ウボォーさん*、聞こえますか？オレ達から貴方への**鎮魂歌**です
 </code></pre>
 
-<h3>コード</h3>
+<h2>コード</h2>
 
 <p>HTMLにおける<code>&lt;code&gt;</code>。<br/>
 先程から使っている<code>これ</code>や</p>
@@ -1198,7 +1232,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 インライン(1つ目)の場合は<strong> ｀(グレイヴアクセント) で囲み</strong>ます。<br/>
 段落(2つ目)の場合は<strong>行頭にTabを挿入</strong>、または<strong> ｀(グレイヴアクセント)3つで行を囲み</strong>ます。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1216,13 +1250,13 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 </span><span class='line'> ```</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>順序無しリスト</h3>
+<h2>順序無しリスト</h2>
 
 <p>HTMLにおける<code>&lt;ul&gt;&lt;li&gt;</code>。<br/>
 行頭に<strong> (* + &ndash; のうちのどれか1つ) ＋ 半角スペース</strong>を挿入することで実現します。<br/>
 また、さらに<strong>行頭に半角スペース4つを入れる</strong>ことでサブアイテムを作ることもできます。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <ul>
 <li>強化系
@@ -1276,12 +1310,12 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 </span><span class='line'>- 特質形</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>順序付きリスト</h3>
+<h2>順序付きリスト</h2>
 
 <p>HTMLにおける<code>&lt;ol&gt;&lt;li&gt;</code>。<br/>
 行頭に<strong>数字 ＋ ピリオド</strong>を挿入することで実現します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <ol>
 <li>ファントムブラッド</li>
@@ -1298,12 +1332,12 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 </span><span class='line'>3. スターダストクルセイダーズ</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>引用</h3>
+<h2>引用</h2>
 
 <p>HTMLにおける<code>&lt;blockquote&gt;</code>、<code>&lt;q&gt;</code>、<code>&lt;cite&gt;</code>。<br/>
 行頭に<strong> > ＋ 半角スペース</strong>を挿入することで実現します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <blockquote><p>恐ろしく速い手刀 オレでなきゃ見逃しちゃうね<br/>
 (by 団長の手刀を見逃さなかった人 &ndash; HUNTER×HUNTER11巻より抜粋)</p></blockquote>
@@ -1314,13 +1348,13 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 </span><span class='line'>&gt; (by 団長の手刀を見逃さなかった人 - HUNTER×HUNTER11巻より抜粋)</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>水平線</h3>
+<h2>水平線</h2>
 
 <p>HTMLにおける<code>&lt;hr&gt;</code>。<br/>
 1行の中に<strong> &ndash; (ハイフン)、 * (アスタリスク)、 _ (アンダースコア)のうちどれか1種を3個以上並べる</strong>ことで実現します。
 間に半角スペースを挟んでもOKです。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <hr />
 
@@ -1332,11 +1366,11 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 </span><span class='line'>_ _ _ _ _</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>テーブル</h3>
+<h2>テーブル</h2>
 
 <p>HTMLにおける<code>&lt;table&gt;</code>。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <table>
 <thead>
@@ -1392,12 +1426,12 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 </span><span class='line'>left | center | right</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>リンク</h3>
+<h2>リンク</h2>
 
 <p>HTMLにおける<code>&lt;a&gt;</code>。<br/>
 <code>[リンクのテキスト](URL "タイトル")</code> の形式で実現します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <p><a href="http://www.geocities.jp/yuusuke4971/" title="かの有名なサイト">ゆうすけのホームページ</a></p>
 
@@ -1409,7 +1443,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 <p>また、リンクの情報を一カ所にまとめておいて、<br/>
 実際にリンクを貼る場所でその情報を持ってくることもできます。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <p><a href="http://www.google.co.jp" title="ごおgれ">Google</a><br/>
 <a href="http://www.yahoo.co.jp" title="やほお">Yahoo!</a></p>
@@ -1426,19 +1460,19 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 </span><span class='line'>[1]: http://www.yahoo.co.jp "やほお"</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>画像</h3>
+<h2>画像</h2>
 
 <p>HTMLにおける<code>&lt;img&gt;</code>。<br/>
 <code>![画像の説明文](画像URL)</code> の形式で実現します。</p>
 
-<h4>(例)</h4>
+<h3>(例)</h3>
 
 <p><img src="http://vatscy.github.io/images/post/YMD68_TKG500.jpg" alt="そんな好きじゃない" /></p>
 
 <pre><code>![そんな好きじゃない](http://vatscy.github.io/images/post/YMD68_TKG500.jpg)
 </code></pre>
 
-<h3>その他</h3>
+<h2>その他</h2>
 
 <ul>
 <li>半角バックスラッシュまたは半角￥をMarkdownの直前に挿入することでエスケープ可能。</li>
@@ -1454,7 +1488,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
     <link href="http://vatscy.github.io/blog/2013/12/21/first-write/"/>
     <updated>2013-12-21T01:20:40+09:00</updated>
     <id>http://vatscy.github.io/blog/2013/12/21/first-write</id>
-    <content type="html"><![CDATA[<h2>はじめに</h2>
+    <content type="html"><![CDATA[<h1>はじめに</h1>
 
 <p>初めまして、ばつしいです。<br/>
 今日からゆるゆるとブログを綴っていこうと思います。<br/>
@@ -1473,15 +1507,8 @@ DDDについて調べた過程、それに対して私が感じたことをま�
 駆け出しエンジニアの拙いブログですが、誰かのお役に立てれば幸いです。</p>
 
 <p>具体例を多用してわかりやすくしていきたいなと思っています。<br/>
-何となく好きな漫画ネタが多くなるような予感がしてます。</p>
-
-<p>ちなみにHUNTER×HUNTERとジョジョが好きです。<br/>
-特にHUNTER×HUNTERは結構マニアックな所まで知っています。蟻編が好きです。<br/>
-ジョジョは4部後半と5部が好きです。実は6部以降はまだ読んでません(にわか)</p>
-
-<p>あと最近は監獄学園にハマってます。これは世の男性にはマジでオススメ！</p>
-
-<hr />
+何となく好きな漫画ネタが多くなるような予感がしてます。<br/>
+ちなみにHUNTER×HUNTERとジョジョと監獄学園が好きです。</p>
 
 <p>後半話が脱線しましたが、とりあえず初回はこんな感じで！</p>
 ]]></content>

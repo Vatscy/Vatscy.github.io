@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-07-01T00:42:54+09:00</updated>
+  <updated>2014-07-05T19:14:23+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -26,7 +26,7 @@
 <!-- more -->
 
 
-<h2>通常実行</h2>
+<h1>通常実行</h1>
 
 <p>特に意識せずにJavaScriptを記述したり読み込んだりすると、<strong>書いた順番に処理</strong>されます。</p>
 
@@ -70,7 +70,9 @@ element.innerHTML = "(・∀・)";
 
 <p>正解は、</p>
 
-<p>(・∀・)</p>
+<p><code>
+(・∀・)
+</code></p>
 
 <p>と表示されます。</p>
 
@@ -93,7 +95,7 @@ var element = document.getElementById("ears");
 
 <p>そこで、HTMLが読み込まれた<strong>後</strong>にJavaScriptを実行する必要があります。</p>
 
-<h2>読み込み後実行</h2>
+<h1>読み込み後実行</h1>
 
 <p><a href="http://jquery.com">jQuery</a>を用いて下記のように記述すると、<strong>HTMLが全て読み込まれた後にJavaScriptを実行</strong>できます。
 3パターン挙げますが、全て処理は同じです。</p>
@@ -158,12 +160,14 @@ $(function() {
 
 <p>処理の記述は<code>&lt;div&gt;</code>より先ですが、HTMLが読み込まれた後に実行されるので、表示結果は</p>
 
-<p>∧＿＿∧<br/>
-(・∀・)</p>
+<p><code>
+∧＿＿∧  
+(・∀・)
+</code></p>
 
 <p>となります。（ずれてるけど）</p>
 
-<h2>完全読み込み後実行</h2>
+<h1>完全読み込み後実行</h1>
 
 <p>HTMLだけでなく、<strong>全ての関連ファイルを読み込んだ後に実行</strong>する処理を書くこともできます。</p>
 
