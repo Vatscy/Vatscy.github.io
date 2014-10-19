@@ -10,7 +10,7 @@
   <meta name="author" content="ばつしい">
 
   
-  <meta name="description" content="ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、正規表現そのものが何を意味しているのか、どんな文字列を期待しているのかを解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。 &hellip;">
+  <meta name="description" content="ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、正規表現そのものが何を意味しているのか、どんな文字列を期待しているのかを解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。 他人の書いた正規表現を見て、「ん？」 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -46,7 +46,7 @@ $(document).ready( function () {
 <!-- facebook設定 -->
 <meta property="og:title" content="正規表現を解析して可視化してくれるサイトが凄すぎる件" />
 <meta property="og:type" content="article" />
-<meta property="og:description" content="ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、正規表現そのものが何を意味しているのか、どんな文字列を期待しているのかを解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。 &hellip;" />
+<meta property="og:description" content="ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、正規表現そのものが何を意味しているのか、どんな文字列を期待しているのかを解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。 他人の書いた正規表現を見て、「ん？」 &hellip;" />
 <meta property="og:url" content="http://vatscy.github.io/blog/2014/05/17/regexper/" />
 <meta property="og:image" content="http://vatscy.github.io/images/post/regexper1.jpg" />
 <meta property="og:site_name" content="ばしぶろ" />
@@ -198,14 +198,15 @@ $(document).ready( function () {
 </p>
   <p>ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、<em>正規表現そのものが何を意味しているのか、どんな文字列を期待しているのか</em>を解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。</p>
 
-<p>僕は馬鹿なので正規表現を見ても何が何だかさっぱりわかりません。<br/>
+<p>他人の書いた正規表現を見て、「ん？」ってなったことはありませんか？<br/>
 例えばこれ。</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>^[a-zA-Z0-9-_.]@([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,4}$</span></code></pre></td></tr></table></div></figure>
 
 
-<p>いつかはマスターしたいけど&hellip;今は楽したい。<br/>
+<p>これくらいなら分かりますが、複雑になってくるとつらい&hellip;<br/>
+いつかはマスターしたいけど&hellip;今は楽したい。<br/>
 そう思ってググってみると&hellip;ありました！</p>
 
 <!--more-->
@@ -253,7 +254,8 @@ $(document).ready( function () {
 最終的に一番右に到達するまでに出てきた文字をつなげたような文字列を期待しています。
 (解説下手だけどこの記事を読んでる人ならわかると信じたい)</p>
 
-<p>簡単でわかりやすい！</p>
+<p>簡単でわかりやすい！<br/>
+人に説明する際にもわざわざ正誤リストなどを作る必要もなさそうですね。</p>
 
 <p>GitHubで開発しているみたいです。こんなサイトを作りたいなぁ&hellip;</p>
 

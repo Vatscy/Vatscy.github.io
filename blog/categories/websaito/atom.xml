@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Webサイト | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/websaito/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2014-07-08T01:28:05+09:00</updated>
+  <updated>2014-10-19T09:51:46+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -20,14 +20,15 @@
     <id>http://vatscy.github.io/blog/2014/05/17/regexper</id>
     <content type="html"><![CDATA[<p>ある正規表現に対して、特定の文字列がマッチするかどうかをチェックするツールやサイトは沢山ありますが、<em>正規表現そのものが何を意味しているのか、どんな文字列を期待しているのか</em>を解析・解読・説明してくれるツールやサイトってなかなか見ない気がします。</p>
 
-<p>僕は馬鹿なので正規表現を見ても何が何だかさっぱりわかりません。<br/>
+<p>他人の書いた正規表現を見て、「ん？」ってなったことはありませんか？<br/>
 例えばこれ。</p>
 
 <p><code>
 ^[a-zA-Z0-9-_.]@([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,4}$
 </code></p>
 
-<p>いつかはマスターしたいけど&hellip;今は楽したい。<br/>
+<p>これくらいなら分かりますが、複雑になってくるとつらい&hellip;<br/>
+いつかはマスターしたいけど&hellip;今は楽したい。<br/>
 そう思ってググってみると&hellip;ありました！</p>
 
 <!--more-->
@@ -75,7 +76,8 @@
 最終的に一番右に到達するまでに出てきた文字をつなげたような文字列を期待しています。
 (解説下手だけどこの記事を読んでる人ならわかると信じたい)</p>
 
-<p>簡単でわかりやすい！</p>
+<p>簡単でわかりやすい！<br/>
+人に説明する際にもわざわざ正誤リストなどを作る必要もなさそうですね。</p>
 
 <p>GitHubで開発しているみたいです。こんなサイトを作りたいなぁ&hellip;</p>
 ]]></content>
