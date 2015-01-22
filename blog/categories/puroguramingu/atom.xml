@@ -4,7 +4,7 @@
   <title><![CDATA[Category: プログラミング | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/puroguramingu/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2015-01-22T20:26:48+09:00</updated>
+  <updated>2015-01-22T20:29:36+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -31,13 +31,13 @@
 
 <p>例えば、以下のようなint型のリストがあったとします。</p>
 
-<p><code>
+<p><code>javascript
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 </code></p>
 
 <p>これを以下のように順番に3つずつの固まりに分割する<code>Partition</code>メソッドを考えます。</p>
 
-<p><code>csharp
+<p><code>javascript
 [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9]]
 </code></p>
 
@@ -67,7 +67,7 @@ public static IEnumerable&lt;IEnumerable<T>> Partition<T>(this IEnumerable<T> so
 
 <p>すっきり書けたね！使用例と結果は以下。</p>
 
-<p><code>
+<p><code>csharp
 var list = new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 var list2 = list.Partition(3);
 // [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9]]
