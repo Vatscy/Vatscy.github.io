@@ -4,7 +4,7 @@
   <title><![CDATA[Category: プログラミング | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/puroguramingu/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2015-01-22T19:32:30+09:00</updated>
+  <updated>2015-01-22T19:35:25+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -12,69 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[LINQを使う際に陥りやすい思考の罠]]></title>
-    <link href="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/"/>
-    <updated>2014-12-03T22:55:47+09:00</updated>
-    <id>http://vatscy.github.io/blog/2014/12/03/trap-of-linq</id>
-    <content type="html"><![CDATA[<p>※主にLINQ to Objectsの話。LINQ to SQLなどは挙動が違うので注意。</p>
-
-<p>LINQって便利！スタイリッシュ！C#を使い始めて一番感動したのはLINQでした。存在を知ってからしばらくはいかにLINQを使いまくるか、ばっかり考えてました。しかし、この浅い考えは時に悲劇を生みます。</p>
-
-<p><strong>LINQは仕組みを理解した上で効果的に使うもの</strong>です。今回はLINQを使う際に陥り易い思考の罠について書いてみます。</p>
-
-<h1>リストをいくつかの固まりに分割する</h1>
-
-<p>例えば、以下のようなint型のリストがあったとします。</p>
-
-<p><code>
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-</code></p>
-
-<p>これを以下のように順番に3つずつの固まりに分割する<code>Partition</code>メソッドを考えます。</p>
-
-<p><code>csharp
-[[0, 1, 2], [3, 4, 5], [6, 7, 8], [9]]
-</code></p>
-
-<p>LINQには以下のメソッドが用意されています。</p>
-
-<ul>
-<li><a href="http://msdn.microsoft.com/ja-jp/library/bb503062(v=vs.110">Take</a>.aspx) &ndash; 先頭から指定した分の要素を返す</li>
-<li><a href="http://msdn.microsoft.com/ja-jp/library/bb358985(v=vs.110">Skip</a>.aspx) &ndash; 先頭から指定した分だけ飛ばして残りの要素を返す</li>
-</ul>
-
-
-<p>これらを使って実装を考えると、例えばこんな感じ。</p>
-
-<p>```csharp
-public static IEnumerable&lt;IEnumerable<T>> Partition<T>(this IEnumerable<T> source, int size)
-{</p>
-
-<pre><code>while (source.Count() &gt; 0)
-{
-    yield return source.Take(size);
-    source = source.Skip(size);
-}
-</code></pre>
-
-<p>}
-```</p>
-
-<p>すっきり書けたね！使用例と結果は以下。</p>
-
-<p><code>
-var list = new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-var list2 = list.Partition(3);
-// [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9]]
-</code></p>
-
-<h2>しかし実は、これはかなり効率が悪い</h2>
-
-<p>この実装の追い求めるイメージはこんな感じ。</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[【ASP.NET】APIのルーティングを設定する2つの方法【WebAPI】]]></title>
@@ -505,6 +442,68 @@ $ git reset --soft HEAD^
 
 <p>今回はブランチ切り替え時のスタッシュの有用性についてまとめました。
 しかしそれ以外にもスタッシュは様々な場面で使えるので、スタッシュという機能があるということを覚えておくときっと役に立つはずです。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DDD(ドメイン駆動設計)入門してみた]]></title>
+    <link href="http://vatscy.github.io/blog/2014/03/08/ddd/"/>
+    <updated>2014-03-08T22:53:45+09:00</updated>
+    <id>http://vatscy.github.io/blog/2014/03/08/ddd</id>
+    <content type="html"><![CDATA[<p>現場に配属されて数ヶ月が経ち、業務にも徐々に慣れてきました。
+エンジニアとしての知識もわりとついてきたんじゃないかと思いますが、圧倒的に自分に足りないなと思うのは<strong>設計力</strong>です。</p>
+
+<p>そこで、上司からの薦めもあり、DDD(ドメイン駆動設計)入門してみました。
+DDDについて調べた過程、それに対して私が感じたことをまとめてみようと思います。</p>
+
+<!--more-->
+
+
+<h1>DDD(ドメイン駆動設計)とは</h1>
+
+<p>そもそも、DDDとは何なのか？</p>
+
+<blockquote><p><strong>ドメイン駆動設計(英: Domain-driven design, DDD)</strong>とはソフトウェアの設計手法であり、'複雑なドメインの設計はモデルベースで行うべきであり'、'また大半のソフトウェアプロジェクトではシステムを実装するための特定の技術ではなくドメインそのものとドメインのロジックに焦点を置くべき'とする。この名称は Eric Evans が同名の著作で用いた。<br/>
+書籍 Domain-Driven Designでは、たとえば ubiquitous language といった高位の概念と実践について多数述べられている。これは、ドメインモデルがシステムの要求を記述するためにドメインの専門家が提供し、業務上のユーザーやスポンサー、開発者みなにとってうまく働くような common language(共通言語)を形成するべきである、という考えである。同書は多層アーキテクチャを持つオブジェクト指向システムにおいて、一般的なレイヤ構造におけるドメイン層を記述することに重点を置いている。<br/>
+(Wikipediaより引用)</p></blockquote>
+
+<p>つまり、「ドメイン」を中心として設計を行うってことでいいのかな？</p>
+
+<p>これだけだとよく分からない&hellip;</p>
+
+<p>そこで、上司にオススメ頂いたサイトがあるので列挙しておく。</p>
+
+<ul>
+<li><a href="http://www.ogis-ri.co.jp/otc/hiroba/technical/DDDEssence/">DDD難民に捧げる Domain-Driven Designのエッセンス</a></li>
+<li><a href="http://www.infoq.com/jp/minibooks/domain-driven-design-quickly">Domain Driven Design(ドメイン駆動設計) Quickly 日本語版</a></li>
+<li><a href="https://www.youtube.com/watch?v=77BTZWq3GiQ">20110409_DevLOVE「実践！　ドメイン駆動設計」_増田亨さん</a></li>
+</ul>
+
+
+<p>1つ目の「エッセンス」は、まさにDDDのエッセンスを簡潔にまとめてあるサイト。このサイトを見れば大まかに「DDDとは何ぞや」が分かります。</p>
+
+<p>2つ目の「Quickly」は、DDDの原著の要約を日本語訳したものを無料ダウンロードできるサイト。無料にも関わらず中身は充実の100ページ弱！ありがたいです。</p>
+
+<p>3つ目の動画は、有限会社システム設計の代表取締役・増田亨さん(<a href="https://twitter.com/masuda220">@masuda220</a>)のDDDの講演動画です。具体例を絡めて非常に分かり易く解説なされています。読書が嫌いな私にとって動画は非常にありがたいw</p>
+
+<p>軽く参考ページを挙げてみましたが、正直全てを隅々まで見ることができていません&hellip;
+もう少し時間をかけてゆっくり理解していこうと思います。</p>
+
+<p>ということで、DDDについての解説は私は現状できませんw
+もう少し学んでからリベンジしたいと思います。</p>
+
+<h1>気づいたこと</h1>
+
+<p>DDDについて学び始めて気づいたことは、<strong>設計の初歩から始めないと駄目だな</strong>ということです。</p>
+
+<p>例えば、DDDの考え方の基礎となる<em>オブジェクト指向</em>。エンジニアなら誰でも知っていると思います。さすがにポンコツの私ですら知っていますw<br/>
+カプセル化、インヘリタンス（継承）、ポリモーフィズム&hellip;説明もできます。</p>
+
+<p>しかし、いざ「オブジェクト指向を基に設計してみよう！」と思っても自信を持って設計できる気がしません&hellip;</p>
+
+<p>なのでまずは<strong>オブジェクト指向設計</strong>から始めてみようと思います。</p>
+
+<p>何か最近、自分に不足していると感じること、学びたいことが沢山ありすぎてつらいですが、広く手を出して浅くなってしまうのは無個性すぎるので、スコープを狭めて深く学び、個性を出していきたい。と言っても基礎が薄いので固めなければならない、という状況で歯がゆい。しばらくは足掻きたいと思います。</p>
 ]]></content>
   </entry>
   
