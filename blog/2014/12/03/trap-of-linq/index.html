@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>LINQを使う際に陥りやすい思考の罠 - ばしぶろ</title>
+  <title>【C#】LINQを使う際に陥りやすい思考の罠 - ばしぶろ</title>
   <meta name="author" content="ばつしい">
 
   
@@ -44,7 +44,7 @@ $(document).ready( function () {
 
 
 <!-- facebook設定 -->
-<meta property="og:title" content="LINQを使う際に陥りやすい思考の罠" />
+<meta property="og:title" content="【C#】LINQを使う際に陥りやすい思考の罠" />
 <meta property="og:type" content="article" />
 <meta property="og:description" content="※主にLINQ to Objectsの話。LINQ to SQLなどは挙動が違うので注意。 LINQって便利！スタイリッシュ！C#を使い始めて一番感動したのはLINQでした。存在を知ってからしばらくは、いかにLINQを使いまくるか、ばっかり考えてました。しかし、この浅い考えは時に悲劇を生みます &hellip;" />
 <meta property="og:url" content="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" />
@@ -149,7 +149,7 @@ $(document).ready( function () {
   
   <header>
     
-      <h1 class="entry-title">LINQを使う際に陥りやすい思考の罠</h1>
+      <h1 class="entry-title">【C#】LINQを使う際に陥りやすい思考の罠</h1>
     
     
       <p class="meta">
@@ -174,10 +174,10 @@ $(document).ready( function () {
   <div class="facebook-b"><fb:like href="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" layout="button_count" action="like" show_faces="false" share="false" width="100"></fb:like></div>
   
   
-  <div class="twitter-b"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" data-via="vatscy8241" data-text="LINQを使う際に陥りやすい思考の罠">Tweet</a></div>
+  <div class="twitter-b"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" data-via="vatscy8241" data-text="【C#】LINQを使う際に陥りやすい思考の罠">Tweet</a></div>
   
   
-    <div class="hatena-b"><a href="http://b.hatena.ne.jp/entry/vatscy.github.io/blog/2014/12/03/trap-of-linq/" class="hatena-bookmark-button" data-hatena-bookmark-title="LINQを使う際に陥りやすい思考の罠" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></div>
+    <div class="hatena-b"><a href="http://b.hatena.ne.jp/entry/vatscy.github.io/blog/2014/12/03/trap-of-linq/" class="hatena-bookmark-button" data-hatena-bookmark-title="【C#】LINQを使う際に陥りやすい思考の罠" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></div>
   
   
   
@@ -202,22 +202,18 @@ $(document).ready( function () {
 
 <p><strong>LINQは仕組みを理解した上で効果的に使うもの</strong>です。今回はLINQを使う際に陥り易い思考の罠について書いてみます。</p>
 
-<!-- more -->
-
-
 <h1>リストをいくつかの固まりに分割する</h1>
 
 <p>例えば、以下のようなint型のリストがあったとします。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span></code></pre></td></tr></table></div></figure>
 
 
 <p>これを以下のように順番に3つずつの固まりに分割する<code>Partition</code>メソッドを考えます。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">]]</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="na">[[0, 1, 2]</span><span class="p">,</span> <span class="p">[</span><span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">5</span><span class="p">],</span> <span class="p">[</span><span class="m">6</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">8</span><span class="p">],</span> <span class="p">[</span><span class="m">9</span><span class="p">]]</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -309,10 +305,10 @@ $(document).ready( function () {
   <div class="facebook-b"><fb:like href="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" layout="box_count" action="like" show_faces="false" share="false" width="100"></fb:like></div>
   
   
-  <div class="twitter-b-footer"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" data-via="vatscy8241" data-text="LINQを使う際に陥りやすい思考の罠" data-count="vertical">Tweet</a></div>
+  <div class="twitter-b-footer"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" data-via="vatscy8241" data-text="【C#】LINQを使う際に陥りやすい思考の罠" data-count="vertical">Tweet</a></div>
   
   
-    <div class="hatena-b"><a href="http://b.hatena.ne.jp/entry/vatscy.github.io/blog/2014/12/03/trap-of-linq/" class="hatena-bookmark-button" data-hatena-bookmark-title="LINQを使う際に陥りやすい思考の罠" data-hatena-bookmark-layout="vertical-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></div>
+    <div class="hatena-b"><a href="http://b.hatena.ne.jp/entry/vatscy.github.io/blog/2014/12/03/trap-of-linq/" class="hatena-bookmark-button" data-hatena-bookmark-title="【C#】LINQを使う際に陥りやすい思考の罠" data-hatena-bookmark-layout="vertical-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></div>
   
   
   
@@ -326,8 +322,6 @@ $(document).ready( function () {
       
         <a class="basic-alignment left" href="/blog/2014/06/28/brambles/" title="Previous Post: 神曲『とげとげタルめいろ』原曲・アレンジ集めてみた">&laquo; 神曲『とげとげタルめいろ』原曲・アレンジ集めてみた</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/01/22/test/" title="Next Post: test">test &raquo;</a>
       
     </p>
   </footer>
@@ -380,11 +374,7 @@ $(document).ready( function () {
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2015/01/22/test/">test</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/03/trap-of-linq/">LINQを使う際に陥りやすい思考の罠</a>
+        <a href="/blog/2014/12/03/trap-of-linq/">【C#】LINQを使う際に陥りやすい思考の罠</a>
       </li>
     
       <li class="post">
@@ -397,6 +387,10 @@ $(document).ready( function () {
     
       <li class="post">
         <a href="/blog/2014/05/17/regexper/">正規表現を解析して可視化してくれるサイトが凄すぎる件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/06/monolingual/">【Mac】言語データを断捨離してみた</a>
       </li>
     
   </ul>
