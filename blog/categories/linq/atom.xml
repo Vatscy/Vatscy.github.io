@@ -4,7 +4,7 @@
   <title><![CDATA[Category: LINQ | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/linq/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2015-01-22T20:24:16+09:00</updated>
+  <updated>2015-01-22T20:26:48+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -23,6 +23,9 @@
 <p>LINQって便利！スタイリッシュ！C#を使い始めて一番感動したのはLINQでした。存在を知ってからしばらくは、いかにLINQを使いまくるか、ばっかり考えてました。しかし、この浅い考えは時に悲劇を生みます。</p>
 
 <p><strong>LINQは仕組みを理解した上で効果的に使うもの</strong>です。今回はLINQを使う際に陥り易い思考の罠について書いてみます。</p>
+
+<!-- more -->
+
 
 <h1>リストをいくつかの固まりに分割する</h1>
 
