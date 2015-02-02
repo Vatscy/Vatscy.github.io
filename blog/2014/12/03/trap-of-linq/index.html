@@ -205,7 +205,7 @@ $(document).ready( function () {
 <!-- more -->
 
 
-<h1>リストをいくつかの固まりに分割する</h1>
+<h1>LINQを使ったコレクション操作</h1>
 
 <p>例えば、以下のようなint型のリストがあったとします。</p>
 
@@ -250,7 +250,7 @@ $(document).ready( function () {
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>すっきり書けたね！使用例と結果は以下。</p>
+<p>おっ、すっきり書けた！使用例と結果は以下。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -261,9 +261,68 @@ $(document).ready( function () {
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>しかし実はこれはかなり効率が悪い</h2>
+<p><strong>しかし実はこれはかなり効率が悪い。</strong>はっきり言って<strong>とんでもない駄作</strong>です。この事実に気付けるようになるために、LINQの仕組みを理解しましょう。</p>
 
-<p>(この先現在執筆中&hellip;)</p>
+<h1>IEnumerable&lt;T&gt;の使命</h1>
+
+<p>LINQはIEnumerable&lt;T&gt;インタフェースの拡張メソッドとして定義されています。<strong>List&lt;T&gt;やT[ ]の拡張メソッドではないことに注意！</strong>これ、めちゃめちゃ大事。なのでLINQを扱う際にはIEnumerable&lt;T&gt;の役割を理解することが、めちゃめちゃ大事。</p>
+
+<p>IEnumerable&lt;T&gt;のMSDNには以下のように説明されています。</p>
+
+<blockquote><p>指定した型のコレクションに対する単純な反復処理をサポートする列挙子を公開します。</p></blockquote>
+
+<p>つまり&hellip;どういうことだってばよ？</p>
+
+<p>簡単にIEnumerable&lt;T&gt;と他のコレクションの違いを説明します。</p>
+
+<p>例えば、List&lt;T&gt;やT[ ]は指定したインデックスの要素を自由に取り出すことができます。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">fib</span> <span class="p">=</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">13</span><span class="p">,</span> <span class="m">21</span> <span class="p">};</span>
+</span><span class='line'><span class="kt">var</span> <span class="n">fifth</span> <span class="p">=</span> <span class="n">fib</span><span class="p">[</span><span class="m">5</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>また、Dictionary&lt;T1, T2&gt;はkeyを指定してvalueを取り出すことができます。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">urls</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Distionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">{</span><span class="s">&quot;twitter&quot;</span><span class="p">,</span> <span class="s">&quot;https://twitter.com/&quot;</span><span class="p">},</span>
+</span><span class='line'>    <span class="p">{</span><span class="s">&quot;facebook&quot;</span><span class="p">,</span> <span class="s">&quot;https://www.facebook.com/&quot;</span><span class="p">},</span>
+</span><span class='line'>    <span class="p">{</span><span class="s">&quot;google&quot;</span><span class="p">,</span> <span class="s">&quot;https://www.google.co.jp/&quot;</span><span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="kt">var</span> <span class="n">twitterUrl</span> <span class="p">=</span> <span class="n">urls</span><span class="p">[</span><span class="s">&quot;twitter&quot;</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>これらはそれぞれのコレクションの使命、役割です。</p>
+
+<p>ではIEnumerable&lt;T&gt;の使命は何なのか？それは<strong>要素を1つずつ取り出せること</strong>。それだけ。インデックスやkeyを指定して特定の要素を取り出すことはできず、「何か頂戴」に対して「次はこれね」と返すだけ。</p>
+
+<p>IEnumerable&lt;T&gt;型の変数から中身を取り出す際には<code>foreach</code>を使用します。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">fib</span> <span class="p">=</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">13</span><span class="p">,</span> <span class="m">21</span> <span class="p">};</span>
+</span><span class='line'><span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">item</span> <span class="k">in</span> <span class="n">fib</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">item</span> <span class="p">+</span> <span class="s">&quot;, &quot;</span><span class="p">);</span> <span class="c1">// 1, 1, 2, 3, 5, 8, 13, 21</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">var</span> <span class="n">fifth</span> <span class="p">=</span> <span class="n">fib</span><span class="p">[</span><span class="m">5</span><span class="p">];</span> <span class="c1">// これはエラー（インデックスの指定は不可）</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(現在続きを執筆中&hellip;)</p>
 
 </div>
 

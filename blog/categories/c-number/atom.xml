@@ -4,7 +4,7 @@
   <title><![CDATA[Category: C# | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/c-number/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2015-02-02T22:29:52+09:00</updated>
+  <updated>2015-02-02T23:31:59+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -27,7 +27,7 @@
 <!-- more -->
 
 
-<h1>リストをいくつかの固まりに分割する</h1>
+<h1>LINQを使ったコレクション操作</h1>
 
 <p>例えば、以下のようなint型のリストがあったとします。</p>
 
@@ -65,7 +65,7 @@ public static IEnumerable&lt;IEnumerable<T>> Partition<T>(this IEnumerable<T> so
 <p>}
 ```</p>
 
-<p>すっきり書けたね！使用例と結果は以下。</p>
+<p>おっ、すっきり書けた！使用例と結果は以下。</p>
 
 <p><code>csharp
 var list = new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -73,9 +73,56 @@ var list2 = list.Partition(3);
 // [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9]]
 </code></p>
 
-<h2>しかし実はこれはかなり効率が悪い</h2>
+<p><strong>しかし実はこれはかなり効率が悪い。</strong>はっきり言って<strong>とんでもない駄作</strong>です。この事実に気付けるようになるために、LINQの仕組みを理解しましょう。</p>
 
-<p>(この先現在執筆中&hellip;)</p>
+<h1>IEnumerable&lt;T&gt;の使命</h1>
+
+<p>LINQはIEnumerable&lt;T&gt;インタフェースの拡張メソッドとして定義されています。<strong>List&lt;T&gt;やT[ ]の拡張メソッドではないことに注意！</strong>これ、めちゃめちゃ大事。なのでLINQを扱う際にはIEnumerable&lt;T&gt;の役割を理解することが、めちゃめちゃ大事。</p>
+
+<p>IEnumerable&lt;T&gt;のMSDNには以下のように説明されています。</p>
+
+<blockquote><p>指定した型のコレクションに対する単純な反復処理をサポートする列挙子を公開します。</p></blockquote>
+
+<p>つまり&hellip;どういうことだってばよ？</p>
+
+<p>簡単にIEnumerable&lt;T&gt;と他のコレクションの違いを説明します。</p>
+
+<p>例えば、List&lt;T&gt;やT[ ]は指定したインデックスの要素を自由に取り出すことができます。
+<code>csharp
+var fib = new[] { 1, 1, 2, 3, 5, 8, 13, 21 };
+var fifth = fib[5];
+</code></p>
+
+<p>また、Dictionary&lt;T1, T2&gt;はkeyを指定してvalueを取り出すことができます。
+```csharp
+var urls = new Distionary&lt;string, string> {</p>
+
+<pre><code>{"twitter", "https://twitter.com/"},
+{"facebook", "https://www.facebook.com/"},
+{"google", "https://www.google.co.jp/"}
+</code></pre>
+
+<p>};
+var twitterUrl = urls[&ldquo;twitter&rdquo;];
+```
+これらはそれぞれのコレクションの使命、役割です。</p>
+
+<p>ではIEnumerable&lt;T&gt;の使命は何なのか？それは<strong>要素を1つずつ取り出せること</strong>。それだけ。インデックスやkeyを指定して特定の要素を取り出すことはできず、「何か頂戴」に対して「次はこれね」と返すだけ。</p>
+
+<p>IEnumerable&lt;T&gt;型の変数から中身を取り出す際には<code>foreach</code>を使用します。
+```csharp
+IEnumerable<int> fib = new[] { 1, 1, 2, 3, 5, 8, 13, 21 };
+foreach (var item in fib) {</p>
+
+<pre><code>Console.Write(item + ", "); // 1, 1, 2, 3, 5, 8, 13, 21
+</code></pre>
+
+<p>}</p>
+
+<p>var fifth = fib[5]; // これはエラー（インデックスの指定は不可）
+```</p>
+
+<p>(現在続きを執筆中&hellip;)</p>
 ]]></content>
   </entry>
   
