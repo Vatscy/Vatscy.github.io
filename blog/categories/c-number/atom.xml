@@ -4,7 +4,7 @@
   <title><![CDATA[Category: C# | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/c-number/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2015-02-02T23:31:59+09:00</updated>
+  <updated>2015-02-02T23:37:28+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -77,7 +77,7 @@ var list2 = list.Partition(3);
 
 <h1>IEnumerable&lt;T&gt;の使命</h1>
 
-<p>LINQはIEnumerable&lt;T&gt;インタフェースの拡張メソッドとして定義されています。<strong>List&lt;T&gt;やT[ ]の拡張メソッドではないことに注意！</strong>これ、めちゃめちゃ大事。なのでLINQを扱う際にはIEnumerable&lt;T&gt;の役割を理解することが、めちゃめちゃ大事。</p>
+<p>LINQはIEnumerable&lt;T&gt;インタフェースの拡張メソッドとして定義されています。<strong>List&lt;T&gt;やT[]の拡張メソッドではないことに注意！</strong>これ、めちゃめちゃ大事。なのでLINQを扱う際にはIEnumerable&lt;T&gt;の役割を理解することが、めちゃめちゃ大事。</p>
 
 <p>IEnumerable&lt;T&gt;のMSDNには以下のように説明されています。</p>
 
@@ -87,10 +87,10 @@ var list2 = list.Partition(3);
 
 <p>簡単にIEnumerable&lt;T&gt;と他のコレクションの違いを説明します。</p>
 
-<p>例えば、List&lt;T&gt;やT[ ]は指定したインデックスの要素を自由に取り出すことができます。
+<p>例えば、List&lt;T&gt;やT[]は指定したインデックスの要素を自由に取り出すことができます。
 <code>csharp
 var fib = new[] { 1, 1, 2, 3, 5, 8, 13, 21 };
-var fifth = fib[5];
+var fifth = fib[5]; // 8
 </code></p>
 
 <p>また、Dictionary&lt;T1, T2&gt;はkeyを指定してvalueを取り出すことができます。
@@ -103,7 +103,7 @@ var urls = new Distionary&lt;string, string> {</p>
 </code></pre>
 
 <p>};
-var twitterUrl = urls[&ldquo;twitter&rdquo;];
+var twitterUrl = urls[&ldquo;twitter&rdquo;]; // <a href="https://twitter.com/">https://twitter.com/</a>
 ```
 これらはそれぞれのコレクションの使命、役割です。</p>
 

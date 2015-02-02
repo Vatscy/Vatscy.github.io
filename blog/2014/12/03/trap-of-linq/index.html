@@ -265,7 +265,7 @@ $(document).ready( function () {
 
 <h1>IEnumerable&lt;T&gt;の使命</h1>
 
-<p>LINQはIEnumerable&lt;T&gt;インタフェースの拡張メソッドとして定義されています。<strong>List&lt;T&gt;やT[ ]の拡張メソッドではないことに注意！</strong>これ、めちゃめちゃ大事。なのでLINQを扱う際にはIEnumerable&lt;T&gt;の役割を理解することが、めちゃめちゃ大事。</p>
+<p>LINQはIEnumerable&lt;T&gt;インタフェースの拡張メソッドとして定義されています。<strong>List&lt;T&gt;やT[]の拡張メソッドではないことに注意！</strong>これ、めちゃめちゃ大事。なのでLINQを扱う際にはIEnumerable&lt;T&gt;の役割を理解することが、めちゃめちゃ大事。</p>
 
 <p>IEnumerable&lt;T&gt;のMSDNには以下のように説明されています。</p>
 
@@ -275,12 +275,12 @@ $(document).ready( function () {
 
 <p>簡単にIEnumerable&lt;T&gt;と他のコレクションの違いを説明します。</p>
 
-<p>例えば、List&lt;T&gt;やT[ ]は指定したインデックスの要素を自由に取り出すことができます。</p>
+<p>例えば、List&lt;T&gt;やT[]は指定したインデックスの要素を自由に取り出すことができます。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="kt">var</span> <span class="n">fib</span> <span class="p">=</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">13</span><span class="p">,</span> <span class="m">21</span> <span class="p">};</span>
-</span><span class='line'><span class="kt">var</span> <span class="n">fifth</span> <span class="p">=</span> <span class="n">fib</span><span class="p">[</span><span class="m">5</span><span class="p">];</span>
+</span><span class='line'><span class="kt">var</span> <span class="n">fifth</span> <span class="p">=</span> <span class="n">fib</span><span class="p">[</span><span class="m">5</span><span class="p">];</span> <span class="c1">// 8</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -297,7 +297,7 @@ $(document).ready( function () {
 </span><span class='line'>    <span class="p">{</span><span class="s">&quot;facebook&quot;</span><span class="p">,</span> <span class="s">&quot;https://www.facebook.com/&quot;</span><span class="p">},</span>
 </span><span class='line'>    <span class="p">{</span><span class="s">&quot;google&quot;</span><span class="p">,</span> <span class="s">&quot;https://www.google.co.jp/&quot;</span><span class="p">}</span>
 </span><span class='line'><span class="p">};</span>
-</span><span class='line'><span class="kt">var</span> <span class="n">twitterUrl</span> <span class="p">=</span> <span class="n">urls</span><span class="p">[</span><span class="s">&quot;twitter&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="kt">var</span> <span class="n">twitterUrl</span> <span class="p">=</span> <span class="n">urls</span><span class="p">[</span><span class="s">&quot;twitter&quot;</span><span class="p">];</span> <span class="c1">// https://twitter.com/</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
