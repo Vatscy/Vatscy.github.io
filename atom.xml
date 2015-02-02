@@ -4,7 +4,7 @@
   <title><![CDATA[ばしぶろ]]></title>
   <link href="http://vatscy.github.io/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2015-02-02T23:37:28+09:00</updated>
+  <updated>2015-02-02T23:45:24+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -1425,7 +1425,7 @@ DDDについて調べた過程、それに対して私が感じたことをま�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[First Write]]></title>
+    <title type="html"><![CDATA[Hello World]]></title>
     <link href="http://vatscy.github.io/blog/2013/12/21/first-write/"/>
     <updated>2013-12-21T01:20:40+09:00</updated>
     <id>http://vatscy.github.io/blog/2013/12/21/first-write</id>
