@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: レポート | ばしぶろ]]></title>
+  <link href="http://vatscy.github.io/blog/categories/repoto/atom.xml" rel="self"/>
+  <link href="http://vatscy.github.io/"/>
+  <updated>2016-10-14T07:10:28+09:00</updated>
+  <id>http://vatscy.github.io/</id>
+  <author>
+    <name><![CDATA[ばつしい]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[LINE DEVELOPER DAY 2016に行ってきました]]></title>
+    <link href="http://vatscy.github.io/blog/2016/09/30/linedevday2016/"/>
+    <updated>2016-09-30T22:51:31+09:00</updated>
+    <id>http://vatscy.github.io/blog/2016/09/30/linedevday2016</id>
+    <content type="html"><![CDATA[<p>2016年9月29日に開催された<a href="http://linedevday.linecorp.com/jp/2016/">LINE DEVELOPER DAY 2016</a>に参加しました。1日掛りでとても濃い内容でしたので整理が追いついていませんが、とりあえず備忘録として取ったメモを載せておきます。</p>
+
+<!-- more -->
+
+
+<h2>全体</h2>
+
+<ul>
+<li>ヒカリエホール(9F)</li>
+<li>全てがLINEアプリだけで完結
+
+<ul>
+<li>入場はLINEからQRコードを表示</li>
+<li>会場に設置された3つのビーコンをLINEで受信するとスタンプがもらえる</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>A-1 Opening &amp; Introduction</h2>
+
+<ul>
+<li>今年で5周年
+
+<ul>
+<li>230カ国</li>
+<li>2億2000万人</li>
+</ul>
+</li>
+<li>目標: Closing the Distanceを実現</li>
+<li>Content Platform
+
+<ul>
+<li>各種ゲーム</li>
+<li>line today</li>
+<li>line live</li>
+<li>line tv</li>
+</ul>
+</li>
+<li>Life Infra Platform
+
+<ul>
+<li>line@</li>
+</ul>
+</li>
+<li>line platformは &lsquo;Open&rsquo;</li>
+<li>bot
+
+<ul>
+<li>どこよりも長くbotに取り組んできた</li>
+<li>Message-APIがOpen</li>
+<li>Chat Extention
+
+<ul>
+<li>チャットの中でできることを増やす</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Large-Scale Platform
+
+<ul>
+<li>大規模オンプレデータセンターを保有している
+
+<ul>
+<li>Private Cloud</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>storage
+
+<ul>
+<li>Storage Opensourceへのコントリビューションも増えている</li>
+</ul>
+</li>
+<li>Data Processing &amp; Machine Learning</li>
+<li>グローバルな開発人材確保
+
+<ul>
+<li>Tokyo, Fukuoka, SouthKorea, China, Taiwanなど</li>
+</ul>
+</li>
+<li>lineの清聴はlineだけでなされるものではなく、周りの協力が必要</li>
+</ul>
+
+
+<h2>A-2</h2>
+
+<h3>LINE Notify</h3>
+
+<ul>
+<li>開発者向け</li>
+<li>無料で利用可能</li>
+<li>ユーザーのlineに通知を送れるAPI Gateway</li>
+<li>OAuth2でアクセストークンを取得してAPI投げるだけ
+
+<ul>
+<li>シェルスクリプトやjenkinsに入れるなど、開発シーンで気軽に使える</li>
+</ul>
+</li>
+<li>IFTTTと連携
+
+<ul>
+<li>様々なシナリオがコーディングレスに実現できる</li>
+</ul>
+</li>
+<li>GitHubとも連携</li>
+<li>mackerelとも連携</li>
+</ul>
+
+
+<h3>LINE Messaging API</h3>
+
+<ul>
+<li>line bot
+
+<ul>
+<li>line oa</li>
+<li>line@</li>
+<li>今までは管理画面で設定してメッセージを送信していた</li>
+</ul>
+</li>
+<li>今まではlineが提供しているもの、または提携パートナーが提供しているものがAPI形式でbotを提供していた</li>
+<li>line bot platformのオープン化
+
+<ul>
+<li>ボットを実装するためのAPIを一般公開する</li>
+</ul>
+</li>
+<li>今年春にAPIをトライアル公開
+
+<ul>
+<li>当初10kユーザーだったのが現在20kユーザー</li>
+</ul>
+</li>
+<li>本日より正式公開</li>
+<li>トライアルのフィードバックを基に改善
+
+<ul>
+<li>no magic numbers</li>
+</ul>
+</li>
+<li>APIドキュメントをフルリライト
+
+<ul>
+<li>日本語/英語</li>
+<li>以前より読みやすくなった</li>
+<li>各言語でのサンプルコードも充実</li>
+</ul>
+</li>
+<li>SDKも公開
+
+<ul>
+<li>lineブログに詳細を本日公開予定</li>
+</ul>
+</li>
+<li>Three New Features
+
+<ul>
+<li>Group
+
+<ul>
+<li>一部のbotのみだったが、groupに参加できるbotを作れるようになった</li>
+</ul>
+</li>
+<li>new message type
+
+<ul>
+<li>carousel, confirm, button</li>
+<li>カルーセルからボタンが出てきてスムーズにwebに移動できる、など</li>
+</ul>
+</li>
+<li>reply / push
+
+<ul>
+<li>push
+
+<ul>
+<li>bot → user</li>
+</ul>
+</li>
+<li>reply
+
+<ul>
+<li>ユーザーの発言ひとつひとつにリプライトークンがつく</li>
+<li>このリプライトークンを使ってAPIをコールするとコール料が無料になる</li>
+<li>有効範囲: 数十秒間、ワンタイム</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>botとのやり取り
+
+<ul>
+<li>リッチメニュー
+
+<ul>
+<li>画面下からメニューパネルが出て来る</li>
+<li>メッセージ送信しなくてよいので、botとのやり取りがスムーズに行える</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>line web login
+
+<ul>
+<li>botの機能を使うにしても限界がある→やはりweb画面で用意したい</li>
+<li>line内のwebviewであればオートログイン機能が働く</li>
+<li>line profile+ に登録されている情報をweb上で取得する、などが簡単にできる</li>
+<li>ただしまだ提携パートナー向けのみの提供</li>
+</ul>
+</li>
+<li>Line bot platformの上でユーザーにサービス提供が可能</li>
+</ul>
+
+
+<h3>IoT: line beacon</h3>
+
+<ul>
+<li>ビーコンをlineが受信して、自作bot</li>
+</ul>
+
+
+<h3>bot award</h3>
+
+<ul>
+<li>優勝賞金最大1000万円</li>
+</ul>
+
+
+<h2>A-3</h2>
+
+<ul>
+<li>lineのサービスダウンの歴史</li>
+</ul>
+
+
+<h3>2016/3/11</h3>
+
+<ul>
+<li>サービス障害を興すとtwitter等でデマが流れるというリスクもある(笑い話)</li>
+<li>必要なときに必要最低限の通信をするよう心がけた設計がされている</li>
+<li>クリエイターズきせかえのリリースにむけた開発中に発生</li>
+<li>データ更新作業を何回かにわけて実施
+
+<ul>
+<li>1つずつ更新する通知と、全データ更新する通知がある</li>
+<li>ほぼ全ユーザーから全きせかえデータの更新通知を送ることになった</li>
+<li>全データ更新通知は時間分散していなかった</li>
+<li>更新のため認証APIが呼ばれ、認証サーバがダウン</li>
+</ul>
+</li>
+<li>サーキットブレイカー: lineブログで解説している</li>
+<li>1次対応、再発防止対応、総務省に報告</li>
+<li>多機能にも影響を与えてしまった
+
+<ul>
+<li>マイクロサービスがまだ不十分であったので更に推進する必要がある</li>
+</ul>
+</li>
+<li>質問
+
+<ul>
+<li>マイクロサービスで構築されている場合、部分的な作業をする際の連絡経路はどうなっているのか？
+
+<ul>
+<li>影響などを想定して必要があれば連携するが、このときには影響を予想できなかった</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>A-4</h2>
+
+<h3>What is LINE login</h3>
+
+<ul>
+<li>LINEアカウントでログインできる</li>
+<li>web/iOS/Androidで実装可能
+
+<ul>
+<li>SDKの提供</li>
+</ul>
+</li>
+<li>Autologin from the Line app
+
+<ul>
+<li>line内webviewではアイパス入力不要</li>
+</ul>
+</li>
+<li>OAuth2</li>
+<li>app-to-app authentication</li>
+</ul>
+
+
+<h3>What&rsquo;s NEXT?</h3>
+
+<ul>
+<li>Profile+
+
+<ul>
+<li>lineに登録したユーザー情報を自サービスで利用できる</li>
+</ul>
+</li>
+<li>Email API
+
+<ul>
+<li>ユーザーが同意すればEmail情報も取得できる？</li>
+</ul>
+</li>
+<li>LINE Payとの連携</li>
+</ul>
+
+
+<h2>A-5</h2>
+
+<h3>アーキ</h3>
+
+<ul>
+<li>LEGY
+
+<ul>
+<li>ルーティング</li>
+<li>通信の暗号化 など</li>
+</ul>
+</li>
+<li>TLSの問題
+
+<ul>
+<li>実際のデータを送る前にハンドシェイクなどが発生してしまう</li>
+<li>TLS v1.3はまだドラフトなので使えない</li>
+</ul>
+</li>
+<li>LEGY Encryption
+
+<ul>
+<li>Lightweight TLS alternative</li>
+</ul>
+</li>
+<li>Kessagin E2EE
+
+<ul>
+<li>End-to-end Encryption for LINE &ndash; Letter Sealing
+
+<ul>
+<li>ユーザー間でしか暗号/復号化できない
+
+<ul>
+<li>LINEサーバ側でもできない</li>
+</ul>
+</li>
+<li>現在はメッセージだけだが将来的には動画などにも対応させる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Device Security
+
+<ul>
+<li>True Delete
+
+<ul>
+<li>削除を実行する際に削除フラグを立てたりするのではなく、本当にデータをnullなどでoverwriteする</li>
+</ul>
+</li>
+<li>他にも色々</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>rick assesment</h3>
+
+<ul>
+<li>セキュリティ指標
+
+<ul>
+<li>コード解析・改造の難しさ</li>
+<li>ボット・ツールのサーバ側での検知</li>
+</ul>
+</li>
+<li>Man-In-The-Middle対策
+
+<ul>
+<li>ゲーム内でゲームサーバの証明書を検証して、プロキシが挟まっていないことを確認する</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>Anti-Spam/Abusing</h3>
+
+<ul>
+<li>誤検知率が十分に低くないとサービスとして致命的</li>
+<li>機械学習などの導入で自動化の研究を続けているか、まだ完全に自動化はされておらず人力でチェックしている範囲もある</li>
+</ul>
+
+
+<h3>Bug Bounty Program</h3>
+
+<ul>
+<li>ユーザーからのバグ報告を募り、有益な情報には報酬を出す制度</li>
+<li>実際に支払われた事例は5件ある</li>
+</ul>
+
+
+<h2>A-6</h2>
+
+<h3>Why group?</h3>
+
+<ul>
+<li>messenger platform
+
+<ul>
+<li>1:1</li>
+<li>1:bot</li>
+<li>1:group</li>
+</ul>
+</li>
+<li>Groupは親しい間柄だけでない、LINEが提供するgroupの範囲を広げていきたい</li>
+<li>課題
+
+<ul>
+<li>グループが巨大になるにつれて
+
+<ul>
+<li>目的がずれてくる</li>
+<li>意図しないメンバーへの情報公開</li>
+<li>幽霊メンバー</li>
+</ul>
+</li>
+<li>途中joinの場合に過去ログ見れない</li>
+</ul>
+</li>
+<li>Group 2.0(構想段階)
+
+<ul>
+<li>3 member levels
+
+<ul>
+<li>owner, admin, normal</li>
+</ul>
+</li>
+<li>Admission Types
+
+<ul>
+<li>誰でも参加可能</li>
+<li>承認制</li>
+</ul>
+</li>
+<li>More Chats
+
+<ul>
+<li>グループ毎に1チャットだったのを、複数チャットを作ることができるように</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Group 2.0 Application
+
+<ul>
+<li>元から機能実装しておくのではなく、アドオンで追加できる仕組みを用意する
+
+<ul>
+<li>Slackなどの他チャットの影響を受けていそう</li>
+</ul>
+</li>
+<li>グループのアクセストークンをどうするか
+
+<ul>
+<li>channel tokenを利用するようにした</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>A-7</h2>
+
+<ul>
+<li>HLS
+
+<ul>
+<li>HTTP Live Streaming</li>
+</ul>
+</li>
+<li>tsファイルは2秒毎</li>
+<li>動画配信が途切れた場合にストレージへのアクセスが増加する
+
+<ul>
+<li>配信が途切れたイベントを検知して返すAPIを別途用意して、ストレージへのアクセスをしないようにした</li>
+<li>他のAPIとは分けてマイクロサービスとして構築しているので落ちても全落ちしない</li>
+</ul>
+</li>
+<li>チャットログデータもHLSと同じ考えで2秒ごとにjson分割</li>
+<li>love
+
+<ul>
+<li>連打をクライアント側でカウントしておきある程度の量をまとめてサーバ側に送信することで負荷を下げる</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>A-8</h2>
+
+<ul>
+<li>Group Call
+
+<ul>
+<li>1年前にグループ通話に特化したpopcorn buzzをリリース</li>
+<li>このノウハウを元に開発</li>
+</ul>
+</li>
+<li>グループ通話を実現するための選択肢
+
+<ul>
+<li>フルメッシュ
+
+<ul>
+<li>全てがつながる</li>
+</ul>
+</li>
+<li>end system mixing
+
+<ul>
+<li>特定のクライアントが中心となる</li>
+</ul>
+</li>
+<li>サーバを中心に据える←これを採用</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>A-9</h2>
+
+<h3>What is Armeria?</h3>
+
+<ul>
+<li>概要
+
+<ul>
+<li>非同期RPC/API呼び出し用のクライアント/サーバライブラリ</li>
+<li>Java 8, Netty 4.1, HTTP/2, Thrift</li>
+</ul>
+</li>
+<li>HTTP/2の採用
+
+<ul>
+<li>TCPコネクションの数が毎分60万だったのが2000くらいに激減</li>
+</ul>
+</li>
+<li>同期処理が多かった実装を非同期化することによる課題
+
+<ul>
+<li>エンジニア側の意識・慣れ</li>
+<li>TCP接続の数が激減することで、TCP単位でやっているロードバランシングが有効に働かない、など</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>A-10</h2>
+
+<ul>
+<li>本日のラインナップ
+
+<ul>
+<li>50タイトルほどの中から絞り込んだ</li>
+</ul>
+</li>
+<li>LINE GitHubエンタープライズ内のリポジトリ数
+
+<ul>
+<li>2012.12 62</li>
+<li>2016.9 10660</li>
+<li>マイクロサービス化などの成果</li>
+</ul>
+</li>
+<li>各国独自のカルチャーを取り入れたプロダクト提供が必要
+
+<ul>
+<li>単なる多言語対応では駄目</li>
+</ul>
+</li>
+<li>言葉の問題
+
+<ul>
+<li>多言語を話す</li>
+<li>必要があれば通訳担当者が同席</li>
+<li>翻訳bot
+
+<ul>
+<li>使いたくて作った、昔からある</li>
+</ul>
+</li>
+<li>てっとり早いのは、直接会うこと
+
+<ul>
+<li>コードを見ながらだとエンジニア同士では案外やり取りできる</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>拠点</h3>
+
+<ul>
+<li>Fukuoka
+
+<ul>
+<li>元々3つに分かれていたのを1つにした</li>
+<li>昇降式デスク、スタンディング可能</li>
+<li>いすを選べる</li>
+</ul>
+</li>
+<li>SHinjuku
+
+<ul>
+<li>南口のビルに引っ越し</li>
+</ul>
+</li>
+<li>エンジニアのためにより良い環境を提供し、存分にパフォーマンスを発揮してもらう</li>
+</ul>
+
+
+<h3>LINE ENGINEERING CULTURE</h3>
+
+<h4>Take Ownership</h4>
+
+<ul>
+<li>チームとしての成果を重視しつつ、チーム内でのフィードバックを得ながら各自のオーナーシップを発揮する</li>
+<li>冬に雪が降る仕様は、iOSエンジニアの提案から始まった</li>
+</ul>
+
+
+<h4>Take Risk</h4>
+
+<ul>
+<li>いつも計画通り行くとは限らない</li>
+<li>新しい技術は新しい価値を生み出すもの</li>
+<li>5年前までPC向けだった開発チームがスマホ向けに大きく方向転換したのはかなりリスクを取った判断だった</li>
+</ul>
+
+
+<h4>Be Open</h4>
+
+<ol>
+<li>担当外のソースコード、KPIの数値などが閲覧可能</li>
+<li>オープンな気持ちで
+
+<ul>
+<li>各フェーズでのレビュー、フィードバックを前向きに捉えていく</li>
+</ul>
+</li>
+</ol>
+
+
+<h3>サイクル</h3>
+
+<ul>
+<li>1〜3が回る</li>
+<li>Trust &amp; Respect</li>
+<li>Self-directed Work</li>
+<li>Positive Peer Pressure</li>
+<li>仲がいいだけでは駄目</li>
+<li>チーム・同僚同士で前向きなプレッシャーを掛け合うことが理想</li>
+</ul>
+
+
+<h3>OPEN TO PUBLIC</h3>
+
+<ul>
+<li>lineは知ってるけど誰がどう作ってるのか見えない、というのが世間の反応であるという自覚がある
+
+<ul>
+<li>そんなんじゃいかん</li>
+</ul>
+</li>
+<li>より開かれた組織になりたい
+
+<ul>
+<li>オープンソース</li>
+<li>カンファレンス</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
