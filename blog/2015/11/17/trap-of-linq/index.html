@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/">
+  <link rel="canonical" href="http://vatscy.github.io/blog/2015/11/17/trap-of-linq/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -47,7 +47,7 @@ $(document).ready( function () {
 <meta property="og:title" content="【C#】LINQを使う際に陥りやすい思考の罠" />
 <meta property="og:type" content="article" />
 <meta property="og:description" content="※主にLINQ to Objectsの話。LINQ to SQLなどは挙動が違うので注意。 LINQって便利！スタイリッシュ！C#を使い始めて一番感動したのはLINQでした。存在を知ってからしばらくは、いかにLINQを使いまくるか、ばっかり考えてました。しかし、この浅い考えは時に悲劇を生みます &hellip;" />
-<meta property="og:url" content="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" />
+<meta property="og:url" content="http://vatscy.github.io/blog/2015/11/17/trap-of-linq/" />
 <meta property="og:image" content="http://vatscy.github.io/images/post/trap-of-linq.jpg" />
 <meta property="og:site_name" content="ばしぶろ" />
 <meta property="og:locale" content="ja_JP" />
@@ -165,24 +165,24 @@ $(document).ready( function () {
   
 
 
-<time datetime="2014-12-03T22:55:47+09:00" pubdate data-updated="true">2014年12月03日</time>
+<time datetime="2015-11-17T22:55:47+09:00" pubdate data-updated="true">2015年11月17日</time>
         
       </p>
     
     <div class="snsb">
   
-  <div class="facebook-b"><fb:like href="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" layout="button_count" action="like" show_faces="false" share="false" width="100"></fb:like></div>
+  <div class="facebook-b"><fb:like href="http://vatscy.github.io/blog/2015/11/17/trap-of-linq/" layout="button_count" action="like" show_faces="false" share="false" width="100"></fb:like></div>
   
   
-  <div class="twitter-b"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" data-via="vatscy8241" data-text="【C#】LINQを使う際に陥りやすい思考の罠">Tweet</a></div>
+  <div class="twitter-b"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2015/11/17/trap-of-linq/" data-via="vatscy8241" data-text="【C#】LINQを使う際に陥りやすい思考の罠">Tweet</a></div>
   
   
-    <div class="hatena-b"><a href="http://b.hatena.ne.jp/entry/vatscy.github.io/blog/2014/12/03/trap-of-linq/" class="hatena-bookmark-button" data-hatena-bookmark-title="【C#】LINQを使う際に陥りやすい思考の罠" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></div>
+    <div class="hatena-b"><a href="http://b.hatena.ne.jp/entry/vatscy.github.io/blog/2015/11/17/trap-of-linq/" class="hatena-bookmark-button" data-hatena-bookmark-title="【C#】LINQを使う際に陥りやすい思考の罠" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></div>
   
   
   
   
-  <div class="pocket-b"><a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en" data-save-url="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/"></a></div>
+  <div class="pocket-b"><a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en" data-save-url="http://vatscy.github.io/blog/2015/11/17/trap-of-linq/"></a></div>
   <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
   
   
@@ -351,7 +351,7 @@ $(document).ready( function () {
   
 
 
-<time datetime="2014-12-03T22:55:47+09:00" pubdate data-updated="true">2014年12月03日</time>
+<time datetime="2015-11-17T22:55:47+09:00" pubdate data-updated="true">2015年11月17日</time>
       
 
 <span class="categories">
@@ -365,17 +365,17 @@ $(document).ready( function () {
     
       <div class="snsb">
   
-  <div class="facebook-b"><fb:like href="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" layout="box_count" action="like" show_faces="false" share="false" width="100"></fb:like></div>
+  <div class="facebook-b"><fb:like href="http://vatscy.github.io/blog/2015/11/17/trap-of-linq/" layout="box_count" action="like" show_faces="false" share="false" width="100"></fb:like></div>
   
   
-  <div class="twitter-b-footer"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/" data-via="vatscy8241" data-text="【C#】LINQを使う際に陥りやすい思考の罠" data-count="vertical">Tweet</a></div>
+  <div class="twitter-b-footer"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vatscy.github.io/blog/2015/11/17/trap-of-linq/" data-via="vatscy8241" data-text="【C#】LINQを使う際に陥りやすい思考の罠" data-count="vertical">Tweet</a></div>
   
   
-    <div class="hatena-b"><a href="http://b.hatena.ne.jp/entry/vatscy.github.io/blog/2014/12/03/trap-of-linq/" class="hatena-bookmark-button" data-hatena-bookmark-title="【C#】LINQを使う際に陥りやすい思考の罠" data-hatena-bookmark-layout="vertical-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></div>
+    <div class="hatena-b"><a href="http://b.hatena.ne.jp/entry/vatscy.github.io/blog/2015/11/17/trap-of-linq/" class="hatena-bookmark-button" data-hatena-bookmark-title="【C#】LINQを使う際に陥りやすい思考の罠" data-hatena-bookmark-layout="vertical-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></div>
   
   
   
-  <div class="pocket-b"><a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en" data-save-url="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/"></a></div>
+  <div class="pocket-b"><a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en" data-save-url="http://vatscy.github.io/blog/2015/11/17/trap-of-linq/"></a></div>
   <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
   
 </div>
@@ -443,7 +443,7 @@ $(document).ready( function () {
       </li>
     
       <li class="post">
-        <a href="/blog/2014/12/03/trap-of-linq/">【C#】LINQを使う際に陥りやすい思考の罠</a>
+        <a href="/blog/2015/11/17/trap-of-linq/">【C#】LINQを使う際に陥りやすい思考の罠</a>
       </li>
     
       <li class="post">
@@ -513,8 +513,8 @@ $(document).ready( function () {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://vatscy.github.io/blog/2014/12/03/trap-of-linq/';
-        var disqus_url = 'http://vatscy.github.io/blog/2014/12/03/trap-of-linq/';
+        var disqus_identifier = 'http://vatscy.github.io/blog/2015/11/17/trap-of-linq/';
+        var disqus_url = 'http://vatscy.github.io/blog/2015/11/17/trap-of-linq/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: C# | ばしぶろ]]></title>
   <link href="http://vatscy.github.io/blog/categories/c-number/atom.xml" rel="self"/>
   <link href="http://vatscy.github.io/"/>
-  <updated>2016-10-14T08:31:12+09:00</updated>
+  <updated>2016-10-14T09:49:14+09:00</updated>
   <id>http://vatscy.github.io/</id>
   <author>
     <name><![CDATA[ばつしい]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[【C#】LINQを使う際に陥りやすい思考の罠]]></title>
-    <link href="http://vatscy.github.io/blog/2014/12/03/trap-of-linq/"/>
-    <updated>2014-12-03T22:55:47+09:00</updated>
-    <id>http://vatscy.github.io/blog/2014/12/03/trap-of-linq</id>
+    <link href="http://vatscy.github.io/blog/2015/11/17/trap-of-linq/"/>
+    <updated>2015-11-17T22:55:47+09:00</updated>
+    <id>http://vatscy.github.io/blog/2015/11/17/trap-of-linq</id>
     <content type="html"><![CDATA[<p>※主にLINQ to Objectsの話。LINQ to SQLなどは挙動が違うので注意。</p>
 
 <p>LINQって便利！スタイリッシュ！C#を使い始めて一番感動したのはLINQでした。存在を知ってからしばらくは、いかにLINQを使いまくるか、ばっかり考えてました。しかし、この浅い考えは時に悲劇を生みます。</p>
